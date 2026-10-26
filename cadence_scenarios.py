@@ -231,7 +231,12 @@ class CadenceScorer:
         shared=Counter(x['flat']);shared.update({k:v*up for k,v in direct(dm).items()})
         conv=x['conversions'];wp=[s for s in x['skills'] if s['weight']>0]
         total=sum(s['weight'] for s in wp);den=max(100,total)
+        # One strength call has fixed snapshot and Momentum state. Ordinary
+        # hands are requested twice; reuse their exact scalar packets locally.
+        packet_values={}
         def packet(hand,skill=None):
+            key=(hand,skill['path'] if skill else None)
+            if key in packet_values:return packet_values[key]
             records=skill['records'] if skill else []
             wdp=at(records[0][0].get('weaponDamagePct',100),records[0][1]) if records else 100
             wdp+=sum(at(r.get('weaponDamagePct'),l) for r,l in records[1:])
@@ -248,6 +253,7 @@ class CadenceScorer:
                 if typ in ('Fire','Cold','Lightning'):pct+=stats.get('offensiveElementalModifier',0)
                 pct+=x['cunning']*.41 if typ in ('Physical','Pierce') else x['spirit']*100/215
                 value+=flat*max(.01,1+pct/100)+bonus.get(typ,0)
+            packet_values[key]=value
             return value
         def ordinary(hand):
             plain=packet(hand)

@@ -4,7 +4,7 @@ import argparse, contextlib, copy, hashlib, json, os, pathlib, shutil, sys, temp
 from GrimDawn_Optimizer import ROOT
 from production_data import bridge,database,extract_zip,select_character,stage_profile,commit_profile,digest,link_static
 from production_search import MalEngine,CadenceEngine,bounded_search,export_seeds
-from production_report import report,disposition,known_exception
+from production_report import report,known_exception
 
 @contextlib.contextmanager
 def workflow_lock():
@@ -79,14 +79,7 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
             deadline=(start+seconds-6) if mode=='quick' else time.monotonic()+seconds
             result=bounded_search(e,deadline,width=width,rounds=1 if mode=='quick' else 3,full=mode=='full')
             winner=result.get('selected');state=winner['state'] if winner else None
-            unresolved=json.loads((staged/'unresolved.json').read_text())
-            from item_valuation import value_owned_equipment
-            item_valuations=value_owned_equipment(e,unresolved)
-            inventory,checks=disposition(e,state,unresolved,time.monotonic()+max(1,(start+seconds-1-time.monotonic())) if mode=='quick' else time.monotonic()+15)
-            result.update(version='1.3.4',character=name,level=e.mal['character-level'],mode=mode,baseline=baseline,baseline_state=e.current,accepted_exception=exception,baseline_validation=validation,materiality_percent=config['materiality']*100,notices=notices,new_item_rolls=new_count,inventory=inventory,inventory_context_checks=checks,elapsed_seconds=time.monotonic()-start,profile_revision=config['revision'])
-            result['item_valuations']=item_valuations
-            from inventory_decisions import apply_dispositions
-            apply_dispositions(e,item_valuations,inventory,state)
+            result.update(version='1.3.4',character=name,level=e.mal['character-level'],mode=mode,baseline=baseline,baseline_state=e.current,accepted_exception=exception,baseline_validation=validation,materiality_percent=config['materiality']*100,notices=notices,new_item_rolls=new_count,inventory_disposition='suspended',elapsed_seconds=time.monotonic()-start,profile_revision=config['revision'])
             if winner:
                 # Report independent fixed state and source fingerprints, no save writes.
                 assert all(winner['state'][k]==e.current[k] for k in ['skills','devotions','bindings'])
@@ -94,8 +87,8 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
             # Snapshot current baseline separately; never pass this self-calculation off as an independent export.
             (staged/'current_calculated_baseline.json').write_text(json.dumps(baseline))
             target=out if len(names)==1 else out/name;target.mkdir(parents=True,exist_ok=True)
-            from inventory_decisions import write_inventory_report
-            write_inventory_report(e,result,target/(name+'_Inventory_Disposition.md'))
+            # Remove a stale report from an earlier run; valuation code stays available.
+            (target/(name+'_Inventory_Disposition.md')).unlink(missing_ok=True)
             report(e,result,target/(name+'_Gear_Review.md'));(target/'results.json').write_text(json.dumps(result,indent=2));all_results[name]=result;updates.append((staged,name))
         if commit:
             for staged,name in updates:commit_profile(staged,name)

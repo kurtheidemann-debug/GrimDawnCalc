@@ -211,28 +211,7 @@ def report(e,r,path):
         for p,q in resources['augment_purchases'].items():
             f=e.db[p].get('factionSource');fact=next((x['name'] for x in e.factions if x['key']==f),f)
             lines.append(f"- Augment: **{e.name(p)} ×{q}**, {fact}; level {e.db[p].get('levelRequirement',0)}; reputation eligibility checked.")
-    lines+=['','## Future-level equipment valuation','','Single-slot comparisons use current level, progression and existing Balanced scores. Required level does not reduce the valuation. Future items cannot enter the current loadout; normal non-level requirements still apply when their level unlocks. Incomplete comparisons are Uncertain and never disposal evidence.','']
-    future=[x for x in r.get('item_valuations',[]) if x.get('future_level') or x.get('required_level') is None]
-    if future:
-        lines+=['|Full item name / roll|Slot|Required level|Location|Result|Balanced score / current|Offense / defense index|Compared with equipped item|Comparison|','|---|---|---:|---|---|---|---|---|---|']
-        for row in future:
-            item=e.items.get(row['id'],row)
-            scores=f"{row['score']:.6f} / {row['baseline_score']:.6f}" if row.get('score') is not None else 'Uncertain — unavailable'
-            indices=f"{row['offense_index']:.2f} / {row['defense_index']:.2f}" if row.get('offense_index') is not None else 'Uncertain — unavailable'
-            lines.append('|'+ '|'.join([row['item'].replace('|','/')+' / `'+row['fingerprint']+'`',row['slot'],str(row['required_level'] or 'Unknown'),item_source(e,item),row['classification'],scores,indices,row.get('compared_to','Unknown').replace('|','/'),(row['comparison']+' Eligibility: '+row.get('equipment_eligibility','Unknown')+'; blockers: '+('; '.join(row.get('eligibility_blockers',[])) or 'None')).replace('|','/')])+'|')
-    else:lines+=['No future-level equipment in this snapshot.']
-    lines+=['','## Inventory disposition','','Safe disposal is deliberately conservative. Future-level items remain in the snapshot and unlock automatically. Full names identify items; fingerprints distinguish matching names. Future upgrade comparisons and Uncertain results are retention evidence, never disposal proof.']
-    from inventory_decisions import disposition_rows
-    inventory_rows=disposition_rows(e,r.get('item_valuations',[]),r['inventory'],selected['state'] if selected else None)
-    for category in ['Keep — Upgrade','Keep — Future Upgrade','Keep — Alternative','Uncertain — Value','Sell/Dismantle']:
-        rows=[x for x in inventory_rows if x['disposition']==category]
-        lines+=['',f'### {category} ({len(rows)})','']
-        if not rows:lines+=['None.'];continue
-        lines+=['|Full item name / roll|Location|Item value|Equipment eligibility|Value reason|Eligibility blockers|','|---|---|---|---|---|---|']
-        for row in rows:
-            item=e.items.get(row['id'],row)
-            cells=[row['item']+' / `'+row.get('fingerprint','unknown')+'`',item_source(e,item),row['item_value'],row['equipment_eligibility'],row.get('reason',row.get('value_reason','')), '; '.join(row['eligibility_blockers']) or 'None']
-            lines.append('|'+ '|'.join(str(x).replace('|','/') for x in cells)+'|')
+    lines+=['','Inventory keep/sell processing is suspended; equipment inventory availability is unchanged.']
     lines+=['','## Run checks','',f"Character/save decoded; identity and level checked. Newly rolled items: {r['new_item_rolls']}. Complete-loadout evaluations: {r.get('evaluations',0)}; feasible candidates: {r.get('feasible_candidates',0)}. Elapsed: {r['elapsed_seconds']:.2f}s. Regression suite is reserved for code/database changes."]
     if selected:lines+=['','Winner passed equipment/attachment requirements, level eligibility, unique physical item use, resource checks, fixed skills/devotions/bindings, equipment order, defensive floors, materiality policy and independent offensive recomputation.']
     lines+=['','Assumptions and notices:']
