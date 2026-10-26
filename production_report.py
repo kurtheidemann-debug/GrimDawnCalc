@@ -3,6 +3,7 @@ import copy,json,math,time
 from GrimDawn_Optimizer import SLOTS,STORM,WIND,MAEL
 from item_identity import full_name,fingerprint
 from production_data import physical_key
+from production_data import difficulty_name
 
 def safe_name(item):return full_name(item).replace('|','/')
 
@@ -164,7 +165,7 @@ def known_exception(e,config,source_character):
 
 def report(e,r,path):
     b=r['baseline'];selected=r.get('selected');ex=r.get('accepted_exception');name=e.character_name
-    lines=[f'# {name} — Gear Review v1.3.4','',f"Level **{e.mal['character-level']}** · {'Ultimate' if (int(e.mal['last-difficulty'])&3)==2 else 'Elite'} · {r['mode'].title()} mode · materiality **{r['materiality_percent']}%**.",'',f"Status: **{r['status']}**. {r.get('scope','')}."]
+    lines=[f'# {name} — Gear Review v1.3.4','',f"Level **{e.mal['character-level']}** · {difficulty_name(e.mal)} · {r['mode'].title()} mode · materiality **{r['materiality_percent']}%**.",'',f"Status: **{r['status']}**. {r.get('scope','')}."]
     if r.get('timed_out'):lines+=['','The runtime bound was reached. This is the best fully evaluated feasible loadout retained before the bound.']
     if ex:lines+=['','Accepted baseline exception: **Chaos displays 86% in the decoder, 80% in the optimizer; both have 105% uncapped**. Decoder 86% is authoritative for this exact baseline. The established scoring model is preserved.']
     if selected:lines+=action_checklist(e,selected['state'])

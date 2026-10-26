@@ -26,25 +26,25 @@ No command writes to a supplied save. Reports recommend changes for manual use.
 
 ## Quick and Full modes
 
-Quick imports current identity, level, attributes, unspent attributes, equipment,
-and personal inventory. It reuses that profile's shared stash, build, faction
-access, known recipes, crafting resources and scoring unless the selected save
-explicitly supplies changed character progression. Explicit saved skill ranks,
-devotion choices/bindings and reputation are imported and reported; the optimizer
-keeps that actual saved configuration fixed. Missing fields retain their profile
-values. Leveling alone never allocates or invents skills. Every owned catalog item
-is checked again against the new level on every run; previously ineligible stash
-items are not discarded. Missing personal items do not become phantom inventory.
+Quick and Full import the selected character's current level, base attributes,
+unspent points, skills, devotions/bindings, equipment/attachments, faction state,
+and saved difficulty authoritatively. Missing required character fields block
+with an explicit decoder/input error; historical character values are never
+substituted. Optional hotbar/skill-set fields are not backfilled. Main-campaign
+quest files, when supplied, are decoded into `quest-progress`; absent quest files
+are disclosed. Quest-based purchase/service eligibility remains Stage 4 work.
 
-Full is explicit. `--mode full --character Mal` updates only Mal. Omitting
-`--character` in Full updates each registered profile present in the supplied
-save tree. It refreshes supplied shared stash, progression, reputations, recipes
-and materials, adopts actual saved skills/devotions/bindings, checks a fresh
-decoder baseline export, and runs a wider complete-loadout search. Missing optional
-progression files retain the prior snapshot with an explicit notice. Unknown
-characters are not assigned an invented scoring profile. Neither mode changes a
-profile's scoring, materiality, archetype or target difficulty merely because a
-save changed. Static game data is reused.
+Quick still reuses the profile's shared-stash, recipe and crafting-resource
+snapshots. Full refreshes the supplied shared stash, recipes and resources. Missing
+optional account files retain their prior snapshot with an explicit notice; this
+account refresh behavior is unchanged in Stage 2. Cross-character inventory
+pooling remains Stage 3 work. Unknown characters do not receive an invented
+scoring policy. Static databases and persistent build policy are reused.
+
+Saved difficulty alone controls resistance penalties and the calculation target:
+Normal -> Normal, Elite -> Elite, Ultimate -> Ultimate. Stored profile difficulty
+and reference level are output metadata, not inputs. There is no difficulty
+choice/override in the production workflow. Resave/reupload to change difficulty.
 
 When multiple supported characters are in a Quick upload, the persistent default
 is Mal and the report says so. An explicit `--character` selects Beeztrap. A save
@@ -56,7 +56,7 @@ containing just one supported character is identified automatically.
 |---|---|---|
 |Build|Lightning Druid|Dual-wield Cadence|
 |Initial reference level|78|74|
-|Target|Ultimate|Elite, with Ultimate resistance projection|
+|Target|Saved Normal / Elite / Ultimate|Saved Normal / Elite / Ultimate|
 |Materiality|5%|3%|
 |Offense|Preserved Mal model; 80% Totem / 20% Wind Devil|Preserved 32 Cadence scenarios and uncertainty blockers|
 |Quick skills / devotions / bindings|Locked|Locked|
@@ -93,15 +93,17 @@ when neither offense nor defense gains are material.
 
 ## Validation
 
-`python validate.py` runs the full preserved suite plus workflow regressions and
-writes `Software_Validation.json`. The code, decoder and static database hashes
-are certified. Routine gameplay snapshots are excluded. `review.py` reuses a
-matching certificate; a code/database change triggers validation once before
-processing. Ordinary inventory updates do not rerun regressions.
+`python validate.py` verifies the published runtime integrity manifest. It does not
+run the regression suite. Code/data changes require appropriate focused tests and
+an updated manifest; see `test_stage2.py` and `docs/STAGE2_RESULTS.md` for Stage 2.
+Routine reviews do not run a regression campaign.
 
-Every run still decodes/checks the save, verifies identity/level and item records,
-calculates defenses, and checks the delivered complete loadout. The winner's
-Mal offense or all 32 Cadence scenario scores are independently recomputed.
+Both Quick and Full independently export/recalculate the **current imported**
+baseline before search, and block unexplained differences. They also check current
+identity, equipment legality/resources, unique instances and finite defensive
+metrics. The winner's Mal offense or all 32 Cadence scenario scores are independently
+recomputed. Derived item-roll caches require matching decoder/database provenance;
+older unversioned profile rolls are recomputed, including relic completion bonuses.
 
 The accepted Mal Chaos exception is scoped to the exact original level-78
 equipment/attribute/skill baseline fingerprint; inventory and source paths do not affect it: decoder **86%**, model
@@ -110,9 +112,9 @@ authoritative for that baseline, records the exception and preserves existing
 scoring mechanics. During a review matching this accepted baseline, a conservative
 minimum of 86% uncapped Chaos is required of delivered candidates; the exception
 does not invent a candidate's actual cap. It is not a wildcard exception for other characters, altered
-snapshots or unrelated mismatches. Full Refresh still blocks new discrepancies.
-Quick baseline values are recalculated model values; they are not misrepresented
-as a new independent decoder export.
+snapshots or unrelated mismatches. Both review modes block new discrepancies. The current level-87 Mal save is not
+covered by the historical level-78 exception; see the separate max-Chaos-cap
+blocker in `docs/STAGE2_RESULTS.md`. No new tolerance or exception was added.
 
 ## Outputs and disposal policy
 

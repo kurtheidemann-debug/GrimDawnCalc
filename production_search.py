@@ -13,7 +13,7 @@ class Deadline(Exception):pass
 
 class MalEngine(PracticalEngine):
     def __init__(self,directory):
-        super().__init__(directory);self.target_ultimate=True
+        super().__init__(directory);self.target_ultimate=(int(self.mal['last-difficulty'])&3)==2
     def options(self):
         return Engine.options(self)
     def deficits(self,v):
@@ -23,7 +23,7 @@ class MalEngine(PracticalEngine):
 class CadenceEngine(ProductionEngine):
     """Directory injection only: preserve the production scorer and legality guards."""
     def __init__(self,directory):
-        BeeztrapEquipment.__init__(self,directory);self.target_ultimate=False
+        BeeztrapEquipment.__init__(self,directory);self.target_ultimate=(int(self.mal['last-difficulty'])&3)==2
         self.scorer=BeeztrapMateriality(self);self.scenario_baseline=self.scorer.snapshot(self.current)
         self.raw_baseline={s.name:self.scorer.strength(self.scenario_baseline,s) for s in SCENARIOS}
         self.memo={};self.comparisons={}

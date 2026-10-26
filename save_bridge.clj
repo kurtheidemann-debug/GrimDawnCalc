@@ -5,11 +5,12 @@
 (case (get req "operation")
  "decode"
  (do
-  (require '[gd-edit.io.gdc :as gdc] '[gd-edit.io.stash :as stash])
+  (require '[gd-edit.io.gdc :as gdc] '[gd-edit.io.stash :as stash] '[gd-edit.quest :as quest])
   (let [load-char (resolve 'gd-edit.io.gdc/load-character-file)
         load-stash (resolve 'gd-edit.io.stash/load-stash-file)]
    (spit out (json/write-str
-    {:characters (mapv (fn [p] {:path p :data (load-char p)}) (get req "characters"))
+    {:characters (mapv (fn [p] {:path p :data (assoc (load-char p) :quest-progress
+                                                  ((resolve 'gd-edit.quest/load-quest-files) p))}) (get req "characters"))
      :stash (when-let [p (get req "stash")] (load-stash p))}))))
  "roll"
  (do
