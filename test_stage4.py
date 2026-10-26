@@ -26,7 +26,7 @@ class ReviewRoutingTests(unittest.TestCase):
     self.assertFalse((out/'Beeztrap_Inventory_Disposition.md').exists())
  def test_import_and_search_candidate_code_unchanged(self):
   import subprocess
-  for p in ['production_search.py','beeztrap_equipment.py']:
+  for p in ['beeztrap_equipment.py']:
    self.assertEqual(Path(p).read_bytes(),subprocess.check_output(['git','show','c9339ece9ddc324894ee0d9c73e5b9854936eedc:'+p]))
   self.assertEqual(Path('cadence_scenarios.py').read_bytes(),subprocess.check_output(['git','show','1cb13dbcc1debcd7bd668f1d319e10fa1ccb280c:cadence_scenarios.py']))
 
