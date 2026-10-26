@@ -1,5 +1,5 @@
 """Bounded complete-loadout search over unchanged v1.2 calculators and policies."""
-import copy,json,math,time
+import copy,json,math,time,itertools
 from pathlib import Path
 from GrimDawn_Optimizer import Engine,ROOT,SLOTS
 from practical_optimizer import PracticalEngine
@@ -21,17 +21,26 @@ class MalEngine(PracticalEngine):
         return super().deficits(v)+max(0,getattr(self,'minimum_chaos_raw',0)-v['resistances'][8]['raw'])
 
 class CadenceEngine(ProductionEngine):
-    """Directory injection only: preserve the production scorer and legality guards."""
+    """Production Cadence adapter with bounded supported-sword pair transitions."""
     def __init__(self,directory):
         BeeztrapEquipment.__init__(self,directory);self.target_ultimate=(int(self.mal['last-difficulty'])&3)==2
         self.scorer=BeeztrapMateriality(self);self.scenario_baseline=self.scorer.snapshot(self.current)
         self.raw_baseline={s.name:self.scorer.strength(self.scenario_baseline,s) for s in SCENARIOS}
         self.memo={};self.comparisons={}
     def options(self):
-        # Preserved legality locks both swords/attachments and conversion signature.
         opts=Engine.options(self)
-        for i in [12,13]:opts[i]=[self.current['gear'][i]]
+        # The existing scorer verifies only this class/base-speed envelope.
+        swords=[ident for ident in opts[12] if self.supported_weapon(ident)]
+        opts[12]=swords;opts[13]=swords[:]
         return opts
+    def supported_weapon(self,ident):
+        base=self.items[ident]['records'][0]
+        return base.get('Class')=='WeaponMelee_Sword' and base.get('characterBaseAttackSpeedTag')=='Speed:  Very Fast'
+    def legal(self,s,v,full=False):
+        errors=super().legal(s,v,full)
+        if not all(self.supported_weapon(i) for i in s['gear'][12:]):
+            errors.append('Unsupported Cadence pair: requires two Very Fast one-handed swords')
+        return errors
 
 
 def seed_states(e,directory):
@@ -55,8 +64,9 @@ def export_seeds(e,states):
 
 
 def bounded_search(e,deadline,width=5,rounds=1,full=False):
-    beez=e.character_name=='Beeztrap';start=time.monotonic();finalists={};logs=[];evaluated=0;timed_out=False
+    beez=e.character_name=='Beeztrap';start=time.monotonic();finalists={};logs=[];evaluated=0;timed_out=False;weapon_pairs=set()
     options=e.options();seeds=seed_states(e,e.d);beam=seeds[:]
+    joint_weapons=beez and (options[12]!=[e.current['gear'][12]] or options[13]!=[e.current['gear'][13]])
     def check():
         if time.monotonic()>=deadline:raise Deadline()
     def utility(s,v):return e.utility(s,v) if beez else e.score(s,v,'balanced')
@@ -64,6 +74,7 @@ def bounded_search(e,deadline,width=5,rounds=1,full=False):
     def retain(s,v=None):
         nonlocal evaluated
         v=e.evaluate(s) if v is None else v;evaluated+=1
+        if beez and len(set(s['gear'][12:]))==2:weapon_pairs.add(tuple(s['gear'][12:]))
         if feasible(s,v):
             key=e.signature(s)
             finalists[key]={'state':copy.deepcopy(s),'stats':v,'cost':e.cost(s),'resources':e.resources(s)}
@@ -110,12 +121,19 @@ def bounded_search(e,deadline,width=5,rounds=1,full=False):
                 b=tuple(s[k][i] for k in ['gear','comp','aug'])
                 if b not in ranked:ranked.append(b)
             bundles.append(ranked)
+            # Weapon slots form one transition: swaps must not require using
+            # one physical sword twice in an intermediate state.
+            if joint_weapons and i==12:
+                logs.append({'slot':SLOTS[i],'evaluations':evaluated,'feasible':len(finalists)})
+                continue
             # Grow a complete-loadout beam immediately; never wait for all slots.
             trials={}
             for s in beam:
-                for bundle in ranked:
+                choices=itertools.product(bundles[12],ranked) if joint_weapons and i==13 else ((b,) for b in ranked)
+                for combined in choices:
                     check();q=copy.deepcopy(s)
-                    for k,z in zip(['gear','comp','aug'],bundle):q[k][i]=z
+                    for slot,bundle in zip([12,13] if joint_weapons and i==13 else [i],combined):
+                        for k,z in zip(['gear','comp','aug'],bundle):q[k][slot]=z
                     if len(set(q['gear']))<14 or e.resources(q)['errors']:continue
                     v=e.evaluate(q)
                     if any('requirement' not in er for er in e.legal(q,v)):continue
@@ -127,11 +145,14 @@ def bounded_search(e,deadline,width=5,rounds=1,full=False):
             logs.append({'slot':SLOTS[i],'evaluations':evaluated,'feasible':len(finalists)})
         for rd in range(1,rounds):
             for i,pool in enumerate(bundles):
+                if joint_weapons and i==13:continue
                 trials={}
                 for s in beam:
-                    for bundle in pool:
+                    choices=itertools.product(pool,bundles[13]) if joint_weapons and i==12 else ((b,) for b in pool)
+                    for combined in choices:
                         check();q=copy.deepcopy(s)
-                        for k,z in zip(['gear','comp','aug'],bundle):q[k][i]=z
+                        for slot,bundle in zip([12,13] if joint_weapons and i==12 else [i],combined):
+                            for k,z in zip(['gear','comp','aug'],bundle):q[k][slot]=z
                         if len(set(q['gear']))<14 or e.resources(q)['errors']:continue
                         v=e.evaluate(q)
                         if any('requirement' not in er for er in e.legal(q,v)):continue
@@ -145,8 +166,9 @@ def bounded_search(e,deadline,width=5,rounds=1,full=False):
                 check();q=copy.deepcopy(s);q['attributes'][j]+=remaining
                 retain(q)
     except Deadline:timed_out=True
+    coverage={'eligible_weapon_candidates':len(set(options[12]+options[13])),'weapon_pair_configurations_evaluated':len(weapon_pairs)} if beez else {}
     if not finalists:
-        return {'status':'no_feasible_loadout','timed_out':timed_out,'evaluations':evaluated,'logs':logs,'feasible_candidates':0,'selected':None}
+        return {**coverage,'status':'no_feasible_loadout','timed_out':timed_out,'evaluations':evaluated,'logs':logs,'feasible_candidates':0,'selected':None}
     choices=list(finalists.values());best=max(choices,key=lambda x:rank(x['state'],x['stats']));reference=best
     if beez:
         near=[x for x in choices if x['stats']['offense_index']>=.97*best['stats']['offense_index'] and x['stats']['health']>=.95*best['stats']['health'] and x['stats']['DA']>=.95*best['stats']['DA'] and x['stats']['armor']>=.95*best['stats']['armor'] and x['cost']['utility_cost']<=best['cost']['utility_cost']]
@@ -173,4 +195,4 @@ def bounded_search(e,deadline,width=5,rounds=1,full=False):
         v['offense_index']=recomputed;v['defense_index']=e.evaluate(s)['defense_index']
     if not feasible(s,v):raise ValueError('Final winner failed full legality, resources, defenses or equip order')
     best['stats']=v
-    return {'status':'best_found_within_limits','timed_out':timed_out,'evaluations':evaluated,'logs':logs,'feasible_candidates':len(finalists),'selected':best,'reference':{'stats':reference['stats'],'cost':reference['cost']},'seconds_search':time.monotonic()-start,'scope':'Bounded complete-loadout beam; no global optimum proof','materiality_percent':3 if beez else 5,'materiality_audit':materiality_audit}
+    return {**coverage,'status':'best_found_within_limits','timed_out':timed_out,'evaluations':evaluated,'logs':logs,'feasible_candidates':len(finalists),'selected':best,'reference':{'stats':reference['stats'],'cost':reference['cost']},'seconds_search':time.monotonic()-start,'scope':'Bounded complete-loadout beam; no global optimum proof','materiality_percent':3 if beez else 5,'materiality_audit':materiality_audit}

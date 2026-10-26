@@ -99,8 +99,7 @@ unique item instances, defensive floors, equip order, and fixed build data.
 Attribute candidates include the existing minimum requirement repair plus bounded
 voluntary Physique/Spirit allocations. The unchanged cost/defensive policies select
 among them. The report states the exact point allocation and remaining points.
-No reset is allowed. Beeztrap's preserved dual-wield, conversion and offense
-uncertainty guards still apply. A defensive repair may be useful without claiming
+No reset is allowed. Beeztrap's supported dual-wield model and offense uncertainty guards still apply. A defensive repair may be useful without claiming
 a certified offensive gain when Cadence blockers remain.
 
 Mal's 5% rule is applied after search to select meaningful, cost-aware changes;
@@ -184,7 +183,7 @@ are not silently reintroduced from old donor snapshots.
 Donor bases with `soulbound` or `untradeable` metadata are rejected in candidate
 admission and final legality. Existing target/shared ownership exceptions remain.
 Level, attribute, equipment type, resources, faction augment eligibility, defenses
-and fixed Beeztrap weapons retain the existing checks. Attached augments on donor
+retain the existing checks. Stage 7 enables supported Cadence sword-pair changes. Attached augments on donor
 gear do not grant the target the donor's faction purchase eligibility.
 
 Reports show character, bag/stash tab or occupied equipped slot, and the exact
@@ -207,11 +206,58 @@ Stage 4 scorer, and suspended disposition. No complete Full Review was run.
 35 focused tests passed, including current imported character state in both
 modes, local-only Quick after a poisoned Full cache, Full donor selection, exact
 source paths, cached-seed rejection, resource refresh and shortages, identical
-selection/scores for identical pools, and Stage 2–5 safeguards. The shared scorer,
-legality code, search implementation/limits and Stage 4 optimization are unchanged.
+selection/scores for identical pools, and Stage 2–5 safeguards. The shared scorer, general legality code, search limits and Stage 4 optimization
+are preserved. Stage 7 adds supported weapon-pair transitions as described below.
 
 Matched deterministic fixture (same beam width/rounds, no attachments): Quick
 exposed 16 slot candidates (3 head choices + 13 fixed slots), 106 evaluations;
 Full exposed 18 (adding shared + donor head choices), 111 evaluations. Full chose
 the donor item; Quick chose its personal-stash item. Counts demonstrate source
 coverage differences, not a claimed real-save speedup. No Full Review was run.
+
+## Stage 7: supported Cadence weapon pairs
+
+Production `CadenceEngine.options` previously pinned weapon slots 12 and 13 to
+the current IDs. It now supplies both slots with the existing pool of level- and
+transfer-eligible Very Fast one-handed swords. Unsupported weapon classes (axes,
+maces, ranged, shields/offhands, two-handed weapons) and unverified speed tags
+remain outside this scorer's supported comparison envelope; this stage does not
+add their combat mechanics. Attribute/level/resource checks and unique physical
+instances remain mandatory. Quick/Full source policies and provenance are unchanged.
+
+Each sword/attachment candidate is evaluated as a complete loadout by the unchanged
+32-scenario Cadence scorer. No independent weapon score is added. The existing
+per-slot shortlists are joined for one weapon-pair beam transition, including
+ordered hand assignments. This permits swaps and double replacements without an
+illegal intermediate duplicate sword. Beam width, deadlines, materiality, cost,
+defensive floors and standalone winner recomputation are preserved. Only shortlisted
+joint bundles enter the pair transition; coverage remains bounded, not exhaustive.
+When only the original assignments are admitted, the prior transition is retained.
+
+Results/reporting record eligible sword-instance counts and distinct ordered
+physical pairs evaluated, alongside total evaluations and timeout status. Pair
+counts exclude using the same instance in both hands. The Stage 4 packet cache
+and all scoring formulas are unchanged. Unsupported conversion/proc/DoT mechanics
+retain the existing comparison flags; no new damage approximation is introduced.
+
+Controlled real-scorer fixtures strengthen synthetic defenses to satisfy existing
+gates and add two distinct high-damage sword instances. The production beam selects
+main-only, offhand-only and simultaneous two-weapon upgrades. Reversed assignments
+are evaluated and change scenario indices. Original-only results match the prior
+fixed implementation. Additional checks cover duplicate/type/speed rejection,
+weapon attachment compatibility, donor provenance, Quick/Full source scope and
+suspended keep/sell. Relevant existing Stage 2–6 tests pass; no Full Review is run.
+See `Stage7_Benchmark.json` for the one matched fixed/unlocked benchmark and
+`benchmark_stage7.py` for its bounded reproducible fixture.
+
+Matched benchmark (same synthetic fixture, width 5, one round, 30-second bound):
+
+|Implementation|Eligible sword instances|Ordered pairs scored|Evaluations|Seconds|Completed|
+|---|---:|---:|---:|---:|---|
+|Prior fixed search|2|1|310|11.2321|Yes|
+|Unlocked pair search|4|7|449|26.8859|Yes|
+
+The unlocked fixture selected both added swords; fixed search retained the
+original pair. Seven scored pairs is bounded coverage, not all twelve possible
+ordered distinct pairs among four swords. This deliberately accepts additional
+computation; it does not change the production timeout or imply real-save timings.

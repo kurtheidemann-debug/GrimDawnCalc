@@ -35,4 +35,5 @@ Quick reviews use the selected character’s current equipment, bags and persona
 stash. Full reviews pool all uploaded characters and shared equipment, with exact
 owner/location reporting. Both modes import current character state and refresh
 supplied attachment-resource data; missing resource files do not reuse old stock.
-Beeztrap’s fixed weapons and suspended keep/sell workflow remain in effect.
+Beeztrap now searches supported Very Fast one-handed sword pairs with the existing
+Cadence model. Keep/sell remains suspended; other weapon classes remain unsupported.

@@ -1,0 +1,26 @@
+{
+  "fixed": {
+    "eligible_weapons": 2,
+    "ordered_pairs_scored": 1,
+    "search_evaluations": 310,
+    "seconds": 11.232089508000058,
+    "completed": true,
+    "selected_pair": [
+      "GD0321",
+      "GD0322"
+    ],
+    "offense_index": 99.99999999999999
+  },
+  "unlocked": {
+    "eligible_weapons": 4,
+    "ordered_pairs_scored": 7,
+    "search_evaluations": 449,
+    "seconds": 26.885908526000094,
+    "completed": true,
+    "selected_pair": [
+      "upgrade0",
+      "upgrade1"
+    ],
+    "offense_index": 174.2314242402955
+  }
+}
