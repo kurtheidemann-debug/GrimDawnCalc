@@ -189,21 +189,13 @@ class Save9AcceptanceTests(unittest.TestCase):
     def test_independent_baseline_and_material_calibration_guard(self):
         for name in ['Beeztrap', 'Mal']:
             e = self.engine(name); directory, config, notices = self.staged[name, 'full']
-            if name == 'Beeztrap':
-                exception, rows = verify_baseline(e, 'full', config, self.decoded[name], self.work)
+            for mode in ['full','quick']:
+                exception, rows = verify_baseline(e, mode, config, self.decoded[name], self.work)
                 self.assertIsNone(exception)
                 self.assertFalse([r for r in rows if r.get('difference')])
-            else:
-                # The current input is correct. A separate existing max-resist
-                # defect must still block certification, not receive a new exception.
-                for mode in ['full','quick']:
-                    with self.assertRaisesRegex(ValueError, 'Chaos resistance shown'):
-                        verify_baseline(e, mode, config, self.decoded[name], self.work)
-                differences=[r for r in e.validate() if r.get('difference')]
-                self.assertEqual([(r['stat'],r['exported'],r['calculated']) for r in differences],
-                                 [('Chaos resistance shown',86,80)])
-                self.assertEqual(next(r for r in e.validate() if r['stat']=='Chaos before cap')['difference'],0)
             self.assertEqual(e.evaluate(e.current)['OA'], 2025 if name == 'Beeztrap' else 2581)
+            chaos=next(x for x in e.evaluate(e.current)['resistances'] if x['name']=='Chaos')
+            self.assertEqual(chaos['cap'],80 if name=='Beeztrap' else 86)
             del e
 
     def test_saved_ultimate_penalties_and_feasibility(self):
@@ -217,6 +209,40 @@ class Save9AcceptanceTests(unittest.TestCase):
                     self.assertEqual([x['shown'] for x in v['resistances'][:3]], [68,64,68])
                     self.assertFalse(e.feasible_production(e.current,v))
                 del e
+
+    def test_actual_silver_and_salt_cap_contributions(self):
+        e=self.engine('Mal');s=copy.deepcopy(e.current)
+        self.assertEqual([e.name(s['comp'][i]) for i in [12,13]],['Imbued Silver','Imbued Silver'])
+        for i in [12,13]:
+            self.assertEqual(e.item_parts(s['gear'][i],s['comp'][i],s['aug'][i])[3]['defensiveChaos'],3)
+        for removed,expected in [(0,86),(1,83),(2,80)]:
+            q=copy.deepcopy(s)
+            for i in [12,13][:removed]:q['comp'][i]=''
+            chaos=next(r for r in e.calculate(q)['resistances'] if r['name']=='Chaos')
+            self.assertEqual(chaos['cap'],expected)
+            self.assertEqual(chaos['raw'],108-20*removed)
+        q=copy.deepcopy(s)
+        for i in [12,13]:q['comp'][i]='records/items/materia/compa_purifiedsalt.dbr'
+        rows=e.calculate(q)['resistances']
+        self.assertEqual(next(r for r in rows if r['name']=='Aether')['cap'],86)
+        self.assertEqual(next(r for r in rows if r['name']=='Chaos')['cap'],80)
+
+    def test_all_real_ascended_max_resist_records(self):
+        from GrimDawn_Optimizer import Engine
+        records=[(p,r) for p,r in self.db.items() if '/lootaffixes/ascended/' in p
+                 and any(r.get(f+'MaxResist',0) for f in core.RES)]
+        self.assertEqual(len(records),9)
+        e=Engine.__new__(Engine);e.db=self.db;e.cache={}
+        e.items={'x':{'save':{'basename':'synthetic-base'},'rolled':{},'completion':{}}}
+        # Only the base wrapper is synthetic; affix and component definitions are real.
+        e.db=dict(self.db);e.db['synthetic-base']={'Class':'ArmorProtective_Head'}
+        for path,r in records:
+            for component,augment in [('', ''),('records/items/materia/compa_runestone.dbr',''),
+                                      ('records/items/materia/compa_runestone.dbr','records/items/enchants/c08a_enchant.dbr')]:
+                e.items['x']['save']['ascended-name']=path;e.cache.clear()
+                cap=e.item_parts('x',component,augment)[3]
+                for f in core.RES:
+                    self.assertEqual(cap[f],r.get(f+'MaxResist',0))
 
     def test_normal_elite_ultimate_use_saved_penalties_in_both_engines(self):
         # Synthetic difficulty changes test only the adapter/constructors, never write a player save.

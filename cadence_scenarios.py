@@ -30,14 +30,7 @@ SCENARIOS=tuple(Scenario(*x) for x in product((1/3, .5), (.5, 1.), (.5, 1.), ('m
 
 def selected_records(engine, state, slot):
     """Catalog records include SAVED attachments: rebuild only live sources once."""
-    item=engine.items[state['gear'][slot]];saved=item['save']
-    records=[]
-    for key in ('basename','prefix-name','suffix-name','modifier-name','relic-bonus','ascended-name'):
-        if key=='modifier-name' and engine.db.get(saved.get('basename'),{}).get('Class')=='ItemArtifact':
-            continue
-        if saved.get(key):records.append(engine.db.get(saved[key],{}))
-    records += [engine.db.get(state[k][slot],{}) for k in ('comp','aug') if state[k][slot]]
-    return [r for r in records if r]
+    return engine.item_records(state['gear'][slot],state['comp'][slot],state['aug'][slot])
 
 
 def selected_modifiers(engine,state):

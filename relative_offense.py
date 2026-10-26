@@ -135,8 +135,7 @@ class RelativeOffense:
  def equipment_records(self,s):
   out=[];mods=collections.defaultdict(list)
   for i,ident in enumerate(s['gear']):
-   x=self.e.items[ident]
-   rs=[r for r in x['records'] if r]+[self.db.get(s[k][i],{}) for k in ['comp','aug']]
+   rs=self.e.item_records(ident,s['comp'][i],s['aug'][i])
    for r in rs:
     out.append((r,1))
     for j in range(1,6):

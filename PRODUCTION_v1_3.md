@@ -112,9 +112,11 @@ authoritative for that baseline, records the exception and preserves existing
 scoring mechanics. During a review matching this accepted baseline, a conservative
 minimum of 86% uncapped Chaos is required of delivered candidates; the exception
 does not invent a candidate's actual cap. It is not a wildcard exception for other characters, altered
-snapshots or unrelated mismatches. Both review modes block new discrepancies. The current level-87 Mal save is not
-covered by the historical level-78 exception; see the separate max-Chaos-cap
-blocker in `docs/STAGE2_RESULTS.md`. No new tolerance or exception was added.
+snapshots or unrelated mismatches. Both review modes block new discrepancies. The current level-87 Mal save now
+reconciles maximum Chaos at 86 through general item-granted cap accumulation;
+no historical exception, new tolerance or character adjustment is needed.
+See `docs/EQUIPMENT_MECHANICS_RECONCILIATION.md` for the confirmed related fixes
+and remaining model limitations.
 
 ## Outputs and disposal policy
 

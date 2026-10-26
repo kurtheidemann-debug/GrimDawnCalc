@@ -30,7 +30,7 @@ class BeeztrapEquipment(PracticalEngine):
   for i,ident in enumerate(s['gear']):
    key=(ident,s['comp'][i],s['aug'][i])
    if key not in self.convcache:
-    rs=[r for r in self.items[ident]['records'] if r]+[self.db.get(s[k][i],{}) for k in ['comp','aug']]
+    rs=self.item_records(ident,s['comp'][i],s['aug'][i])
     records=list(rs)
     for r in rs:
      for j in range(1,6):

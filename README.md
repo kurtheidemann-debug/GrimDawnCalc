@@ -22,6 +22,7 @@ Run `python validate.py` after code/database changes. A matching shipped softwar
 validation certificate skips that suite during routine reviews. No manual
 regression campaign or source game installation is needed for normal saves.
 
-Stage 2 save-state authority is implemented; later v1.3.6 stages are not released.
-See [Stage 2 results](docs/STAGE2_RESULTS.md) for focused tests, cache provenance,
-saved-difficulty behavior, and the current Mal maximum-Chaos-resistance blocker.
+Stage 2 save-state authority and the requested Stage 3 equipment mechanics
+reconciliation are implemented; remaining v1.3.6 features are not released.
+See [Stage 2 results](docs/STAGE2_RESULTS.md) and [mechanics results](docs/EQUIPMENT_MECHANICS_RECONCILIATION.md).
+Both current Save 9 characters pass strict baseline verification; no Full Review was run.
