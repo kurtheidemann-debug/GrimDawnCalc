@@ -21,3 +21,7 @@ tests are bundled. The preserved v1.2 README is in `reference/README_v1_2.md`.
 Run `python validate.py` after code/database changes. A matching shipped software
 validation certificate skips that suite during routine reviews. No manual
 regression campaign or source game installation is needed for normal saves.
+
+Stage 2 save-state authority is implemented; later v1.3.6 stages are not released.
+See [Stage 2 results](docs/STAGE2_RESULTS.md) for focused tests, cache provenance,
+saved-difficulty behavior, and the current Mal maximum-Chaos-resistance blocker.

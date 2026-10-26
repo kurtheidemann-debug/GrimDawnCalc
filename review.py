@@ -28,7 +28,9 @@ def workflow_lock():
 
 def verify_baseline(e,mode,config,source_character,work):
     exception=known_exception(e,config,source_character);rows=[]
-    if mode=='full':
+    # Both import modes use current save state. Quick must not bypass a material
+    # model discrepancy merely because it reuses account-resource snapshots.
+    if mode in ['quick','full']:
         baseline=bridge({'operation':'baseline','database':str(ROOT/'database.json.gz'),'localization':str(ROOT/'localization.json'),'character':str(e.d/'mal.json')},pathlib.Path(work)/'bridge',timeout=90)
         e.exported=baseline;rows=e.validate()
         mismatches=[r for r in rows if r.get('difference')]
@@ -52,7 +54,11 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
         request={'operation':'decode','characters':[str(p) for p in chars]}
         if mode=='full' and stash:request['stash']=str(stash)
         # Cache only raw read-only decoder output, keyed by every selected byte.
-        key=digest({'characters':[(p.relative_to(work/'save').as_posix(),hashlib.sha256(p.read_bytes()).hexdigest()) for p in chars], 'stash':hashlib.sha256(stash.read_bytes()).hexdigest() if mode=='full' and stash else None,'bridge':hashlib.sha256((ROOT/'save_bridge.clj').read_bytes()).hexdigest()})
+        key=digest({'characters':[(p.relative_to(work/'save').as_posix(),hashlib.sha256(p.read_bytes()).hexdigest()) for p in chars],
+                    'quests':[(p.relative_to(work/'save').as_posix(),hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted((work/'save').rglob('quests.gdd'))],
+                    'stash':hashlib.sha256(stash.read_bytes()).hexdigest() if mode=='full' and stash else None,
+                    'decoder':hashlib.sha256((ROOT/'gd-edit-standalone.jar').read_bytes()).hexdigest(),
+                    'bridge':hashlib.sha256((ROOT/'save_bridge.clj').read_bytes()).hexdigest()})
         cache=ROOT/'cache'/'decoded';cache.mkdir(parents=True,exist_ok=True);cached=cache/(key+'.json')
         if cached.exists():decoded=json.loads(cached.read_text())
         else:

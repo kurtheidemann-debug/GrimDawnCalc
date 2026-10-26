@@ -1,6 +1,6 @@
 # Production Roadmap
 
-Status: Stage 1 documentation; remaining stages are planned and must be separately implemented and verified.
+Status: Stages 1 and 2 implemented. Stages 3–6 remain planned and must be separately implemented and verified. See `STAGE2_RESULTS.md` for the separate Mal mechanics blocker; this is not the complete v1.3.6 release.
 
 ## Execution discipline
 

@@ -1,5 +1,5 @@
 """Read-only save import, incremental seeded rolls, and transactional profiles."""
-import copy, functools, gzip, hashlib, json, os, pathlib, shutil, struct, subprocess, tempfile, zipfile
+import copy, functools, gzip, hashlib, json, math, os, pathlib, shutil, struct, subprocess, tempfile, zipfile
 from GrimDawn_Optimizer import ROOT
 from item_identity import full_name
 
@@ -27,18 +27,30 @@ def progression_missing(character):
                 missing.append(f'skills[{i}].{field}')
     return missing
 
-def import_quick_progression(current,previous,notices):
-    """Use one complete progression snapshot; never fill individual missing fields."""
-    missing=progression_missing(current)
-    source=current
-    if missing:
-        if progression_missing(previous):
-            raise ValueError('Incomplete progression decode; no complete previous snapshot. Missing/unusable fields: '+', '.join(missing))
-        source=previous
-        notices.append('WARNING: Incomplete progression decode. Missing/unusable fields: '+', '.join(missing)+'. Using the ENTIRE previous progression snapshot (skills, devotions, bindings and unspent points); no new progression fields were mixed in.')
-    else:
-        notices.append('Current save progression imported authoritatively: skill ranks, devotion allocations and bindings; unspent skill points '+str(current['skill-points'])+', unspent devotion points '+str(current['devotion-points'])+'. Equipment scoring uses this snapshot; no skill or devotion points allocated.')
-    for field in PROGRESSION:current[field]=copy.deepcopy(source[field])
+def require_current_state(character):
+    """Missing current state is a decoder/input error, never a profile fallback."""
+    missing=progression_missing(character)
+    for key in ['physique','cunning','spirit','iron']:
+        value=character.get(key)
+        if type(value) not in [int,float] or not math.isfinite(value) or value<0:missing.append(key)
+    for key in ['character-level','attribute-points']:
+        value=character.get(key)
+        if type(value) is not int or value<0:missing.append(key)
+    difficulty=character.get('last-difficulty')
+    if type(difficulty) is not int or difficulty<0 or difficulty&3 not in [0,1,2]:missing.append('last-difficulty')
+    if type(character.get('use-alt-weaponset')) is not bool:missing.append('use-alt-weaponset')
+    equipment=character.get('equipment')
+    if not isinstance(equipment,list) or len(equipment)!=12 or any(not isinstance(x,dict) or 'basename' not in x for x in equipment):missing.append('equipment')
+    sets=character.get('weapon-sets')
+    if not isinstance(sets,list) or len(sets)!=2 or any(not isinstance(x,dict) or not isinstance(x.get('items'),list) or len(x['items'])!=2 or any(not isinstance(it,dict) or 'basename' not in it for it in x['items']) for x in sets):missing.append('weapon-sets')
+    factions=character.get('faction-values')
+    if not isinstance(factions,list) or not factions or any(not isinstance(x,dict) or type(x.get('faction-value')) not in [int,float] or not math.isfinite(x['faction-value']) for x in factions):missing.append('faction-values')
+    for key in ['inventory-sacks','stashes']:
+        if not isinstance(character.get(key),list):missing.append(key)
+    if missing:raise ValueError('Incomplete current save state; no historical fallback: '+', '.join(missing))
+
+def difficulty_name(character):
+    return ('Normal','Elite','Ultimate')[int(character['last-difficulty'])&3]
 
 def digest(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -61,6 +73,12 @@ def roll_key(s):
 @functools.lru_cache(maxsize=1)
 def database():
     with gzip.open(ROOT/'database.json.gz','rt') as f:return json.load(f)
+
+@functools.lru_cache(maxsize=1)
+def roll_source_fingerprint():
+    """Only reuse derived rolls certified against this decoder and static data."""
+    return digest({p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+                   for p in ['database.json.gz','gd-edit-standalone.jar','save_bridge.clj']})
 
 
 def bridge(request,work,timeout=25):
@@ -103,7 +121,8 @@ def scan_items(value,owner,location=''):
 
 
 def resolve_items(raw,previous,work):
-    db=database();cache={roll_key(x['save']):x for x in previous if x.get('resolved',True) and x.get('rolled') is not None}
+    db=database();provenance=roll_source_fingerprint()
+    cache={roll_key(x['save']):x for x in previous if x.get('resolved',True) and x.get('rolled') is not None and x.get('roll_source')==provenance}
     pending={};records={}
     for x in raw:
         missing=[x['save'].get(f) for f in FIELDS if x['save'].get(f) and x['save'][f] not in db]
@@ -125,6 +144,7 @@ def resolve_items(raw,previous,work):
         x.update({k:copy.deepcopy(r.get(k)) for k in ['rolled','worn-rolled','completion','requirements']})
         x['records']=[db.get(x['save'].get(f)) for f in FIELDS]
         x['resolved']=not x.get('unresolved_reason') and r.get('rolled') is not None and not (r.get('requirements') or {}).get('error')
+        if x['resolved']:x['roll_source']=provenance
         if not x['resolved']:x.setdefault('unresolved_reason','Seeded rolls or requirements could not be decoded')
         identity=physical_key(x);n=occurrences.get(identity,0);occurrences[identity]=n+1
         x['id']='I'+identity[:18]+'-'+str(n)
@@ -173,26 +193,15 @@ def read_materials(path):
 
 def stage_profile(name,character,raw_stash,mode,save_root,work):
     source=ROOT/'profiles'/name;d=pathlib.Path(work)/'profiles'/name;shutil.copytree(source,d,ignore=shutil.ignore_patterns(*STATIC))
-    config=json.loads((source/'profile.json').read_text());old=json.loads((source/'mal.json').read_text());previous=json.loads((source/'catalog.json').read_text());notices=[]
+    config=json.loads((source/'profile.json').read_text());previous=json.loads((source/'catalog.json').read_text());notices=[]
     m=copy.deepcopy(character)
+    require_current_state(m)
     if m['character-name']!=name or not 1<=m['character-level']<=100:raise ValueError('Invalid character identity or level')
+    notices.append('Current save is authoritative for level, attributes, points, skills, devotions, bindings, equipment, reputation and saved difficulty: '+difficulty_name(m)+'. No historical character-state fallback.')
+    if 'quest-progress' not in m:notices.append('Quest progression was not exposed by the decoder; no historical quest state substituted. Vendor/service access remains outside Stage 2.')
+    elif not m['quest-progress']:notices.append('No main-campaign quest files supplied; quest progression unavailable. No historical quest state substituted.')
     if mode=='quick':
-        import_quick_progression(m,old,notices)
-        for k in ['hotbars','skill-sets']:
-            if k not in character and k in old:
-                m[k]=copy.deepcopy(old[k]);notices.append('No explicit '+k+' data; retained profile value.')
-            elif character.get(k)!=old.get(k):
-                notices.append('Explicit saved '+k+' change imported; optimizer keeps the imported configuration fixed.')
-        if 'faction-values' not in character:
-            m['faction-values']=copy.deepcopy(old['faction-values'])
-        elif character['faction-values']!=old['faction-values']:
-            notices.append('Explicit saved faction reputation updated; eligible augments recalculated.')
-        m['last-difficulty']=(m['last-difficulty']&~3)|config['difficulty']
-        notices.append('Shared stash, recipes and crafting resources reused from this profile; explicit character progression takes precedence.')
-    else:
-        saved_difficulty=int(m['last-difficulty'])&3
-        m['last-difficulty']=(m['last-difficulty']&~3)|config['difficulty']
-        if saved_difficulty!=config['difficulty']:notices.append('Saved difficulty differs; retained the independent profile optimization target.')
+        notices.append('Quick mode still reuses shared stash, recipes and crafting-resource snapshots; account inventory/acquisition refresh changes are deferred to later stages.')
     # Current calculator addresses the active set as weapon-set 0.
     if m.get('use-alt-weaponset'):
         m['weapon-sets'][0],m['weapon-sets'][1]=m['weapon-sets'][1],m['weapon-sets'][0]
@@ -229,7 +238,8 @@ def stage_profile(name,character,raw_stash,mode,save_root,work):
             (d/'recipes.json').write_text(json.dumps(recipes))
         else:notices.append('No recipe progression supplied; previous recipe snapshot retained.')
         if raw_stash is None:notices.append('No shared stash supplied; previous stash retained.')
-    config.update(reference_level=m['character-level'],revision=config.get('revision',0)+1)
+    # These are output metadata only; neither controls the next save import.
+    config.update(difficulty=int(m['last-difficulty'])&3,reference_level=m['character-level'],revision=config.get('revision',0)+1)
     (d/'profile.json').write_text(json.dumps(config,indent=2));link_static(d)
     return d,config,notices,new_count
 

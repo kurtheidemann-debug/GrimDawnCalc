@@ -12,7 +12,7 @@ class UnscoredWeaponOffense:
 class BeeztrapEquipment(PracticalEngine):
  def __init__(self,directory=DATA):
   super().__init__(directory);self.model=UnscoredWeaponOffense();self.memo={};self.base=self.calculate(self.current);self.eval_count=0
-  self.anchor=self.base;self.ultimate_pen=difficulty_penalties(self.db,2);self.target_ultimate=True
+  self.anchor=self.base;self.ultimate_pen=difficulty_penalties(self.db,2);self.target_ultimate=(int(self.mal['last-difficulty'])&3)==2
   self.protected=[p for p in self.current['skills'] if p.endswith(('cadence1.dbr','cadence2.dbr','cadence3.dbr','wpattack0.dbr','nightbladeenchant1.dbr')) or self.db[p].get('skillChanceWeight')]
   self.guard_stats=['characterAttackSpeedModifier','offensivePierceModifier','offensivePhysicalModifier','offensiveSlowPhysicalModifier','offensiveLifeLeechMin']
   self.convcache={};self.endpoint_audit=[]
@@ -103,7 +103,7 @@ class BeeztrapEquipment(PracticalEngine):
   result['maximum_offense_status']='NOT_ESTABLISHED'
   result['offense_status']='NOT_RANKED; internal offense_index=100 is neutral, not a gain estimate.'
   result['interpretation']='Defensive equipment candidates retaining both swords, attachments and recognized offensive inputs. Maximum overall offense is not established by v1.2.'
-  result['target_difficulty']='Ultimate projection' if self.target_ultimate else 'Saved Elite'
+  result['target_difficulty']=('Normal','Elite','Ultimate')[int(self.mal['last-difficulty'])&3]
   result['baseline']=self.evaluate(self.current);result['baseline_state']=self.current;result['baseline_validation']=self.validate()
   result['saved_configuration_hash']=self.saved_configuration;result['skills_fixed']=self.current['skills'];result['devotions_fixed']=self.current['devotions'];result['bindings_fixed']=self.current['bindings']
   for en in result['chosen'].values():
@@ -148,15 +148,15 @@ def key_for(args):
  for name in ['GrimDawn_Optimizer.py','practical_optimizer.py','relative_offense.py']:
   h.update((ROOT/name).read_bytes())
  for name in ['database.json.gz','catalog.json','mal.json','baseline.json','penalties.json','materials.json','recipes.json','localization.json']:h.update((DATA/name).read_bytes())
- h.update(str((args.width,args.rounds,args.elite)).encode());return h.hexdigest()
+ h.update(str((args.width,args.rounds)).encode());return h.hexdigest()
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--width',type=int,default=16);ap.add_argument('--rounds',type=int,default=2);ap.add_argument('--elite',action='store_true');ap.add_argument('--attachments-only',action='store_true');ap.add_argument('--force',action='store_true');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--width',type=int,default=16);ap.add_argument('--rounds',type=int,default=2);ap.add_argument('--attachments-only',action='store_true');ap.add_argument('--force',action='store_true');a=ap.parse_args()
  # Shared database bytes are restored locally after extracting the compact ZIP.
  for name in ['database.json.gz','localization.json','guide70.json','guide83.json']:
   if not (DATA/name).exists():shutil.copy2(ROOT/name,DATA/name)
  out=DATA/'results';out.mkdir(exist_ok=True);key=key_for(a);target=out/'results.json'
  if target.exists() and not a.force and json.loads(target.read_text()).get('input_hash')==key:print('Cached Beeztrap candidates unchanged:',target);return
- e=BeeztrapEquipment();e.target_ultimate=not a.elite;e.attachments_only=a.attachments_only
+ e=BeeztrapEquipment();e.attachments_only=a.attachments_only
  discrepancies=[x for x in e.validate() if x['difference']]
  if discrepancies:raise SystemExit('Baseline validation failed: '+str(discrepancies))
  r=e.run(a.width,a.rounds);r['input_hash']=key;target.write_text(json.dumps(r,indent=2));print('Final candidates:',list(r['chosen']),flush=True)
