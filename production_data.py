@@ -166,7 +166,8 @@ def select_character(decoded,requested=None):
     if len(candidates)!=len(decoded['characters']):raise ValueError('Duplicate character identities in upload')
     supported=[n for n in candidates if (ROOT/'profiles'/n/'profile.json').exists()]
     if requested:
-        if requested not in supported:raise ValueError('Requested profile missing from supplied save: '+requested)
+        if requested not in candidates:raise ValueError('Requested character missing from supplied save: '+requested)
+        if requested not in supported:raise ValueError('No validated scoring module/profile registered for '+requested+'; combat configuration overrides cannot add an unsupported skill module')
         return requested,candidates
     if len(supported)==1:return supported[0],candidates
     default=json.loads((ROOT/'settings.json').read_text())['default_character']

@@ -9,6 +9,7 @@ from pathlib import Path
 from GrimDawn_Optimizer import at, family
 from relative_offense import payload_of, conversions, convert_payload, TYPES
 from cadence_inputs import extract_inputs, restore_shared_inputs
+from combat_configuration import cadence_weapon_reason
 
 CADENCE='records/skills/playerclass01/cadence1.dbr'
 MOMENTUM='records/skills/playerclass01/cadence3.dbr'
@@ -65,7 +66,7 @@ def route(payload, local, global_conversion, piercing):
 
 
 def speed_factor(adjustments, percent, mode):
-    # Dimensionless sword-speed proxy, not attacks/sec. Conventional 200%
+    # Dimensionless one-handed base-speed proxy, not attacks/sec. Conventional 200%
     # ceiling is an assumption. Slow-hand case deliberately discounts mixed speed.
     hands=[max(.1,1+x) for x in adjustments]
     base=sum(hands)/2 if mode=='mean' else min(hands)
@@ -127,12 +128,10 @@ class CadenceScorer:
         if state.get('respec_attributes'):raise ValueError('Attribute respec unsupported')
         v=e.calculate(state);audit=extract_inputs(e,state,v)
         if audit['primary_attack']!=CADENCE:raise ValueError('This bounded adapter supports saved Cadence only')
-        if not all(w['class']=='WeaponMelee_Sword' for w in audit['weapons']):
-            raise ValueError('Mixed weapon classes have no supported speed envelope')
+        for ident in state['gear'][12:]:
+            reason=cadence_weapon_reason(e.items[ident])
+            if reason:raise ValueError('Unsupported Cadence weapon '+ident+': '+reason)
         shared,local,global_records,limits=self.equipment_sources(state)
-        for weapon in audit['weapons']:
-            if weapon['speed_tag']!='Speed:  Very Fast':
-                limits.append('Unverified base-speed tag outside the two current Very Fast swords')
         eff=v['effective_skills'];active={s['skill-name'] for s in e.mal['skills'] if s.get('skill-active')}
         active|={p for p in state['skills'] if e.db[p].get('Class') in ['Skill_BuffSelfToggled','Skill_BuffRadiusToggled']}
         running=set().union(*(family(p,e.db.get(p,{})) for p in active))

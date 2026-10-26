@@ -69,9 +69,9 @@ class WeaponSearchTests(unittest.TestCase):
   e=self.e;s=copy.deepcopy(e.current);s['gear'][13]=s['gear'][12];v=e.evaluate(s)
   self.assertIn('Same physical item used twice',e.legal(s,v,True))
   original=e.items['upgrade0']['records'][0]
-  with patch.dict(e.items['upgrade0'],{'records':[{'Class':'WeaponMelee_Axe','characterBaseAttackSpeedTag':'Speed:  Very Fast'}]}):
+  with patch.dict(e.items['upgrade0'],{'records':[{'Class':'WeaponMelee_Sword2h','characterBaseAttackSpeedTag':'Speed:  Very Fast'}]}):
    self.assertFalse(e.supported_weapon('upgrade0'))
-  with patch.dict(e.items['upgrade0'],{'records':[{'Class':'WeaponMelee_Sword','characterBaseAttackSpeedTag':'Speed:  Slow'}]}):self.assertFalse(e.supported_weapon('upgrade0'))
+  with patch.dict(e.items['upgrade0'],{'worn-rolled':{},'rolled':{},'records':[{'Class':'WeaponMelee_Sword','characterBaseAttackSpeed':float('nan'),'characterBaseAttackSpeedTag':'Speed:  Slow'}]}):self.assertFalse(e.supported_weapon('upgrade0'))
   s=copy.deepcopy(e.current);s['comp'][12]='records/items/materia/compa_wardstone.dbr'
   self.assertIn('comp slot Weapon',e.legal(s,e.evaluate(s),True))
   self.assertTrue(e.compatible(e.current['comp'][12],13,e.current['gear'][13]))
