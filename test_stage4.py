@@ -18,7 +18,7 @@ class ReviewRoutingTests(unittest.TestCase):
     current={'gear':list(range(14)),'skills':{},'devotions':{},'bindings':{}}
     e=SimpleNamespace(cat=[],current=current,mal={'character-level':76},evaluate=lambda s:{})
     def decode(req,work):return {'characters':[], 'stash':{'present':True}}
-    with patch.multiple(review,workflow_lock=__import__('contextlib').nullcontext,extract_zip=lambda *a:([],None),bridge=decode,select_character=lambda *a:('Beeztrap',{'Beeztrap':{},'Donor':{}}),stage_profile=stage_import,CadenceEngine=lambda *a:e,verify_baseline=lambda *a:(None,[]),bounded_search=lambda *a,**k:{'selected':None},report=lambda *a:None), patch('item_valuation.value_owned_equipment',side_effect=AssertionError('valuation invoked')),patch('inventory_decisions.apply_dispositions',side_effect=AssertionError('disposition invoked')),patch('inventory_decisions.write_inventory_report',side_effect=AssertionError('report invoked')),patch('production_report.disposition',side_effect=AssertionError('disposition invoked')):
+    with patch.multiple(review,workflow_lock=__import__('contextlib').nullcontext,extract_zip=lambda *a:([],None),bridge=decode,select_character=lambda *a:('Beeztrap',{'Beeztrap':{},'Donor':{}}),stage_profile=stage_import,CadenceEngine=lambda *a:e,verify_baseline=lambda *a:(None,[]),resolve_configuration=lambda *a:{'selected':'dual_wield_melee','source':'active_save'},bounded_search=lambda *a,**k:{'selected':None},report=lambda *a:None), patch('item_valuation.value_owned_equipment',side_effect=AssertionError('valuation invoked')),patch('inventory_decisions.apply_dispositions',side_effect=AssertionError('disposition invoked')),patch('inventory_decisions.write_inventory_report',side_effect=AssertionError('report invoked')),patch('production_report.disposition',side_effect=AssertionError('disposition invoked')):
      r=review.perform(root/'unused.zip',mode,'Beeztrap',out,60,commit=False)['Beeztrap']
     self.assertIn('Donor',calls[0])
     self.assertEqual(r['inventory_disposition'],'suspended')
@@ -28,6 +28,10 @@ class ReviewRoutingTests(unittest.TestCase):
   import subprocess
   for p in ['beeztrap_equipment.py']:
    self.assertEqual(Path(p).read_bytes(),subprocess.check_output(['git','show','c9339ece9ddc324894ee0d9c73e5b9854936eedc:'+p]))
-  self.assertEqual(Path('cadence_scenarios.py').read_bytes(),subprocess.check_output(['git','show','1cb13dbcc1debcd7bd668f1d319e10fa1ccb280c:cadence_scenarios.py']))
+  import ast
+  def strength(source):
+   tree=ast.parse(source)
+   return ast.dump(next(n for n in ast.walk(tree) if isinstance(n,ast.FunctionDef) and n.name=='strength'))
+  self.assertEqual(strength(Path('cadence_scenarios.py').read_text()),strength(subprocess.check_output(['git','show','021fad95a9fae23d06810207337f256c38df9aff:cadence_scenarios.py']).decode()))
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,42 @@
+{
+  "stage7_swords": {
+    "configuration": {
+      "detected": "dual_wield_melee",
+      "selected": "dual_wield_melee",
+      "source": "active_save",
+      "reference": "current_uploaded_loadout"
+    },
+    "eligible_by_type": {
+      "WeaponMelee_Sword": 2
+    },
+    "weapon_configurations_evaluated": 2,
+    "evaluations": 379,
+    "seconds": 16.46279946300001,
+    "completed": true,
+    "selected_pair": [
+      "GD0321",
+      "GD0322"
+    ]
+  },
+  "configured_melee": {
+    "configuration": {
+      "detected": "dual_wield_melee",
+      "selected": "dual_wield_melee",
+      "source": "override",
+      "reference": "current_uploaded_loadout"
+    },
+    "eligible_by_type": {
+      "WeaponMelee_Sword": 2,
+      "WeaponMelee_Axe": 1,
+      "WeaponMelee_Mace": 1
+    },
+    "weapon_configurations_evaluated": 8,
+    "evaluations": 418,
+    "seconds": 19.507793003999723,
+    "completed": true,
+    "selected_pair": [
+      "upgrade0",
+      "upgrade1"
+    ]
+  }
+}

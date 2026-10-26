@@ -261,3 +261,54 @@ The unlocked fixture selected both added swords; fixed search retained the
 original pair. Seven scored pairs is bounded coverage, not all twelve possible
 ordered distinct pairs among four swords. This deliberately accepts additional
 computation; it does not change the production timeout or imply real-save timings.
+
+## Stage 8: combat configuration and module capabilities
+
+`review.py --combat-configuration CONFIG` accepts `dual_wield_melee`,
+`one_hand_shield`, `two_hand_melee`, `one_hand_caster_offhand`, or `ranged`.
+Without the flag, the configuration is derived only from the uploaded active
+weapon set. Inactive sets, inventory contents, character names and historical
+profiles do not determine the configuration. The normal registered character
+profile still selects its scoring module. Unknown profiles fail explicitly.
+
+|Scoring module|Validated configuration in production|
+|---|---|
+|Cadence|dual_wield_melee: one-handed swords, axes, maces with finite numeric base-speed adjustments greater than -1|
+|Lightning Totem|one_hand_caster_offhand|
+|Werewolf / pets / unregistered profiles|No new support introduced|
+
+No speed-tag preference or speed minimum is used. The existing formulas already
+consume each weapon's numeric base-speed adjustment, local damage, piercing and
+skill modifiers; class/speed admission guards are generalized without changing
+Cadence strength arithmetic, scenario weights or the Stage 4 packet cache.
+Missing/invalid numeric speed data and other melee classes remain explicit
+unsupported cases. The generic policy recognizes shield, 2H and ranged structures
+but recognition alone does not enable a scoring/search adapter.
+
+A same-configuration explicit override is accepted and reported. **Style-changing
+overrides remain blocked**: neither current module has a validated reference
+builder for switching configurations. For example, a saved shield setup requested
+as Cadence DW fails before engine construction/search with a specific reference
+blocker; Maldirge fails because no validated scoring profile is registered.
+No baseline is fabricated. A successful shield-to-DW reference/materiality test
+cannot be claimed in this stage; it requires a separately validated adapter.
+
+For supported requests, the reference remains the current uploaded loadout.
+Existing implementation-cost weights and materiality rules are reused once;
+there is no new penalty or attachment redistribution layer. The blocked
+style-change fixture verifies unchanged character/attachment data and no
+recommendation. Quick/Full sources, provenance, resource accounting and Stage 7
+ordered pair transitions are preserved. Keep/sell remains suspended.
+
+Focused checks cover active-set inference for all five structures, same-style
+override, explicit rejection of unsupported module/style changes, numeric-speed
+admission, real-scorer slower axe selection with Cadence rank bonuses, mace
+admission, and exact equality of prior sword snapshots and all 32 scenario scores.
+Relevant Stage 2–6 safeguards pass. See Stage8_Benchmark.json for the single
+bounded matched fixture; no production Quick/Full Review was run.
+
+Matched fixture (width 5, one round, 30-second bound): inferred sword DW admitted
+2 swords, evaluated 2 ordered configurations / 379 loadouts in 16.4628 seconds;
+explicit DW admitted 2 swords + 1 axe + 1 mace, evaluated 8 configurations / 418
+loadouts in 19.5078 seconds. Both completed within the bound. The latter selected
+the slower axe and mace. This is source/admission coverage, not a speedup claim.

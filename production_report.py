@@ -177,7 +177,8 @@ def known_exception(e,config,source_character):
 def report(e,r,path):
     b=r['baseline'];selected=r.get('selected');ex=r.get('accepted_exception');name=e.character_name
     lines=[f'# {name} — Gear Review v1.3.4','',f"Level **{e.mal['character-level']}** · {difficulty_name(e.mal)} · {r['mode'].title()} mode · materiality **{r['materiality_percent']}%**.",'',f"Status: **{r['status']}**. {r.get('scope','')}."]
-    if name=='Beeztrap':lines+=['',f"Weapon search: {r.get('eligible_weapon_candidates',0)} eligible Very Fast one-handed swords; {r.get('weapon_pair_configurations_evaluated',0)} distinct ordered physical pairs evaluated. Other weapon classes/speed tags are outside the existing Cadence model. Pair coverage is bounded by the existing joint attachment shortlists and beam."]
+    if r.get('combat_configuration'):lines+=['','Combat configuration: `'+r['combat_configuration']['selected']+'` ('+r['combat_configuration']['source']+'); reference: current uploaded loadout.']
+    if name=='Beeztrap':lines+=['',f"Weapon search: {r.get('eligible_weapon_candidates',0)} eligible supported one-handed melee weapons; {r.get('weapon_pair_configurations_evaluated',0)} distinct ordered physical pairs evaluated. Weapons without validated class/numeric speed inputs are excluded. Pair coverage is bounded by the existing joint attachment shortlists and beam."]
     if r.get('timed_out'):lines+=['','The runtime bound was reached. This is the best fully evaluated feasible loadout retained before the bound.']
     if ex:lines+=['','Accepted baseline exception: **Chaos displays 86% in the decoder, 80% in the optimizer; both have 105% uncapped**. Decoder 86% is authoritative for this exact baseline. The established scoring model is preserved.']
     if selected:lines+=action_checklist(e,selected['state'])

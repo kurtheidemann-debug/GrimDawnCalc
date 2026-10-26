@@ -35,5 +35,8 @@ Quick reviews use the selected character’s current equipment, bags and persona
 stash. Full reviews pool all uploaded characters and shared equipment, with exact
 owner/location reporting. Both modes import current character state and refresh
 supplied attachment-resource data; missing resource files do not reuse old stock.
-Beeztrap now searches supported Very Fast one-handed sword pairs with the existing
-Cadence model. Keep/sell remains suspended; other weapon classes remain unsupported.
+Combat configuration defaults to the uploaded active weapon set. Use
+`--combat-configuration dual_wield_melee` for an explicit supported configuration.
+Cadence admits one-handed swords, axes and maces with valid numeric speed inputs;
+style-changing overrides remain blocked pending a validated reference builder.
+Keep/sell remains suspended.

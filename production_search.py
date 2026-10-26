@@ -8,14 +8,23 @@ from beeztrap_production import ProductionEngine
 from beeztrap_equipment import BeeztrapEquipment
 from beeztrap_materiality import BeeztrapMateriality
 from cadence_scenarios import SCENARIOS,compare_scores
+from combat_configuration import cadence_weapon_reason,filter_options,detect_configuration,configuration_for_classes
 
 class Deadline(Exception):pass
 
 class MalEngine(PracticalEngine):
     def __init__(self,directory):
         super().__init__(directory);self.target_ultimate=(int(self.mal['last-difficulty'])&3)==2
+        self.combat_configuration=detect_configuration(self.mal,self.db)
     def options(self):
-        return Engine.options(self)
+        return filter_options(self,Engine.options(self),self.combat_configuration)
+    def legal(self,s,v,full=False):
+        errors=super().legal(s,v,full)
+        try:
+            actual=configuration_for_classes(*(self.items[i]['records'][0].get('Class','') for i in s['gear'][12:]))
+            if actual!=self.combat_configuration:errors.append('Equipment does not match combat configuration '+self.combat_configuration)
+        except ValueError as ex:errors.append(str(ex))
+        return errors
     def deficits(self,v):
         # Scoped accepted baseline cap is a conservative review floor, not a new mechanic.
         return super().deficits(v)+max(0,getattr(self,'minimum_chaos_raw',0)-v['resistances'][8]['raw'])
@@ -29,17 +38,16 @@ class CadenceEngine(ProductionEngine):
         self.memo={};self.comparisons={}
     def options(self):
         opts=Engine.options(self)
-        # The existing scorer verifies only this class/base-speed envelope.
+        opts=filter_options(self,opts,getattr(self,'combat_configuration','dual_wield_melee'))
         swords=[ident for ident in opts[12] if self.supported_weapon(ident)]
         opts[12]=swords;opts[13]=swords[:]
         return opts
     def supported_weapon(self,ident):
-        base=self.items[ident]['records'][0]
-        return base.get('Class')=='WeaponMelee_Sword' and base.get('characterBaseAttackSpeedTag')=='Speed:  Very Fast'
+        return cadence_weapon_reason(self.items[ident]) is None
     def legal(self,s,v,full=False):
         errors=super().legal(s,v,full)
         if not all(self.supported_weapon(i) for i in s['gear'][12:]):
-            errors.append('Unsupported Cadence pair: requires two Very Fast one-handed swords')
+            errors.append('Unsupported Cadence pair: requires two one-handed swords/axes/maces with valid numeric base-speed adjustments')
         return errors
 
 

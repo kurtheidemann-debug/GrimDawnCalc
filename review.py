@@ -5,6 +5,7 @@ from GrimDawn_Optimizer import ROOT
 from production_data import bridge,database,extract_zip,select_character,stage_profile,commit_profile,digest,link_static
 from production_search import MalEngine,CadenceEngine,bounded_search,export_seeds
 from production_report import report,known_exception
+from combat_configuration import CONFIGURATIONS,resolve_configuration
 
 @contextlib.contextmanager
 def workflow_lock():
@@ -46,7 +47,7 @@ def verify_baseline(e,mode,config,source_character,work):
     return exception,rows
 
 
-def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commit=True):
+def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commit=True,combat_configuration=None):
     start=time.monotonic();out=pathlib.Path(out or ROOT/'reviews'/'latest').resolve();out.mkdir(parents=True,exist_ok=True)
     if seconds<10:raise ValueError('Budget must be at least 10 seconds')
     with workflow_lock(),tempfile.TemporaryDirectory(prefix='gd-review-',dir=ROOT) as tmp:
@@ -69,7 +70,9 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
         for name in names:
             staged,config,notices,new_count=stage_profile(name,candidates[name],decoded.get('stash'),mode,work/'save',work,candidates)
             if len(candidates)>1 and character is None and mode=='quick':notices.append('Multiple characters uploaded; selected persistent default '+name+'. Use --character to select another profile.')
+            configuration=resolve_configuration(candidates[name],database(),'totem' if name=='Mal' else 'cadence',combat_configuration)
             e=(MalEngine if name=='Mal' else CadenceEngine)(staged)
+            e.combat_configuration=configuration['selected']
             exception,validation=verify_baseline(e,mode,config,candidates[name],work)
             if exception and name=='Mal':
                 e.minimum_chaos_raw=exception['decoder_cap']
@@ -79,7 +82,7 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
             deadline=(start+seconds-6) if mode=='quick' else time.monotonic()+seconds
             result=bounded_search(e,deadline,width=width,rounds=1 if mode=='quick' else 3,full=mode=='full')
             winner=result.get('selected');state=winner['state'] if winner else None
-            result.update(version='1.3.4',character=name,level=e.mal['character-level'],mode=mode,baseline=baseline,baseline_state=e.current,accepted_exception=exception,baseline_validation=validation,materiality_percent=config['materiality']*100,notices=notices,new_item_rolls=new_count,inventory_disposition='suspended',elapsed_seconds=time.monotonic()-start,profile_revision=config['revision'])
+            result.update(combat_configuration=configuration,version='1.3.4',character=name,level=e.mal['character-level'],mode=mode,baseline=baseline,baseline_state=e.current,accepted_exception=exception,baseline_validation=validation,materiality_percent=config['materiality']*100,notices=notices,new_item_rolls=new_count,inventory_disposition='suspended',elapsed_seconds=time.monotonic()-start,profile_revision=config['revision'])
             result['equipment_sources']=[{'id':item['id'],'owner':item['owner'],
                 'location':item.get('source_location',item['location']),'save':item['save']}
                 for item in e.cat if winner and item['id'] in winner['state']['gear']]
@@ -100,11 +103,11 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('save',type=pathlib.Path);p.add_argument('--mode',choices=['quick','full'],default='quick');p.add_argument('--character',choices=['Mal','Beeztrap']);p.add_argument('--out',type=pathlib.Path);p.add_argument('--seconds',type=float,default=60);p.add_argument('--width',type=int,default=5);p.add_argument('--no-commit',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('save',type=pathlib.Path);p.add_argument('--mode',choices=['quick','full'],default='quick');p.add_argument('--character');p.add_argument('--out',type=pathlib.Path);p.add_argument('--seconds',type=float,default=60);p.add_argument('--width',type=int,default=5);p.add_argument('--no-commit',action='store_true');p.add_argument('--combat-configuration',choices=CONFIGURATIONS);a=p.parse_args()
     try:
         from validate import ensure_software
         ensure_software()
-        result=perform(a.save.resolve(),a.mode,a.character,a.out,a.seconds,a.width,not a.no_commit)
+        result=perform(a.save.resolve(),a.mode,a.character,a.out,a.seconds,a.width,not a.no_commit,a.combat_configuration)
         for name,r in result.items():print(f"{name}: {r['status']} — level {r['level']}, {r['feasible_candidates']} feasible, {r['elapsed_seconds']:.2f}s",flush=True)
     except Exception as ex:
         out=pathlib.Path(a.out or ROOT/'reviews'/'latest');out.mkdir(parents=True,exist_ok=True)
