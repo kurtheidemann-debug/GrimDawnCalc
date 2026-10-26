@@ -26,3 +26,7 @@ Stage 2 save-state authority and the requested Stage 3 equipment mechanics
 reconciliation are implemented; remaining v1.3.6 features are not released.
 See [Stage 2 results](docs/STAGE2_RESULTS.md) and [mechanics results](docs/EQUIPMENT_MECHANICS_RECONCILIATION.md).
 Both current Save 9 characters pass strict baseline verification; no Full Review was run.
+
+Stage 4 suspends inventory keep/sell reports while preserving equipment candidates.
+Exact per-call Cadence packet reuse reduced a bounded fixture runtime by 38.84%;
+see PRODUCTION_v1_3.md for measurements and focused validation.

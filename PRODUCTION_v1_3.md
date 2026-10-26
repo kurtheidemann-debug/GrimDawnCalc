@@ -118,23 +118,37 @@ no historical exception, new tolerance or character adjustment is needed.
 See `docs/EQUIPMENT_MECHANICS_RECONCILIATION.md` for the confirmed related fixes
 and remaining model limitations.
 
-## Outputs and disposal policy
+## Outputs and suspended inventory disposition
 
-Each report includes all fourteen slots, current/recommended full affixed names,
-keep/change decisions, exact components/augments and reasons; before/after offense,
-defense, all resistances, OA/DA, health, armor, absorption, ranks and cooldowns;
-attribute spending, crafting/purchase needs and faction sources; and personal
-inventory in the four requested disposition groups. JSON retains exact records,
-full states, materiality audit, scenario blockers and validation details.
+Quick and Full produce equipment reports and results JSON. Inventory keep/sell
+valuation and inventory-disposition reports are suspended. All existing item
+imports and equipment candidate availability remain unchanged; valuation modules
+are preserved for later reactivation. A stale disposition report in the selected
+output directory is removed. No future-level keep/sell tables are generated.
 
-Safe disposal is conservative. It requires a usable owned alternative with no
-weaker modeled rolls, matching supported mechanics, no higher requirements and
-complete-loadout legality checks. Rings require two superior physical alternatives.
-Equivalent items are ordered so they cannot all be marked for disposal. Unique
-skills, sets, conversions, unsupported fields, unknown items and incomplete
-requirements/rolls remain protected. Future-level items stay in the candidate
-snapshot and are reevaluated on subsequent levels. An alternative-build label
-means retain/no disposal proof, not a claim that an unrelated build was optimized.
+## Stage 4 performance
+
+One bounded profile of the shipped Beeztrap fixture (53 states, 159 evaluation
+requests) attributed 14.51 of 15.64 profiled seconds (92.8%) to Cadence strength
+scoring; packet calculations accounted for 14.27 seconds. Character calculations
+were 0.31 seconds and legality checks 0.17 seconds. Attachment enumeration was
+fixture setup outside the timer; this measurement does not assign it a runtime
+share. Memoization already reduced 159 requests to 39 unique scored states.
+
+The sole search optimization caches exact hand/skill packet values within one
+strength call. It avoids repeated ordinary-hand packet calculation and expires
+at function return, preserving Momentum state, scenarios and arithmetic order.
+One matched unprofiled workload took **4.20445 s before / 2.57160 s after**,
+**38.84% less time (1.63x)**, with exact equality of all result rows, scores,
+legality/resource checks and feasibility flags. This is not an end-to-end speedup
+claim. The previous Save 10 Full Review reference remains 458.79 seconds search /
+510.25 seconds overall; no complete Full Review was rerun.
+
+Focused validation: 22 unit tests passed (review routing, retained importer/search,
+Stage 2 input authority and strict mismatch guards, Stage 3 equipment mechanics).
+A separate fixed Save 10 fixture compared the original and optimized scorer on
+three complete states, including two feasible loadouts: all scenario scores,
+metrics, legality, utility and selected equipment matched exactly.
 
 The bundled original README, legacy modules/tests/results and licenses remain
 available. Use this document and `review.py` for the v1.3 production workflow.
