@@ -34,11 +34,30 @@ substituted. Optional hotbar/skill-set fields are not backfilled. Main-campaign
 quest files, when supplied, are decoded into `quest-progress`; absent quest files
 are disclosed. Quest-based purchase/service eligibility remains Stage 4 work.
 
-Quick still reuses the profile's shared-stash, recipe and crafting-resource
-snapshots. Full refreshes the supplied shared stash, recipes and resources. Missing
-optional account files retain their prior snapshot with an explicit notice; this
-account refresh behavior is unchanged in Stage 2. Cross-character equipment pooling is enabled in both modes (Stage 5). Unknown characters do not receive an invented
-scoring policy. Static databases and persistent build policy are reused.
+Equipment scope is explicit:
+
+|Source|Quick|Full|
+|---|---|---|
+|Selected character: equipped gear, both weapon sets, bags, personal stash|Yes|Yes|
+|Shared stash equipment|No|Yes|
+|Other uploaded characters: bags, personal stashes, equipped gear, weapon sets|No|Yes|
+
+Both modes rebuild these pools from the uploaded save. Quick never imports old
+Full equipment or donor candidates; cached winners must remap entirely into the
+current permitted catalog. Full does not substitute a prior shared stash when
+one is missing. Source omissions are reported. Unknown target characters still
+require a registered scoring policy; static databases/build policy are reused.
+
+Resources are independent of equipment scope. Both modes decode supplied shared
+storage and refresh supplied reagent/recipe files with the existing importer.
+Quick admits only loose shared components (`ItemRelic`) for resource accounting,
+not shared equipment. Donor consumables/material stacks remain excluded. Missing
+reagent files clear cached reagent stock; missing recipe files exclude cached
+blueprint recipes (default recipes remain). Missing shared storage excludes its
+loose components. Existing native attachments can stay on their own selected
+items; new attachments still require current stock/crafting or eligible augment
+purchases, target reputation/level, and sufficient iron. No unknown cached stock
+funds recommendations. Quest-gated service/vendor access remains unmodeled.
 
 Saved difficulty alone controls resistance penalties and the calculation target:
 Normal -> Normal, Elite -> Elite, Ultimate -> Ultimate. Stored profile difficulty
@@ -154,12 +173,11 @@ available. Use this document and `review.py` for the v1.3 production workflow.
 
 ## Stage 5: uploaded cross-character equipment
 
-Both Quick and Full import equipment from every uploaded character's bags,
-personal stash, equipped slots and weapon sets into the selected character's
-existing pool. Target and shared items retain their order/IDs; donor instances
+Full imports equipment from every uploaded character's bags, personal stash,
+equipped slots and weapon sets into the selected character's existing pool.
+Stage 6 restricts Quick to its own character, as specified above. Target and shared items retain their order/IDs; donor instances
 are appended in character-name order. Donor consumables/material stacks are not
-pooled; this stage expands equipment availability only. Quick retains its existing
-cached shared-stash/resource behavior; Full refreshes uploaded shared storage.
+pooled; equipment pooling remains separate from the resource handling above.
 No donor profile or source save is changed. Characters absent from a new upload
 are not silently reintroduced from old donor snapshots.
 
@@ -183,3 +201,17 @@ pruned. This is workload evidence, not a Save 10 runtime estimate. 28 focused
 tests cover import/routing in both modes, provenance, distinct IDs, binding/level/
 attribute gates, no-donor equivalence, Stage 2/3 safeguards, unchanged search and
 Stage 4 scorer, and suspended disposition. No complete Full Review was run.
+
+## Stage 6 validation
+
+35 focused tests passed, including current imported character state in both
+modes, local-only Quick after a poisoned Full cache, Full donor selection, exact
+source paths, cached-seed rejection, resource refresh and shortages, identical
+selection/scores for identical pools, and Stage 2–5 safeguards. The shared scorer,
+legality code, search implementation/limits and Stage 4 optimization are unchanged.
+
+Matched deterministic fixture (same beam width/rounds, no attachments): Quick
+exposed 16 slot candidates (3 head choices + 13 fixed slots), 106 evaluations;
+Full exposed 18 (adding shared + donor head choices), 111 evaluations. Full chose
+the donor item; Quick chose its personal-stash item. Counts demonstrate source
+coverage differences, not a claimed real-save speedup. No Full Review was run.

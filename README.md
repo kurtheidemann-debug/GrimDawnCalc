@@ -31,6 +31,8 @@ Stage 4 suspends inventory keep/sell reports while preserving equipment candidat
 Exact per-call Cadence packet reuse reduced a bounded fixture runtime by 38.84%;
 see PRODUCTION_v1_3.md for measurements and focused validation.
 
-Stage 5 pools uploaded characters’ equipment from bags, personal stashes and
-equipped slots in both review modes, with exact owner/location reporting.
+Quick reviews use the selected character’s current equipment, bags and personal
+stash. Full reviews pool all uploaded characters and shared equipment, with exact
+owner/location reporting. Both modes import current character state and refresh
+supplied attachment-resource data; missing resource files do not reuse old stock.
 Beeztrap’s fixed weapons and suspended keep/sell workflow remain in effect.

@@ -200,15 +200,17 @@ def stage_profile(name,character,raw_stash,mode,save_root,work,characters=None):
     notices.append('Current save is authoritative for level, attributes, points, skills, devotions, bindings, equipment, reputation and saved difficulty: '+difficulty_name(m)+'. No historical character-state fallback.')
     if 'quest-progress' not in m:notices.append('Quest progression was not exposed by the decoder; no historical quest state substituted. Vendor/service access remains outside Stage 2.')
     elif not m['quest-progress']:notices.append('No main-campaign quest files supplied; quest progression unavailable. No historical quest state substituted.')
-    if mode=='quick':
-        notices.append('Quick mode still reuses shared stash, recipes and crafting-resource snapshots; account inventory/acquisition refresh changes are deferred to later stages.')
+    notices.append('Equipment scope: '+('selected character only' if mode=='quick' else 'all uploaded characters and shared storage')+'. Resources are refreshed independently from supplied account files; missing resource sources are not borrowed from prior reviews.')
     # Current calculator addresses the active set as weapon-set 0.
     if m.get('use-alt-weaponset'):
         m['weapon-sets'][0],m['weapon-sets'][1]=m['weapon-sets'][1],m['weapon-sets'][0]
         m['use-alt-weaponset']=False;notices.append('Active alternate weapon set normalized for equipment evaluation; source save untouched.')
     raw=list(scan_items(m,name))
-    if mode=='full' and raw_stash is not None:raw+=list(scan_items(raw_stash,'Shared Stash'))
-    else:raw+=[{'owner':x['owner'],'location':x['location'],'save':x['save']} for x in previous if x['owner']=='Shared Stash']
+    if raw_stash is not None:
+        shared=list(scan_items(raw_stash,'Shared Stash'))
+        # Loose shared components are resources, never equipment candidates.
+        raw += shared if mode=='full' else [x for x in shared if database().get(x['save']['basename'],{}).get('Class')=='ItemRelic']
+    else:notices.append('No shared stash supplied; shared equipment and loose components unavailable for this review.')
     # Keep target/shared order stable so adding donors cannot renumber old instances.
     if character.get('use-alt-weaponset'):
         for item in raw:
@@ -216,7 +218,7 @@ def stage_profile(name,character,raw_stash,mode,save_root,work,characters=None):
                 parts=item['location'].split('/');parts[2]=str(1-int(parts[2]))
                 item['source_location']='/'.join(parts)
     donor_count=0
-    for owner,donor in sorted((characters or {}).items()):
+    for owner,donor in sorted((characters or {}).items()) if mode=='full' else []:
         if owner==name:continue
         for item in scan_items(donor,owner):
             if not item['location'].startswith(('/equipment/','/weapon-sets/','/inventory-sacks/','/stashes/')):continue
@@ -232,27 +234,27 @@ def stage_profile(name,character,raw_stash,mode,save_root,work,characters=None):
     (d/'unresolved.json').write_text(json.dumps([x for x in catalog if not x['resolved']]))
     from relative_offense import difficulty_penalties
     (d/'penalties.json').write_text(json.dumps(difficulty_penalties(database(),int(m['last-difficulty'])&3)))
-    if mode=='full':
-        materials=[];availability={}
-        for f in ['reagents.gst','potions.gst']:
-            paths=list(pathlib.Path(save_root).rglob(f))
-            if len(paths)>1:raise ValueError('Multiple '+f+' files')
-            availability[f]=bool(paths)
-            if paths:materials+=read_materials(paths[0])
-        if availability.get('reagents.gst'):(d/'materials.json').write_text(json.dumps(materials))
-        else:notices.append('No reagent progression supplied; previous material snapshot retained.')
-        formulas=list(pathlib.Path(save_root).rglob('formulas.gst'))
-        if formulas:
-            import re
-            paths=set(re.findall(rb'records/[a-zA-Z0-9_/.-]+\.dbr',formulas[0].read_bytes()))
-            recipes=[]
-            for p in sorted(x.decode() for x in paths):
-                rec=database().get(p)
-                if rec and rec.get('artifactName'):recipes.append({'record':p,'definition':rec,'result':database().get(rec['artifactName'])})
-            if not recipes:raise ValueError('Supplied formulas.gst did not resolve recipes; refusing to erase known recipes')
-            (d/'recipes.json').write_text(json.dumps(recipes))
-        else:notices.append('No recipe progression supplied; previous recipe snapshot retained.')
-        if raw_stash is None:notices.append('No shared stash supplied; previous stash retained.')
+    materials=[];availability={}
+    for f in ['reagents.gst','potions.gst']:
+        paths=list(pathlib.Path(save_root).rglob(f))
+        if len(paths)>1:raise ValueError('Multiple '+f+' files')
+        availability[f]=bool(paths)
+        if paths:materials+=read_materials(paths[0])
+    (d/'materials.json').write_text(json.dumps(materials))
+    if not availability.get('reagents.gst'):notices.append('No reagent progression supplied; cached reagent stock excluded. Only currently decoded loose components can fund component changes.')
+    formulas=list(pathlib.Path(save_root).rglob('formulas.gst'))
+    if formulas:
+        import re
+        paths=set(re.findall(rb'records/[a-zA-Z0-9_/.-]+\.dbr',formulas[0].read_bytes()))
+        recipes=[]
+        for p in sorted(x.decode() for x in paths):
+            rec=database().get(p)
+            if rec and rec.get('artifactName'):recipes.append({'record':p,'definition':rec,'result':database().get(rec['artifactName'])})
+        if not recipes:raise ValueError('Supplied formulas.gst did not resolve recipes; refusing to erase known recipes')
+        (d/'recipes.json').write_text(json.dumps(recipes))
+    else:
+        (d/'recipes.json').write_text('[]')
+        notices.append('No recipe progression supplied; cached blueprint recipes excluded. Only default recipes and current component stock are available.')
     # These are output metadata only; neither controls the next save import.
     config.update(difficulty=int(m['last-difficulty'])&3,reference_level=m['character-level'],revision=config.get('revision',0)+1)
     (d/'profile.json').write_text(json.dumps(config,indent=2));link_static(d)

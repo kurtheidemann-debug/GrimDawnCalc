@@ -52,11 +52,11 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
     with workflow_lock(),tempfile.TemporaryDirectory(prefix='gd-review-',dir=ROOT) as tmp:
         work=pathlib.Path(tmp);chars,stash=extract_zip(source,work/'save')
         request={'operation':'decode','characters':[str(p) for p in chars]}
-        if mode=='full' and stash:request['stash']=str(stash)
+        if stash:request['stash']=str(stash)
         # Cache only raw read-only decoder output, keyed by every selected byte.
         key=digest({'characters':[(p.relative_to(work/'save').as_posix(),hashlib.sha256(p.read_bytes()).hexdigest()) for p in chars],
                     'quests':[(p.relative_to(work/'save').as_posix(),hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted((work/'save').rglob('quests.gdd'))],
-                    'stash':hashlib.sha256(stash.read_bytes()).hexdigest() if mode=='full' and stash else None,
+                    'stash':hashlib.sha256(stash.read_bytes()).hexdigest() if stash else None,
                     'decoder':hashlib.sha256((ROOT/'gd-edit-standalone.jar').read_bytes()).hexdigest(),
                     'bridge':hashlib.sha256((ROOT/'save_bridge.clj').read_bytes()).hexdigest()})
         cache=ROOT/'cache'/'decoded';cache.mkdir(parents=True,exist_ok=True);cached=cache/(key+'.json')
