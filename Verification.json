@@ -1,0 +1,11 @@
+{
+  "version": "practical-1.2",
+  "cache_hit": true,
+  "cached_rerun_seconds": 0.141,
+  "cold_search_seconds": 137.08,
+  "evaluated_states": 19545,
+  "baseline_exported_comparisons": 34,
+  "baseline_differences": [],
+  "test_count": 24,
+  "tests_passed": true
+}

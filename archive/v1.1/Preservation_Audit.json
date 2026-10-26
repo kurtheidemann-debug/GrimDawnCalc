@@ -1,0 +1,55 @@
+{
+  "database.json.gz": {
+    "sha256": "8c699db4100c9b1b9cf584529b2712abadf03403de94e0764fece8b8c0239773",
+    "unchanged_from_checkpoint": true
+  },
+  "catalog.json": {
+    "sha256": "a7523836023dba74ada91f3901d70b534ad24c768fbb43d5bd4839a0944f235e",
+    "unchanged_from_checkpoint": true
+  },
+  "mal.json": {
+    "sha256": "8a3f531b44ba183535f391f9b13d55094820e75afecbf7e3d0cff767a2cc8b42",
+    "unchanged_from_checkpoint": true
+  },
+  "baseline.json": {
+    "sha256": "ae51fd48e0835eeea4c916478c09ec60aa05336b701dfced70623c1adde3b2eb",
+    "unchanged_from_checkpoint": true
+  },
+  "baseline-sources.json": {
+    "sha256": "1e6ac38d013c6be10fb784366684ac8cc065b69ee76d7a55c546bd8215700b7f",
+    "unchanged_from_checkpoint": true
+  },
+  "localization.json": {
+    "sha256": "c7ec3d17ea79d816e03d50b1cefae862a00e96c9ba1530fc73f0f7976cd9b608",
+    "unchanged_from_checkpoint": true
+  },
+  "materials.json": {
+    "sha256": "2ed8079931820f195874b1862646944002db6ca72f2d5fdef30b7af0aefb5598",
+    "unchanged_from_checkpoint": true
+  },
+  "recipes.json": {
+    "sha256": "fbd22095c143d34aae8231ee61c49807d8a8a8bf0edbbc23463db58859342213",
+    "unchanged_from_checkpoint": true
+  },
+  "penalties.json": {
+    "sha256": "1cb2b79a89e4f649e3181e9d553f5480150f778745a44f7cbe4245e9fdc2eedf",
+    "unchanged_from_checkpoint": true
+  },
+  "refresh_data.py": {
+    "sha256": "1f5d70b3e492daf0510cf41851978e2d1e90c3268a9b393a5b10cd96a2932636",
+    "unchanged_from_checkpoint": true
+  },
+  "reagents.py": {
+    "sha256": "b0ef932f74364e4202858df7a656eb893b1fd2dbd825260f38fec3cd51436b87",
+    "unchanged_from_checkpoint": true
+  },
+  "extract_data.clj": {
+    "sha256": "18a4ed04ddc2dff45c1089eeb5a9970f911bfff90e7aaa2789dbe9e825657a65",
+    "unchanged_from_checkpoint": true
+  },
+  "test_optimizer.py": {
+    "sha256": "9047cac5d43a27fd27f0251b9c9b4c2ec7059325616857166c704130675e20f4",
+    "unchanged_from_checkpoint": true
+  },
+  "archive_results_unchanged": true
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Saved build emphasis. Weights are user policy, not skill mechanics. Other snapshots without this file auto-discover damaging learned abilities and use baseline contribution weights.",
+  "character": "Mal",
+  "deployment_window_seconds": 8,
+  "assumed_player_action_seconds": 1,
+  "abilities": {
+    "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+    "records/skills/playerclass06/squall1.dbr": 0.2
+  },
+  "support_skills": [
+    "records/skills/playerclass05/arcanemissile.dbr"
+  ]
+}

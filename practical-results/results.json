@@ -1,0 +1,2918 @@
+{
+  "version": "practical-1.2",
+  "chosen": {
+    "minimal": {
+      "state": {
+        "gear": [
+          "GD0117",
+          "GD0171",
+          "GD0669",
+          "GD0070",
+          "GD0121",
+          "GD0122",
+          "GD0123",
+          "GD0163",
+          "GD0125",
+          "GD0486",
+          "GD0127",
+          "GD0128",
+          "GD0207",
+          "GD0153"
+        ],
+        "comp": [
+          "",
+          "records/items/materia/compa_wardstone.dbr",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_scalyhide.dbr",
+          "",
+          "",
+          "",
+          "records/items/materia/compa_soulshard.dbr",
+          "",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_wardstone.dbr",
+          "",
+          "records/items/materia/compa_imbuedsilver.dbr",
+          "records/items/materia/compa_imbuedsilver.dbr"
+        ],
+        "aug": [
+          "",
+          "records/items/enchants/a114a_enchant.dbr",
+          "",
+          "records/items/enchants/c08a_enchant.dbr",
+          "",
+          "",
+          "records/items/enchants/a20a_enchant.dbr",
+          "records/items/enchants/a18a_enchant.dbr",
+          "",
+          "records/items/enchants/c07a_enchant.dbr",
+          "",
+          "",
+          "records/items/enchants/a101a_enchant.dbr",
+          "records/items/enchants/a101a_enchant.dbr"
+        ],
+        "skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "devotions": {
+          "records/skills/devotion/tier1_03a.dbr": 1,
+          "records/skills/devotion/tier1_03b.dbr": 1,
+          "records/skills/devotion/tier1_03c.dbr": 1,
+          "records/skills/devotion/tier1_03d.dbr": 1,
+          "records/skills/devotion/tier1_15a.dbr": 1,
+          "records/skills/devotion/tier1_15b.dbr": 1,
+          "records/skills/devotion/tier1_15c.dbr": 1,
+          "records/skills/devotion/tier1_15d.dbr": 1,
+          "records/skills/devotion/tier1_25a.dbr": 1,
+          "records/skills/devotion/tier1_25b.dbr": 1,
+          "records/skills/devotion/tier1_25c.dbr": 1,
+          "records/skills/devotion/tier1_25d.dbr": 1,
+          "records/skills/devotion/tier1_29a.dbr": 1,
+          "records/skills/devotion/tier1_29b.dbr": 1,
+          "records/skills/devotion/tier1_29c.dbr": 1,
+          "records/skills/devotion/tier1_29d.dbr": 1,
+          "records/skills/devotion/tier1_30a.dbr": 1,
+          "records/skills/devotion/tier1_30b.dbr": 1,
+          "records/skills/devotion/tier1_30c.dbr": 1,
+          "records/skills/devotion/tier1_30d.dbr": 1,
+          "records/skills/devotion/tier2_09a.dbr": 1,
+          "records/skills/devotion/tier2_09b.dbr": 1,
+          "records/skills/devotion/tier2_09c.dbr": 1,
+          "records/skills/devotion/tier2_09d.dbr": 1,
+          "records/skills/devotion/tier2_09e.dbr": 1,
+          "records/skills/devotion/tier2_09f_skill.dbr": 14,
+          "records/skills/devotion/tier2_28a.dbr": 1,
+          "records/skills/devotion/tier2_28b.dbr": 1,
+          "records/skills/devotion/tier2_28c.dbr": 1,
+          "records/skills/devotion/tier2_28d.dbr": 1,
+          "records/skills/devotion/tier2_28f_skill.dbr": 14,
+          "records/skills/devotion/tier1_25e_skill.dbr": 15,
+          "records/skills/devotion/tier1_29e_skill.dbr": 17,
+          "records/skills/devotion/tier1_36a.dbr": 1,
+          "records/skills/devotion/tier1_36b.dbr": 1,
+          "records/skills/devotion/tier1_36c.dbr": 1,
+          "records/skills/devotion/tier1_38a.dbr": 1,
+          "records/skills/devotion/tier1_38b.dbr": 1,
+          "records/skills/devotion/tier1_38c.dbr": 1,
+          "records/skills/devotion/tier3_14a.dbr": 1,
+          "records/skills/devotion/tier3_14b.dbr": 1,
+          "records/skills/devotion/tier3_14c.dbr": 1,
+          "records/skills/devotion/tier3_14d.dbr": 1,
+          "records/skills/devotion/tier3_14e.dbr": 1,
+          "records/skills/devotion/tier3_14f_skill.dbr": 3,
+          "records/skills/devotion/tier1_46a.dbr": 1,
+          "records/skills/devotion/tier1_46b.dbr": 1,
+          "records/skills/devotion/tier1_46c.dbr": 1,
+          "records/skills/devotion/tier1_46d.dbr": 1
+        },
+        "attributes": [
+          1,
+          0,
+          0
+        ],
+        "bindings": {
+          "records/skills/playerclass05/sphereofprotection1.dbr": "records/skills/devotion/tier2_28f_skill.dbr",
+          "records/skills/playerclass05/arcanemissile.dbr": "records/skills/devotion/tier2_09f_skill.dbr",
+          "records/skills/playerclass06/natureblessing1.dbr": "records/skills/devotion/tier1_29e_skill.dbr",
+          "records/skills/playerclass06/stormcaller1.dbr": "records/skills/devotion/tier1_25e_skill.dbr",
+          "records/skills/playerclass06/stormtotem01.dbr": "records/skills/devotion/tier3_14f_skill.dbr"
+        }
+      },
+      "stats": {
+        "physique": 740,
+        "cunning": 351,
+        "spirit": 723,
+        "health": 11217,
+        "energy": 3048,
+        "energy_reserved": 976,
+        "OA": 2053,
+        "DA": 1994,
+        "armor": 1426,
+        "armor_slots": {
+          "Head": 1258,
+          "Shoulders": 1679,
+          "Chest": 1433,
+          "Arms": 1153,
+          "Legs": 1641,
+          "Feet": 1219
+        },
+        "armor_absorption": 100,
+        "damage_absorption_percent": 0,
+        "resistances": [
+          {
+            "name": "Fire",
+            "raw": 126.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 46.0,
+            "difficulty_adjusted_before_cap": 126.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 176.0
+          },
+          {
+            "name": "Cold",
+            "raw": 102.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 22.0,
+            "difficulty_adjusted_before_cap": 102.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 152.0
+          },
+          {
+            "name": "Lightning",
+            "raw": 114.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 34.0,
+            "difficulty_adjusted_before_cap": 114.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 164.0
+          },
+          {
+            "name": "Poison & Acid",
+            "raw": 169.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 89.0,
+            "difficulty_adjusted_before_cap": 169.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 219.0
+          },
+          {
+            "name": "Pierce",
+            "raw": 103.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 23.0,
+            "difficulty_adjusted_before_cap": 103.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 153.0
+          },
+          {
+            "name": "Bleeding",
+            "raw": 106.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 26.0,
+            "difficulty_adjusted_before_cap": 106.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 131.0
+          },
+          {
+            "name": "Vitality",
+            "raw": 88.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 8.0,
+            "difficulty_adjusted_before_cap": 88.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 113.0
+          },
+          {
+            "name": "Aether",
+            "raw": 81.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 1.0,
+            "difficulty_adjusted_before_cap": 81.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 106.0
+          },
+          {
+            "name": "Chaos",
+            "raw": 82.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 2.0,
+            "difficulty_adjusted_before_cap": 82.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 107.0
+          },
+          {
+            "name": "Physical",
+            "raw": 2.0,
+            "cap": 80.0,
+            "shown": 2,
+            "overcap": -78.0,
+            "difficulty_adjusted_before_cap": 2.0,
+            "difficulty_penalty": 0.0,
+            "before_difficulty_penalty": 2.0
+          }
+        ],
+        "cooldown_reduction": 22.0,
+        "lightning_modifier": 1967.9409393168605,
+        "lightning_gear_skill_modifier": 1631.42,
+        "effective_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 13,
+          "records/skills/playerclass05/passive01.dbr": 13,
+          "records/skills/playerclass05/arcaneshield.dbr": 2,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 2,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 4,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 11,
+          "records/skills/playerclass05/arcanemissile.dbr": 2,
+          "records/skills/playerclass05/arcanemissile2.dbr": 2,
+          "records/skills/playerclass05/arcanemissile3.dbr": 2,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 13,
+          "records/skills/playerclass06/naturesblessing2.dbr": 12,
+          "records/skills/playerclass06/naturesblessing3.dbr": 16,
+          "records/skills/playerclass06/stormcaller1.dbr": 15,
+          "records/skills/playerclass06/totem1.dbr": 2,
+          "records/skills/playerclass06/squall1.dbr": 5,
+          "records/skills/playerclass06/squall2.dbr": 15,
+          "records/skills/playerclass06/squall3.dbr": 13,
+          "records/skills/playerclass06/stormtotem01.dbr": 21
+        },
+        "invested_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "totem_count": 5.0,
+        "totems_per_cast": 2.0,
+        "totem_cooldown": 2.34,
+        "totem_duration": 14.0,
+        "raging_tempest_RR": 33.0,
+        "widow_RR": 31.0,
+        "ultos_relative_RR": 13.0,
+        "energy_regen_flat": 15.3,
+        "energy_regen_percent": 121.0,
+        "stats": {
+          "characterOffensiveAbility": 485.0,
+          "characterDefensiveAbility": 509.0,
+          "offensiveLightningModifier": 1662.0,
+          "offensiveAetherModifier": 279.0,
+          "defensivePierce": 153.0,
+          "defensiveLife": 113.0,
+          "defensiveProtection": 5398.0,
+          "characterManaRegen": 15.3,
+          "defensiveChaos": 107.0,
+          "offensiveSlowColdModifier": 766.0,
+          "characterLifeRegen": 328.0,
+          "offensiveSlowFireModifier": 374.0,
+          "offensiveSlowLightningModifier": 1149.0,
+          "offensiveElementalModifier": 244.0,
+          "offensivePierceModifier": 62.0,
+          "defensivePoison": 219.0,
+          "skillCooldownReduction": 22.0,
+          "characterRunSpeedModifier": 12.0,
+          "defensiveBleeding": 131.0,
+          "defensiveElementalResistance": 152.0,
+          "characterLife": 3681.0,
+          "characterStrength": 378.0,
+          "defensiveAbsorptionModifier": 60.0,
+          "defensiveBonusProtection": 105.0,
+          "characterDexterity": 261.0,
+          "characterLifeRegenModifier": 175.0,
+          "defensiveFire": 24.0,
+          "defensiveLightning": 12.0,
+          "offensiveChaosModifier": 36.0,
+          "offensiveSlowBleedingModifier": 39.0,
+          "defensiveStun": 65.0,
+          "characterLifeModifier": 61.0,
+          "offensiveLightningMin": 11.0,
+          "offensiveLightningMax": 42.0,
+          "offensiveLifeModifier": 143.0,
+          "characterDefensiveAbilityModifier": 6.0,
+          "offensiveTotalDamageModifier": 43.0,
+          "offensiveSlowLifeModifier": 58.0,
+          "characterEnergyAbsorptionPercent": 30.0,
+          "defensiveSlowManaLeach": 25.0,
+          "retaliationLightningMin": 37.0,
+          "retaliationLightningMax": 333.0,
+          "retaliationTotalDamageModifier": 35.0,
+          "characterOffensiveAbilityModifier": 24.0,
+          "characterIncreasedExperience": 5.0,
+          "offensiveGlobalChance": 125.0,
+          "offensiveColdModifier": 635.0,
+          "offensiveFireGlobal": 1.0,
+          "offensiveSlowLightningModifierChance": 25.0,
+          "offensiveFireModifier": 228.0,
+          "characterIntelligence": 390.0,
+          "offensiveColdModifierChance": 25.0,
+          "offensiveSlowColdModifierChance": 25.0,
+          "offensiveLightningGlobal": 1.0,
+          "offensiveSlowLightningGlobal": 2.0,
+          "offensiveSlowFireModifierChance": 25.0,
+          "offensiveSlowFireGlobal": 2.0,
+          "characterTotalSpeedModifier": 11.0,
+          "offensiveSlowColdGlobal": 2.0,
+          "skillManaCostReduction": 10.0,
+          "offensiveColdGlobal": 1.0,
+          "offensiveFireModifierChance": 25.0,
+          "offensiveLightningModifierChance": 58.0,
+          "characterIntelligenceModifier": 33.0,
+          "offensiveBaseLightningMin": 46.0,
+          "offensiveBaseLightningMax": 70.0,
+          "characterBaseAttackSpeed": -0.02,
+          "defensiveAether": 106.0,
+          "characterSpellCastSpeedModifier": 25.0,
+          "skillMaxLevel": 250.0,
+          "defensiveChaosMaxResist": 6.0,
+          "characterManaLimitReserve": 976.0,
+          "characterManaRegenModifier": 121.0,
+          "offensiveCritDamageModifier": 81.0,
+          "characterMana": 1200.0,
+          "skillUltimateLevel": 194.0,
+          "skillTier": 36.0,
+          "skillWeaponTintBlue": 1.0,
+          "offensiveSlowManaLeachDurationMin": 1.0,
+          "skillTargetRadius": 24.0,
+          "skillWeaponTintRed": 0.4,
+          "offensiveSlowManaLeachMin": 10.0,
+          "offensiveElementalMin": 7.0,
+          "skillWeaponTintGreen": 0.7,
+          "offensiveSlowLightningChance": 33.0,
+          "offensiveSlowFireXOR": 1.0,
+          "offensiveSlowColdDurationMin": 3.0,
+          "offensiveSlowFireMin": 19.0,
+          "offensiveSlowColdXOR": 1.0,
+          "offensiveSlowLightningMax": 107.0,
+          "offensiveSlowLightningDurationMin": 6.0,
+          "offensiveSlowFireMax": 31.0,
+          "offensiveSlowColdChance": 34.0,
+          "offensiveSlowFireDurationMin": 3.0,
+          "offensiveSlowFireChance": 33.0,
+          "offensiveSlowColdMin": 25.0,
+          "offensiveSlowLightningMin": 45.0,
+          "offensiveSlowLightningXOR": 1.0,
+          "offensiveSlowFireDurationModifier": 70.0,
+          "offensiveSlowLightningDurationModifier": 70.0,
+          "offensiveSlowColdDurationModifier": 70.0,
+          "offensivePhysicalMin": 43.0,
+          "offensivePhysicalMax": 56.0,
+          "defensiveBleedingDuration": 27.0,
+          "defensivePoisonDuration": 27.0,
+          "offensiveLifeLeechMin": 5.0,
+          "characterShieldStrengthReqReduction": 10.0,
+          "defensiveProtectionModifier": 8.0,
+          "characterManaModifier": 9.0,
+          "characterHealIncreasePercent": 26.0,
+          "defensivePhysical": 2.0,
+          "defensivePercentReflectionResistance": 25.0
+        },
+        "bonuses": {
+          "all": 0.0,
+          "skill": {
+            "records/skills/playerclass05/mindovermatter1.dbr": 3.0,
+            "records/skills/playerclass06/stormcaller1.dbr": 7.0,
+            "records/skills/playerclass07/passive01.dbr": 3.0,
+            "records/skills/playerclass07/hunteraura1.dbr": 3.0,
+            "records/skills/playerclass06/savagestrike2.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike3.dbr": 2.0,
+            "records/skills/playerclass10/leap1.dbr": 3.0,
+            "records/skills/playerclass06/natureblessing1.dbr": 2.0,
+            "records/skills/playerclass06/naturesblessing3.dbr": 6.0,
+            "records/skills/playerclass08/spectralarmor1.dbr": 2.0,
+            "records/skills/playerclass10/wpattack01.dbr": 2.0,
+            "records/skills/playerclass06/naturesblessing2.dbr": 2.0,
+            "records/skills/playerclass06/summon_manticore1.dbr": 2.0,
+            "records/skills/playerclass02/grenado1.dbr": 2.0,
+            "records/skills/playerclass08/lifetap1.dbr": 2.0,
+            "records/skills/playerclass01/willtolive1.dbr": 2.0,
+            "records/skills/playerclass09/righteousfervor3.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike1.dbr": 2.0,
+            "records/skills/playerclass05/elementalinfusion2.dbr": 2.0,
+            "records/skills/playerclass05/razorwind2.dbr": 1.0,
+            "records/skills/playerclass05/chillingsurge2.dbr": 1.0,
+            "records/skills/playerclass06/stormtotem01.dbr": 4.0,
+            "records/skills/playerclass02/stunjacks1.dbr": 2.0,
+            "records/skills/playerclass06/squall2.dbr": 2.0,
+            "records/skills/playerclass10/passive03.dbr": 0.0,
+            "records/skills/playerclass01/counterstrike1.dbr": 0.0,
+            "records/skills/playerclass06/graspingvines2.dbr": 0.0
+          },
+          "mastery": {
+            "records/skills/playerclass10/_classtraining_class10.dbr": 1.0,
+            "records/skills/playerclass06/_classtraining_class06.dbr": 1.0,
+            "records/skills/playerclass05/_classtraining_class05.dbr": 1.0
+          }
+        },
+        "energy_regen_lower_bound": 36.023,
+        "offense_model": {
+          "abilities": {
+            "records/skills/playerclass06/stormtotem01.dbr": {
+              "name": "Storm Totem",
+              "rank": 21,
+              "scaling": "player",
+              "population": {
+                "maximum": 5.0,
+                "sustainable": 5.0,
+                "practical": 4.6709375,
+                "lifetime": 14.0,
+                "deployment_interval": 2.34,
+                "setup_seconds": 3.51
+              },
+              "cooldown": 2.34,
+              "strength": 69477.3014765261,
+              "channels": {
+                "Lightning": 49294.55463299627,
+                "SlowLightning": 20182.746843529832
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                  "rank": 21,
+                  "base_payload": {
+                    "Lightning": 273.0,
+                    "SlowLightning": 145.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 273.0,
+                    "SlowLightning": 145.0
+                  },
+                  "instances": 4.6709375,
+                  "frequency": 1,
+                  "debuff_aura": false,
+                  "strength": 69477.3014765261
+                }
+              ],
+              "limitations": [
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            },
+            "records/skills/playerclass06/squall1.dbr": {
+              "name": "Wind Devil",
+              "rank": 5,
+              "scaling": "player",
+              "population": {
+                "maximum": 3.0,
+                "sustainable": 3.0,
+                "practical": 3.0,
+                "lifetime": "permanent",
+                "deployment_interval": 15.600000000000001,
+                "setup_seconds": 0.0
+              },
+              "cooldown": 15.600000000000001,
+              "strength": 32790.98590291951,
+              "channels": {
+                "Lightning": 9463.32286589759,
+                "Physical": 128.28275622530552,
+                "SlowLightning": 18386.259204529706,
+                "Cold": 4813.1210762669025
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                  "rank": 5,
+                  "base_payload": {
+                    "Physical": 42.0,
+                    "SlowLightning": 77.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 6.3,
+                    "Physical": 35.7,
+                    "SlowLightning": 77.0,
+                    "Cold": 242.0
+                  },
+                  "instances": 1,
+                  "frequency": 1,
+                  "debuff_aura": true,
+                  "strength": 7479.502699385393
+                },
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                  "rank": 13,
+                  "base_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "instances": 3.0,
+                  "frequency": 0.5,
+                  "debuff_aura": false,
+                  "strength": 25311.48320353411
+                }
+              ],
+              "limitations": [
+                "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Identical debuff aura does not stack across instances.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            }
+          },
+          "resistance_reduction": {
+            "Physical": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Pierce": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Fire": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Cold": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Lightning": {
+              "additive": 64.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Poison": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Life": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Aether": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Chaos": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Bleeding": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            }
+          },
+          "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+          "policy": {
+            "deployment_window_seconds": 8,
+            "player_action_seconds": 1,
+            "weights": {
+              "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+              "records/skills/playerclass06/squall1.dbr": 0.2
+            }
+          },
+          "limitations": [
+            "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+            "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+            "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+          ]
+        },
+        "offense_index": 137.40252010322666,
+        "defense_index": 122.70031051868798
+      },
+      "cost": {
+        "utility_cost": 56.9,
+        "equipment_changes": 6,
+        "component_replacements": 6,
+        "destroyed_attached_components": 0,
+        "component_opportunity_cost": 12,
+        "augment_purchases": 6,
+        "attribute_points_spent": 1
+      },
+      "resources": {
+        "errors": [],
+        "component_need": {
+          "records/items/materia/compa_wardstone.dbr": 1,
+          "records/items/materia/compa_scalyhide.dbr": 3,
+          "records/items/materia/compa_soulshard.dbr": 1,
+          "records/items/materia/compa_imbuedsilver.dbr": 1
+        },
+        "crafted_batches": {},
+        "augment_purchases": {
+          "records/items/enchants/a114a_enchant.dbr": 1,
+          "records/items/enchants/c08a_enchant.dbr": 1,
+          "records/items/enchants/a18a_enchant.dbr": 1,
+          "records/items/enchants/c07a_enchant.dbr": 1,
+          "records/items/enchants/a101a_enchant.dbr": 2
+        },
+        "craft_iron_base": 0,
+        "augment_iron_base": 13500,
+        "remaining_iron_base": 2343792
+      }
+    },
+    "balanced": {
+      "state": {
+        "gear": [
+          "GD0117",
+          "GD0171",
+          "GD0669",
+          "GD0070",
+          "GD0121",
+          "GD0122",
+          "GD0123",
+          "GD0163",
+          "GD0125",
+          "GD0486",
+          "GD0127",
+          "GD0128",
+          "GD0207",
+          "GD0153"
+        ],
+        "comp": [
+          "",
+          "records/items/materia/compa_wardstone.dbr",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_scalyhide.dbr",
+          "",
+          "records/items/materia/compa_mutatedscales.dbr",
+          "",
+          "records/items/materia/compa_soulshard.dbr",
+          "",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_wardstone.dbr",
+          "",
+          "records/items/materia/compa_imbuedsilver.dbr",
+          "records/items/materia/compa_imbuedsilver.dbr"
+        ],
+        "aug": [
+          "",
+          "records/items/enchants/a114a_enchant.dbr",
+          "",
+          "records/items/enchants/c08a_enchant.dbr",
+          "",
+          "",
+          "records/items/enchants/a20a_enchant.dbr",
+          "records/items/enchants/a18a_enchant.dbr",
+          "",
+          "records/items/enchants/c07a_enchant.dbr",
+          "",
+          "",
+          "records/items/enchants/a101a_enchant.dbr",
+          "records/items/enchants/a101a_enchant.dbr"
+        ],
+        "skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "devotions": {
+          "records/skills/devotion/tier1_03a.dbr": 1,
+          "records/skills/devotion/tier1_03b.dbr": 1,
+          "records/skills/devotion/tier1_03c.dbr": 1,
+          "records/skills/devotion/tier1_03d.dbr": 1,
+          "records/skills/devotion/tier1_15a.dbr": 1,
+          "records/skills/devotion/tier1_15b.dbr": 1,
+          "records/skills/devotion/tier1_15c.dbr": 1,
+          "records/skills/devotion/tier1_15d.dbr": 1,
+          "records/skills/devotion/tier1_25a.dbr": 1,
+          "records/skills/devotion/tier1_25b.dbr": 1,
+          "records/skills/devotion/tier1_25c.dbr": 1,
+          "records/skills/devotion/tier1_25d.dbr": 1,
+          "records/skills/devotion/tier1_29a.dbr": 1,
+          "records/skills/devotion/tier1_29b.dbr": 1,
+          "records/skills/devotion/tier1_29c.dbr": 1,
+          "records/skills/devotion/tier1_29d.dbr": 1,
+          "records/skills/devotion/tier1_30a.dbr": 1,
+          "records/skills/devotion/tier1_30b.dbr": 1,
+          "records/skills/devotion/tier1_30c.dbr": 1,
+          "records/skills/devotion/tier1_30d.dbr": 1,
+          "records/skills/devotion/tier2_09a.dbr": 1,
+          "records/skills/devotion/tier2_09b.dbr": 1,
+          "records/skills/devotion/tier2_09c.dbr": 1,
+          "records/skills/devotion/tier2_09d.dbr": 1,
+          "records/skills/devotion/tier2_09e.dbr": 1,
+          "records/skills/devotion/tier2_09f_skill.dbr": 14,
+          "records/skills/devotion/tier2_28a.dbr": 1,
+          "records/skills/devotion/tier2_28b.dbr": 1,
+          "records/skills/devotion/tier2_28c.dbr": 1,
+          "records/skills/devotion/tier2_28d.dbr": 1,
+          "records/skills/devotion/tier2_28f_skill.dbr": 14,
+          "records/skills/devotion/tier1_25e_skill.dbr": 15,
+          "records/skills/devotion/tier1_29e_skill.dbr": 17,
+          "records/skills/devotion/tier1_36a.dbr": 1,
+          "records/skills/devotion/tier1_36b.dbr": 1,
+          "records/skills/devotion/tier1_36c.dbr": 1,
+          "records/skills/devotion/tier1_38a.dbr": 1,
+          "records/skills/devotion/tier1_38b.dbr": 1,
+          "records/skills/devotion/tier1_38c.dbr": 1,
+          "records/skills/devotion/tier3_14a.dbr": 1,
+          "records/skills/devotion/tier3_14b.dbr": 1,
+          "records/skills/devotion/tier3_14c.dbr": 1,
+          "records/skills/devotion/tier3_14d.dbr": 1,
+          "records/skills/devotion/tier3_14e.dbr": 1,
+          "records/skills/devotion/tier3_14f_skill.dbr": 3,
+          "records/skills/devotion/tier1_46a.dbr": 1,
+          "records/skills/devotion/tier1_46b.dbr": 1,
+          "records/skills/devotion/tier1_46c.dbr": 1,
+          "records/skills/devotion/tier1_46d.dbr": 1
+        },
+        "attributes": [
+          1,
+          0,
+          0
+        ],
+        "bindings": {
+          "records/skills/playerclass05/sphereofprotection1.dbr": "records/skills/devotion/tier2_28f_skill.dbr",
+          "records/skills/playerclass05/arcanemissile.dbr": "records/skills/devotion/tier2_09f_skill.dbr",
+          "records/skills/playerclass06/natureblessing1.dbr": "records/skills/devotion/tier1_29e_skill.dbr",
+          "records/skills/playerclass06/stormcaller1.dbr": "records/skills/devotion/tier1_25e_skill.dbr",
+          "records/skills/playerclass06/stormtotem01.dbr": "records/skills/devotion/tier3_14f_skill.dbr"
+        }
+      },
+      "stats": {
+        "physique": 740,
+        "cunning": 351,
+        "spirit": 723,
+        "health": 11721,
+        "energy": 3048,
+        "energy_reserved": 976,
+        "OA": 2053,
+        "DA": 1994,
+        "armor": 1426,
+        "armor_slots": {
+          "Head": 1258,
+          "Shoulders": 1679,
+          "Chest": 1433,
+          "Arms": 1153,
+          "Legs": 1641,
+          "Feet": 1219
+        },
+        "armor_absorption": 100,
+        "damage_absorption_percent": 0,
+        "resistances": [
+          {
+            "name": "Fire",
+            "raw": 126.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 46.0,
+            "difficulty_adjusted_before_cap": 126.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 176.0
+          },
+          {
+            "name": "Cold",
+            "raw": 102.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 22.0,
+            "difficulty_adjusted_before_cap": 102.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 152.0
+          },
+          {
+            "name": "Lightning",
+            "raw": 114.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 34.0,
+            "difficulty_adjusted_before_cap": 114.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 164.0
+          },
+          {
+            "name": "Poison & Acid",
+            "raw": 169.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 89.0,
+            "difficulty_adjusted_before_cap": 169.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 219.0
+          },
+          {
+            "name": "Pierce",
+            "raw": 103.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 23.0,
+            "difficulty_adjusted_before_cap": 103.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 153.0
+          },
+          {
+            "name": "Bleeding",
+            "raw": 106.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 26.0,
+            "difficulty_adjusted_before_cap": 106.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 131.0
+          },
+          {
+            "name": "Vitality",
+            "raw": 88.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 8.0,
+            "difficulty_adjusted_before_cap": 88.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 113.0
+          },
+          {
+            "name": "Aether",
+            "raw": 81.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 1.0,
+            "difficulty_adjusted_before_cap": 81.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 106.0
+          },
+          {
+            "name": "Chaos",
+            "raw": 82.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 2.0,
+            "difficulty_adjusted_before_cap": 82.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 107.0
+          },
+          {
+            "name": "Physical",
+            "raw": 2.0,
+            "cap": 80.0,
+            "shown": 2,
+            "overcap": -78.0,
+            "difficulty_adjusted_before_cap": 2.0,
+            "difficulty_penalty": 0.0,
+            "before_difficulty_penalty": 2.0
+          }
+        ],
+        "cooldown_reduction": 22.0,
+        "lightning_modifier": 1967.9409393168605,
+        "lightning_gear_skill_modifier": 1631.42,
+        "effective_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 13,
+          "records/skills/playerclass05/passive01.dbr": 13,
+          "records/skills/playerclass05/arcaneshield.dbr": 2,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 2,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 4,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 11,
+          "records/skills/playerclass05/arcanemissile.dbr": 2,
+          "records/skills/playerclass05/arcanemissile2.dbr": 2,
+          "records/skills/playerclass05/arcanemissile3.dbr": 2,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 13,
+          "records/skills/playerclass06/naturesblessing2.dbr": 12,
+          "records/skills/playerclass06/naturesblessing3.dbr": 16,
+          "records/skills/playerclass06/stormcaller1.dbr": 15,
+          "records/skills/playerclass06/totem1.dbr": 2,
+          "records/skills/playerclass06/squall1.dbr": 5,
+          "records/skills/playerclass06/squall2.dbr": 15,
+          "records/skills/playerclass06/squall3.dbr": 13,
+          "records/skills/playerclass06/stormtotem01.dbr": 21
+        },
+        "invested_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "totem_count": 5.0,
+        "totems_per_cast": 2.0,
+        "totem_cooldown": 2.34,
+        "totem_duration": 14.0,
+        "raging_tempest_RR": 33.0,
+        "widow_RR": 31.0,
+        "ultos_relative_RR": 13.0,
+        "energy_regen_flat": 15.3,
+        "energy_regen_percent": 121.0,
+        "stats": {
+          "characterOffensiveAbility": 485.0,
+          "characterDefensiveAbility": 509.0,
+          "offensiveLightningModifier": 1662.0,
+          "offensiveAetherModifier": 279.0,
+          "defensivePierce": 153.0,
+          "defensiveLife": 113.0,
+          "defensiveProtection": 5398.0,
+          "characterManaRegen": 15.3,
+          "defensiveChaos": 107.0,
+          "offensiveSlowColdModifier": 766.0,
+          "characterLifeRegen": 328.0,
+          "offensiveSlowFireModifier": 374.0,
+          "offensiveSlowLightningModifier": 1149.0,
+          "offensiveElementalModifier": 244.0,
+          "offensivePierceModifier": 62.0,
+          "defensivePoison": 219.0,
+          "skillCooldownReduction": 22.0,
+          "characterRunSpeedModifier": 12.0,
+          "defensiveBleeding": 131.0,
+          "defensiveElementalResistance": 152.0,
+          "characterLife": 3861.0,
+          "characterStrength": 378.0,
+          "defensiveAbsorptionModifier": 60.0,
+          "defensiveBonusProtection": 105.0,
+          "characterDexterity": 261.0,
+          "characterLifeRegenModifier": 175.0,
+          "defensiveFire": 24.0,
+          "defensiveLightning": 12.0,
+          "offensiveChaosModifier": 36.0,
+          "offensiveSlowBleedingModifier": 39.0,
+          "defensiveStun": 65.0,
+          "characterLifeModifier": 64.0,
+          "offensiveLightningMin": 11.0,
+          "offensiveLightningMax": 42.0,
+          "offensiveLifeModifier": 143.0,
+          "characterDefensiveAbilityModifier": 6.0,
+          "offensiveTotalDamageModifier": 43.0,
+          "offensiveSlowLifeModifier": 58.0,
+          "characterEnergyAbsorptionPercent": 30.0,
+          "defensiveSlowManaLeach": 25.0,
+          "retaliationLightningMin": 37.0,
+          "retaliationLightningMax": 333.0,
+          "retaliationTotalDamageModifier": 35.0,
+          "characterOffensiveAbilityModifier": 24.0,
+          "characterIncreasedExperience": 5.0,
+          "offensiveGlobalChance": 125.0,
+          "offensiveColdModifier": 635.0,
+          "offensiveFireGlobal": 1.0,
+          "offensiveSlowLightningModifierChance": 25.0,
+          "offensiveFireModifier": 228.0,
+          "characterIntelligence": 390.0,
+          "offensiveColdModifierChance": 25.0,
+          "offensiveSlowColdModifierChance": 25.0,
+          "offensiveLightningGlobal": 1.0,
+          "offensiveSlowLightningGlobal": 2.0,
+          "offensiveSlowFireModifierChance": 25.0,
+          "offensiveSlowFireGlobal": 2.0,
+          "characterTotalSpeedModifier": 11.0,
+          "offensiveSlowColdGlobal": 2.0,
+          "skillManaCostReduction": 10.0,
+          "offensiveColdGlobal": 1.0,
+          "offensiveFireModifierChance": 25.0,
+          "offensiveLightningModifierChance": 58.0,
+          "characterIntelligenceModifier": 33.0,
+          "offensiveBaseLightningMin": 46.0,
+          "offensiveBaseLightningMax": 70.0,
+          "characterBaseAttackSpeed": -0.02,
+          "defensiveAether": 106.0,
+          "characterSpellCastSpeedModifier": 25.0,
+          "skillMaxLevel": 250.0,
+          "defensiveChaosMaxResist": 6.0,
+          "characterManaLimitReserve": 976.0,
+          "characterManaRegenModifier": 121.0,
+          "offensiveCritDamageModifier": 81.0,
+          "characterMana": 1200.0,
+          "skillUltimateLevel": 194.0,
+          "skillTier": 36.0,
+          "skillWeaponTintBlue": 1.0,
+          "offensiveSlowManaLeachDurationMin": 1.0,
+          "skillTargetRadius": 24.0,
+          "skillWeaponTintRed": 0.4,
+          "offensiveSlowManaLeachMin": 10.0,
+          "offensiveElementalMin": 7.0,
+          "skillWeaponTintGreen": 0.7,
+          "offensiveSlowLightningChance": 33.0,
+          "offensiveSlowFireXOR": 1.0,
+          "offensiveSlowColdDurationMin": 3.0,
+          "offensiveSlowFireMin": 19.0,
+          "offensiveSlowColdXOR": 1.0,
+          "offensiveSlowLightningMax": 107.0,
+          "offensiveSlowLightningDurationMin": 6.0,
+          "offensiveSlowFireMax": 31.0,
+          "offensiveSlowColdChance": 34.0,
+          "offensiveSlowFireDurationMin": 3.0,
+          "offensiveSlowFireChance": 33.0,
+          "offensiveSlowColdMin": 25.0,
+          "offensiveSlowLightningMin": 45.0,
+          "offensiveSlowLightningXOR": 1.0,
+          "offensiveSlowFireDurationModifier": 70.0,
+          "offensiveSlowLightningDurationModifier": 70.0,
+          "offensiveSlowColdDurationModifier": 70.0,
+          "offensivePhysicalMin": 43.0,
+          "offensivePhysicalMax": 56.0,
+          "defensiveBleedingDuration": 27.0,
+          "defensivePoisonDuration": 27.0,
+          "offensiveLifeLeechMin": 5.0,
+          "characterShieldStrengthReqReduction": 10.0,
+          "defensiveProtectionModifier": 8.0,
+          "characterManaModifier": 9.0,
+          "characterHealIncreasePercent": 26.0,
+          "defensivePhysical": 2.0,
+          "defensivePercentReflectionResistance": 25.0
+        },
+        "bonuses": {
+          "all": 0.0,
+          "skill": {
+            "records/skills/playerclass05/mindovermatter1.dbr": 3.0,
+            "records/skills/playerclass06/stormcaller1.dbr": 7.0,
+            "records/skills/playerclass07/passive01.dbr": 3.0,
+            "records/skills/playerclass07/hunteraura1.dbr": 3.0,
+            "records/skills/playerclass06/savagestrike2.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike3.dbr": 2.0,
+            "records/skills/playerclass10/leap1.dbr": 3.0,
+            "records/skills/playerclass06/natureblessing1.dbr": 2.0,
+            "records/skills/playerclass06/naturesblessing3.dbr": 6.0,
+            "records/skills/playerclass08/spectralarmor1.dbr": 2.0,
+            "records/skills/playerclass10/wpattack01.dbr": 2.0,
+            "records/skills/playerclass06/naturesblessing2.dbr": 2.0,
+            "records/skills/playerclass06/summon_manticore1.dbr": 2.0,
+            "records/skills/playerclass02/grenado1.dbr": 2.0,
+            "records/skills/playerclass08/lifetap1.dbr": 2.0,
+            "records/skills/playerclass01/willtolive1.dbr": 2.0,
+            "records/skills/playerclass09/righteousfervor3.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike1.dbr": 2.0,
+            "records/skills/playerclass05/elementalinfusion2.dbr": 2.0,
+            "records/skills/playerclass05/razorwind2.dbr": 1.0,
+            "records/skills/playerclass05/chillingsurge2.dbr": 1.0,
+            "records/skills/playerclass06/stormtotem01.dbr": 4.0,
+            "records/skills/playerclass02/stunjacks1.dbr": 2.0,
+            "records/skills/playerclass06/squall2.dbr": 2.0,
+            "records/skills/playerclass10/passive03.dbr": 0.0,
+            "records/skills/playerclass01/counterstrike1.dbr": 0.0,
+            "records/skills/playerclass06/graspingvines2.dbr": 0.0
+          },
+          "mastery": {
+            "records/skills/playerclass10/_classtraining_class10.dbr": 1.0,
+            "records/skills/playerclass06/_classtraining_class06.dbr": 1.0,
+            "records/skills/playerclass05/_classtraining_class05.dbr": 1.0
+          }
+        },
+        "energy_regen_lower_bound": 36.023,
+        "offense_model": {
+          "abilities": {
+            "records/skills/playerclass06/stormtotem01.dbr": {
+              "name": "Storm Totem",
+              "rank": 21,
+              "scaling": "player",
+              "population": {
+                "maximum": 5.0,
+                "sustainable": 5.0,
+                "practical": 4.6709375,
+                "lifetime": 14.0,
+                "deployment_interval": 2.34,
+                "setup_seconds": 3.51
+              },
+              "cooldown": 2.34,
+              "strength": 69477.3014765261,
+              "channels": {
+                "Lightning": 49294.55463299627,
+                "SlowLightning": 20182.746843529832
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                  "rank": 21,
+                  "base_payload": {
+                    "Lightning": 273.0,
+                    "SlowLightning": 145.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 273.0,
+                    "SlowLightning": 145.0
+                  },
+                  "instances": 4.6709375,
+                  "frequency": 1,
+                  "debuff_aura": false,
+                  "strength": 69477.3014765261
+                }
+              ],
+              "limitations": [
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            },
+            "records/skills/playerclass06/squall1.dbr": {
+              "name": "Wind Devil",
+              "rank": 5,
+              "scaling": "player",
+              "population": {
+                "maximum": 3.0,
+                "sustainable": 3.0,
+                "practical": 3.0,
+                "lifetime": "permanent",
+                "deployment_interval": 15.600000000000001,
+                "setup_seconds": 0.0
+              },
+              "cooldown": 15.600000000000001,
+              "strength": 32790.98590291951,
+              "channels": {
+                "Lightning": 9463.32286589759,
+                "Physical": 128.28275622530552,
+                "SlowLightning": 18386.259204529706,
+                "Cold": 4813.1210762669025
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                  "rank": 5,
+                  "base_payload": {
+                    "Physical": 42.0,
+                    "SlowLightning": 77.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 6.3,
+                    "Physical": 35.7,
+                    "SlowLightning": 77.0,
+                    "Cold": 242.0
+                  },
+                  "instances": 1,
+                  "frequency": 1,
+                  "debuff_aura": true,
+                  "strength": 7479.502699385393
+                },
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                  "rank": 13,
+                  "base_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "instances": 3.0,
+                  "frequency": 0.5,
+                  "debuff_aura": false,
+                  "strength": 25311.48320353411
+                }
+              ],
+              "limitations": [
+                "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Identical debuff aura does not stack across instances.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            }
+          },
+          "resistance_reduction": {
+            "Physical": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Pierce": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Fire": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Cold": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Lightning": {
+              "additive": 64.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Poison": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Life": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Aether": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Chaos": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Bleeding": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            }
+          },
+          "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+          "policy": {
+            "deployment_window_seconds": 8,
+            "player_action_seconds": 1,
+            "weights": {
+              "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+              "records/skills/playerclass06/squall1.dbr": 0.2
+            }
+          },
+          "limitations": [
+            "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+            "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+            "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+          ]
+        },
+        "offense_index": 137.40252010322666,
+        "defense_index": 124.32888693902339
+      },
+      "cost": {
+        "utility_cost": 61.9,
+        "equipment_changes": 6,
+        "component_replacements": 7,
+        "destroyed_attached_components": 0,
+        "component_opportunity_cost": 14,
+        "augment_purchases": 6,
+        "attribute_points_spent": 1
+      },
+      "resources": {
+        "errors": [],
+        "component_need": {
+          "records/items/materia/compa_wardstone.dbr": 1,
+          "records/items/materia/compa_scalyhide.dbr": 3,
+          "records/items/materia/compa_mutatedscales.dbr": 1,
+          "records/items/materia/compa_soulshard.dbr": 1,
+          "records/items/materia/compa_imbuedsilver.dbr": 1
+        },
+        "crafted_batches": {},
+        "augment_purchases": {
+          "records/items/enchants/a114a_enchant.dbr": 1,
+          "records/items/enchants/c08a_enchant.dbr": 1,
+          "records/items/enchants/a18a_enchant.dbr": 1,
+          "records/items/enchants/c07a_enchant.dbr": 1,
+          "records/items/enchants/a101a_enchant.dbr": 2
+        },
+        "craft_iron_base": 0,
+        "augment_iron_base": 13500,
+        "remaining_iron_base": 2343792
+      }
+    },
+    "offense": {
+      "state": {
+        "gear": [
+          "GD0117",
+          "GD0157",
+          "GD0669",
+          "GD0070",
+          "GD0186",
+          "GD0648",
+          "GD0163",
+          "GD0136",
+          "GD0125",
+          "GD0126",
+          "GD0127",
+          "GD0128",
+          "GD0207",
+          "GD0153"
+        ],
+        "comp": [
+          "",
+          "records/items/materia/compa_corpsedust.dbr",
+          "records/items/materia/compb_chainsofoleron.dbr",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_densefur.dbr",
+          "records/items/materia/compb_spellwoventhreads.dbr",
+          "records/items/materia/compa_vengefulwraith.dbr",
+          "records/items/materia/compa_vengefulwraith.dbr",
+          "",
+          "records/items/materia/compa_scalyhide.dbr",
+          "records/items/materia/compa_wardstone.dbr",
+          "",
+          "records/items/materia/compa_imbuedsilver.dbr",
+          "records/items/materia/compa_imbuedsilver.dbr"
+        ],
+        "aug": [
+          "",
+          "records/items/enchants/a114a_enchant.dbr",
+          "records/items/enchants/c08a_enchant.dbr",
+          "records/items/enchants/c08a_enchant.dbr",
+          "records/items/enchants/c08a_enchant.dbr",
+          "records/items/enchants/c07a_enchant.dbr",
+          "records/items/enchants/a114a_enchant.dbr",
+          "records/items/enchants/a114a_enchant.dbr",
+          "",
+          "records/items/enchants/c08a_enchant.dbr",
+          "",
+          "",
+          "records/items/enchants/a101a_enchant.dbr",
+          "records/items/enchants/a101a_enchant.dbr"
+        ],
+        "skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "devotions": {
+          "records/skills/devotion/tier1_03a.dbr": 1,
+          "records/skills/devotion/tier1_03b.dbr": 1,
+          "records/skills/devotion/tier1_03c.dbr": 1,
+          "records/skills/devotion/tier1_03d.dbr": 1,
+          "records/skills/devotion/tier1_15a.dbr": 1,
+          "records/skills/devotion/tier1_15b.dbr": 1,
+          "records/skills/devotion/tier1_15c.dbr": 1,
+          "records/skills/devotion/tier1_15d.dbr": 1,
+          "records/skills/devotion/tier1_25a.dbr": 1,
+          "records/skills/devotion/tier1_25b.dbr": 1,
+          "records/skills/devotion/tier1_25c.dbr": 1,
+          "records/skills/devotion/tier1_25d.dbr": 1,
+          "records/skills/devotion/tier1_29a.dbr": 1,
+          "records/skills/devotion/tier1_29b.dbr": 1,
+          "records/skills/devotion/tier1_29c.dbr": 1,
+          "records/skills/devotion/tier1_29d.dbr": 1,
+          "records/skills/devotion/tier1_30a.dbr": 1,
+          "records/skills/devotion/tier1_30b.dbr": 1,
+          "records/skills/devotion/tier1_30c.dbr": 1,
+          "records/skills/devotion/tier1_30d.dbr": 1,
+          "records/skills/devotion/tier2_09a.dbr": 1,
+          "records/skills/devotion/tier2_09b.dbr": 1,
+          "records/skills/devotion/tier2_09c.dbr": 1,
+          "records/skills/devotion/tier2_09d.dbr": 1,
+          "records/skills/devotion/tier2_09e.dbr": 1,
+          "records/skills/devotion/tier2_09f_skill.dbr": 14,
+          "records/skills/devotion/tier2_28a.dbr": 1,
+          "records/skills/devotion/tier2_28b.dbr": 1,
+          "records/skills/devotion/tier2_28c.dbr": 1,
+          "records/skills/devotion/tier2_28d.dbr": 1,
+          "records/skills/devotion/tier2_28f_skill.dbr": 14,
+          "records/skills/devotion/tier1_25e_skill.dbr": 15,
+          "records/skills/devotion/tier1_29e_skill.dbr": 17,
+          "records/skills/devotion/tier1_36a.dbr": 1,
+          "records/skills/devotion/tier1_36b.dbr": 1,
+          "records/skills/devotion/tier1_36c.dbr": 1,
+          "records/skills/devotion/tier1_38a.dbr": 1,
+          "records/skills/devotion/tier1_38b.dbr": 1,
+          "records/skills/devotion/tier1_38c.dbr": 1,
+          "records/skills/devotion/tier3_14a.dbr": 1,
+          "records/skills/devotion/tier3_14b.dbr": 1,
+          "records/skills/devotion/tier3_14c.dbr": 1,
+          "records/skills/devotion/tier3_14d.dbr": 1,
+          "records/skills/devotion/tier3_14e.dbr": 1,
+          "records/skills/devotion/tier3_14f_skill.dbr": 3,
+          "records/skills/devotion/tier1_46a.dbr": 1,
+          "records/skills/devotion/tier1_46b.dbr": 1,
+          "records/skills/devotion/tier1_46c.dbr": 1,
+          "records/skills/devotion/tier1_46d.dbr": 1
+        },
+        "attributes": [
+          1,
+          0,
+          0
+        ],
+        "bindings": {
+          "records/skills/playerclass05/sphereofprotection1.dbr": "records/skills/devotion/tier2_28f_skill.dbr",
+          "records/skills/playerclass05/arcanemissile.dbr": "records/skills/devotion/tier2_09f_skill.dbr",
+          "records/skills/playerclass06/natureblessing1.dbr": "records/skills/devotion/tier1_29e_skill.dbr",
+          "records/skills/playerclass06/stormcaller1.dbr": "records/skills/devotion/tier1_25e_skill.dbr",
+          "records/skills/playerclass06/stormtotem01.dbr": "records/skills/devotion/tier3_14f_skill.dbr"
+        }
+      },
+      "stats": {
+        "physique": 740,
+        "cunning": 351,
+        "spirit": 786,
+        "health": 12641,
+        "energy": 3185,
+        "energy_reserved": 974,
+        "OA": 2461,
+        "DA": 1929,
+        "armor": 1210,
+        "armor_slots": {
+          "Head": 1198,
+          "Shoulders": 713,
+          "Chest": 1335,
+          "Arms": 987,
+          "Legs": 1580,
+          "Feet": 1185
+        },
+        "armor_absorption": 98.0,
+        "damage_absorption_percent": 0,
+        "resistances": [
+          {
+            "name": "Fire",
+            "raw": 101.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 21.0,
+            "difficulty_adjusted_before_cap": 101.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 151.0
+          },
+          {
+            "name": "Cold",
+            "raw": 107.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 27.0,
+            "difficulty_adjusted_before_cap": 107.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 157.0
+          },
+          {
+            "name": "Lightning",
+            "raw": 89.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 9.0,
+            "difficulty_adjusted_before_cap": 89.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 139.0
+          },
+          {
+            "name": "Poison & Acid",
+            "raw": 138.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 58.0,
+            "difficulty_adjusted_before_cap": 138.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 188.0
+          },
+          {
+            "name": "Pierce",
+            "raw": 86.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 6.0,
+            "difficulty_adjusted_before_cap": 86.0,
+            "difficulty_penalty": -50.0,
+            "before_difficulty_penalty": 136.0
+          },
+          {
+            "name": "Bleeding",
+            "raw": 86.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 6.0,
+            "difficulty_adjusted_before_cap": 86.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 111.0
+          },
+          {
+            "name": "Vitality",
+            "raw": 93.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 13.0,
+            "difficulty_adjusted_before_cap": 93.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 118.0
+          },
+          {
+            "name": "Aether",
+            "raw": 98.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 18.0,
+            "difficulty_adjusted_before_cap": 98.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 123.0
+          },
+          {
+            "name": "Chaos",
+            "raw": 91.0,
+            "cap": 80.0,
+            "shown": 80,
+            "overcap": 11.0,
+            "difficulty_adjusted_before_cap": 91.0,
+            "difficulty_penalty": -25.0,
+            "before_difficulty_penalty": 116.0
+          },
+          {
+            "name": "Physical",
+            "raw": 5.0,
+            "cap": 80.0,
+            "shown": 5,
+            "overcap": -75.0,
+            "difficulty_adjusted_before_cap": 5.0,
+            "difficulty_penalty": 0.0,
+            "before_difficulty_penalty": 5.0
+          }
+        ],
+        "cooldown_reduction": 18.0,
+        "lightning_modifier": 2052.165362463663,
+        "lightning_gear_skill_modifier": 1686.5700000000002,
+        "effective_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 13,
+          "records/skills/playerclass05/passive01.dbr": 13,
+          "records/skills/playerclass05/arcaneshield.dbr": 2,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 4,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 4,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 11,
+          "records/skills/playerclass05/arcanemissile.dbr": 2,
+          "records/skills/playerclass05/arcanemissile2.dbr": 2,
+          "records/skills/playerclass05/arcanemissile3.dbr": 2,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 13,
+          "records/skills/playerclass06/naturesblessing2.dbr": 10,
+          "records/skills/playerclass06/naturesblessing3.dbr": 12,
+          "records/skills/playerclass06/stormcaller1.dbr": 13,
+          "records/skills/playerclass06/totem1.dbr": 2,
+          "records/skills/playerclass06/squall1.dbr": 5,
+          "records/skills/playerclass06/squall2.dbr": 15,
+          "records/skills/playerclass06/squall3.dbr": 13,
+          "records/skills/playerclass06/stormtotem01.dbr": 23
+        },
+        "invested_skills": {
+          "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+          "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+          "records/skills/playerclass05/passive01.dbr": 12,
+          "records/skills/playerclass05/arcaneshield.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+          "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+          "records/skills/playerclass05/arcanemissile.dbr": 1,
+          "records/skills/playerclass05/arcanemissile2.dbr": 1,
+          "records/skills/playerclass05/arcanemissile3.dbr": 1,
+          "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+          "records/skills/playerclass06/natureblessing1.dbr": 10,
+          "records/skills/playerclass06/naturesblessing2.dbr": 9,
+          "records/skills/playerclass06/naturesblessing3.dbr": 9,
+          "records/skills/playerclass06/stormcaller1.dbr": 7,
+          "records/skills/playerclass06/totem1.dbr": 1,
+          "records/skills/playerclass06/squall1.dbr": 4,
+          "records/skills/playerclass06/squall2.dbr": 12,
+          "records/skills/playerclass06/squall3.dbr": 12,
+          "records/skills/playerclass06/stormtotem01.dbr": 16
+        },
+        "totem_count": 5.0,
+        "totems_per_cast": 2.0,
+        "totem_cooldown": 2.46,
+        "totem_duration": 14.0,
+        "raging_tempest_RR": 33.0,
+        "widow_RR": 31.0,
+        "ultos_relative_RR": 13.0,
+        "energy_regen_flat": 15.3,
+        "energy_regen_percent": 131.0,
+        "stats": {
+          "characterOffensiveAbility": 783.0,
+          "characterDefensiveAbility": 447.0,
+          "offensiveLightningModifier": 1603.0,
+          "offensiveAetherModifier": 294.0,
+          "defensivePierce": 136.0,
+          "defensiveLife": 118.0,
+          "defensiveProtection": 4405.0,
+          "characterManaRegen": 15.3,
+          "characterIntelligence": 437.0,
+          "characterLife": 4472.0,
+          "characterLifeRegen": 317.0,
+          "offensiveChaosModifier": 32.0,
+          "offensiveSlowPoisonModifier": 80.0,
+          "defensivePoison": 188.0,
+          "defensiveBleeding": 111.0,
+          "characterLifeRegenModifier": 164.0,
+          "characterLifeModifier": 61.0,
+          "offensiveElementalModifier": 299.0,
+          "characterStrength": 378.0,
+          "characterRunSpeedModifier": 12.0,
+          "characterOffensiveAbilityModifier": 26.0,
+          "defensiveTrap": 24.0,
+          "defensiveFire": 60.0,
+          "defensiveLightning": 48.0,
+          "characterDexterity": 261.0,
+          "defensiveAbsorptionModifier": 40.0,
+          "defensiveBonusProtection": 94.0,
+          "defensiveCold": 66.0,
+          "characterEnergyAbsorptionPercent": 25.0,
+          "defensiveAether": 123.0,
+          "defensiveChaos": 116.0,
+          "defensiveElementalResistance": 91.0,
+          "characterSpellCastSpeedModifier": 33.0,
+          "characterDefensiveAbilityModifier": 6.0,
+          "offensiveTotalDamageModifier": 72.0,
+          "offensiveSlowFireModifier": 375.0,
+          "offensiveSlowColdModifier": 768.0,
+          "offensiveSlowLightningModifier": 1127.0,
+          "offensiveColdModifier": 644.0,
+          "offensiveSlowColdDurationModifier": 130.0,
+          "offensiveLifeModifier": 106.0,
+          "offensiveSlowLifeModifier": 46.0,
+          "offensiveFireModifier": 262.0,
+          "defensivePhysical": 5.0,
+          "characterIncreasedExperience": 5.0,
+          "offensiveGlobalChance": 125.0,
+          "offensiveFireGlobal": 1.0,
+          "offensiveSlowLightningModifierChance": 25.0,
+          "offensiveColdModifierChance": 25.0,
+          "offensiveSlowColdModifierChance": 25.0,
+          "offensiveLightningGlobal": 1.0,
+          "offensiveSlowLightningGlobal": 2.0,
+          "offensiveSlowFireModifierChance": 25.0,
+          "offensiveSlowFireGlobal": 2.0,
+          "characterTotalSpeedModifier": 11.0,
+          "offensiveSlowColdGlobal": 2.0,
+          "skillManaCostReduction": 10.0,
+          "offensiveColdGlobal": 1.0,
+          "offensiveFireModifierChance": 25.0,
+          "offensiveLightningModifierChance": 58.0,
+          "characterIntelligenceModifier": 33.0,
+          "offensiveBaseLightningMin": 46.0,
+          "offensiveBaseLightningMax": 70.0,
+          "characterBaseAttackSpeed": -0.02,
+          "skillMaxLevel": 250.0,
+          "defensiveChaosMaxResist": 6.0,
+          "characterManaLimitReserve": 974.0,
+          "characterManaRegenModifier": 131.0,
+          "offensiveCritDamageModifier": 75.0,
+          "skillCooldownReduction": 18.0,
+          "characterMana": 1200.0,
+          "skillUltimateLevel": 194.0,
+          "skillTier": 36.0,
+          "skillWeaponTintBlue": 1.0,
+          "offensiveSlowManaLeachDurationMin": 1.0,
+          "skillTargetRadius": 24.0,
+          "skillWeaponTintRed": 0.4,
+          "offensiveSlowManaLeachMin": 18.0,
+          "offensiveElementalMin": 13.0,
+          "skillWeaponTintGreen": 0.7,
+          "offensiveSlowLightningChance": 33.0,
+          "offensiveSlowFireXOR": 1.0,
+          "offensiveSlowColdDurationMin": 3.0,
+          "offensiveSlowFireMin": 19.0,
+          "offensiveSlowColdXOR": 1.0,
+          "offensiveSlowLightningMax": 99.0,
+          "offensiveSlowLightningDurationMin": 6.0,
+          "offensiveSlowFireMax": 31.0,
+          "offensiveSlowColdChance": 34.0,
+          "offensiveSlowFireDurationMin": 3.0,
+          "offensiveSlowFireChance": 33.0,
+          "offensiveSlowColdMin": 25.0,
+          "offensiveSlowLightningMin": 40.0,
+          "offensiveSlowLightningXOR": 1.0,
+          "offensiveSlowFireDurationModifier": 70.0,
+          "offensiveSlowLightningDurationModifier": 70.0,
+          "offensivePhysicalMin": 43.0,
+          "offensivePhysicalMax": 56.0,
+          "defensiveBleedingDuration": 25.0,
+          "defensivePoisonDuration": 25.0,
+          "defensiveStun": 32.0,
+          "offensiveLifeLeechMin": 5.0,
+          "characterShieldStrengthReqReduction": 10.0,
+          "defensiveProtectionModifier": 8.0,
+          "characterManaModifier": 9.0,
+          "characterHealIncreasePercent": 26.0,
+          "offensiveLightningMax": 30.0,
+          "offensiveLightningMin": 10.0,
+          "defensivePercentReflectionResistance": 25.0
+        },
+        "bonuses": {
+          "all": 0.0,
+          "skill": {
+            "records/skills/playerclass05/mindovermatter1.dbr": 3.0,
+            "records/skills/playerclass06/stormcaller1.dbr": 5.0,
+            "records/skills/playerclass05/elementalinfusion1.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike2.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike3.dbr": 2.0,
+            "records/skills/playerclass10/leap1.dbr": 3.0,
+            "records/skills/playerclass06/natureblessing1.dbr": 2.0,
+            "records/skills/playerclass06/naturesblessing3.dbr": 2.0,
+            "records/skills/playerclass08/spectralarmor1.dbr": 2.0,
+            "records/skills/playerclass07/arcaneseal1.dbr": 2.0,
+            "records/skills/playerclass09/aegis1.dbr": 2.0,
+            "records/skills/playerclass02/grenado1.dbr": 2.0,
+            "records/skills/playerclass02/stunjacks1.dbr": 4.0,
+            "records/skills/playerclass08/lifetap1.dbr": 2.0,
+            "records/skills/playerclass06/stormtotem01.dbr": 6.0,
+            "records/skills/playerclass02/mortartrap1.dbr": 2.0,
+            "records/skills/playerclass07/auracensure1.dbr": 2.0,
+            "records/skills/playerclass10/passive02.dbr": 2.0,
+            "records/skills/playerclass06/savagestrike1.dbr": 2.0,
+            "records/skills/playerclass05/elementalinfusion2.dbr": 2.0,
+            "records/skills/playerclass05/razorwind2.dbr": 1.0,
+            "records/skills/playerclass05/chillingsurge2.dbr": 1.0,
+            "records/skills/playerclass06/squall2.dbr": 2.0,
+            "records/skills/playerclass10/passive03.dbr": 0.0
+          },
+          "mastery": {
+            "records/skills/playerclass03/_classtraining_class03.dbr": 1.0,
+            "records/skills/playerclass06/_classtraining_class06.dbr": 1.0,
+            "records/skills/playerclass05/_classtraining_class05.dbr": 1.0
+          }
+        },
+        "energy_regen_lower_bound": 37.653000000000006,
+        "offense_model": {
+          "abilities": {
+            "records/skills/playerclass06/stormtotem01.dbr": {
+              "name": "Storm Totem",
+              "rank": 23,
+              "scaling": "player",
+              "population": {
+                "maximum": 5.0,
+                "sustainable": 5.0,
+                "practical": 4.6540625,
+                "lifetime": 14.0,
+                "deployment_interval": 2.46,
+                "setup_seconds": 3.69
+              },
+              "cooldown": 2.46,
+              "strength": 93547.08598889143,
+              "channels": {
+                "Lightning": 66406.64699779579,
+                "SlowLightning": 27140.438991095645
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                  "rank": 23,
+                  "base_payload": {
+                    "Lightning": 298.0,
+                    "SlowLightning": 161.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 298.0,
+                    "SlowLightning": 161.0
+                  },
+                  "instances": 4.6540625,
+                  "frequency": 1,
+                  "debuff_aura": false,
+                  "strength": 93547.08598889143
+                }
+              ],
+              "limitations": [
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            },
+            "records/skills/playerclass06/squall1.dbr": {
+              "name": "Wind Devil",
+              "rank": 5,
+              "scaling": "player",
+              "population": {
+                "maximum": 3.0,
+                "sustainable": 3.0,
+                "practical": 3.0,
+                "lifetime": "permanent",
+                "deployment_interval": 16.400000000000002,
+                "setup_seconds": 0.0
+              },
+              "cooldown": 16.400000000000002,
+              "strength": 40525.14943530687,
+              "channels": {
+                "Lightning": 11721.26515727025,
+                "Physical": 167.57157326726252,
+                "SlowLightning": 22348.271810558894,
+                "Cold": 6288.040894210464
+              },
+              "parts": [
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                  "rank": 5,
+                  "base_payload": {
+                    "Physical": 42.0,
+                    "SlowLightning": 77.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 6.3,
+                    "Physical": 35.7,
+                    "SlowLightning": 77.0,
+                    "Cold": 242.0
+                  },
+                  "instances": 1,
+                  "frequency": 1,
+                  "debuff_aura": true,
+                  "strength": 9546.269042309668
+                },
+                {
+                  "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                  "rank": 13,
+                  "base_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "converted_payload": {
+                    "Lightning": 159.0,
+                    "SlowLightning": 180.0
+                  },
+                  "instances": 3.0,
+                  "frequency": 0.5,
+                  "debuff_aura": false,
+                  "strength": 30978.880392997205
+                }
+              ],
+              "limitations": [
+                "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+                "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+                "Identical debuff aura does not stack across instances.",
+                "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+              ]
+            }
+          },
+          "resistance_reduction": {
+            "Physical": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Pierce": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Fire": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Cold": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Lightning": {
+              "additive": 64.0,
+              "flat": 5.0,
+              "relative": 13.0
+            },
+            "Poison": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Life": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Aether": {
+              "additive": 33.0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Chaos": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            },
+            "Bleeding": {
+              "additive": 0,
+              "flat": 5.0,
+              "relative": 0
+            }
+          },
+          "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+          "policy": {
+            "deployment_window_seconds": 8,
+            "player_action_seconds": 1,
+            "weights": {
+              "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+              "records/skills/playerclass06/squall1.dbr": 0.2
+            }
+          },
+          "limitations": [
+            "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+            "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+            "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+          ]
+        },
+        "offense_index": 182.5957442120497,
+        "defense_index": 122.33167115325318
+      },
+      "cost": {
+        "utility_cost": 353.7,
+        "equipment_changes": 8,
+        "component_replacements": 9,
+        "destroyed_attached_components": 1,
+        "component_opportunity_cost": 150.6,
+        "augment_purchases": 10,
+        "attribute_points_spent": 1
+      },
+      "resources": {
+        "errors": [],
+        "component_need": {
+          "records/items/materia/compa_corpsedust.dbr": 1,
+          "records/items/materia/compb_chainsofoleron.dbr": 1,
+          "records/items/materia/compa_scalyhide.dbr": 2,
+          "records/items/materia/compa_densefur.dbr": 1,
+          "records/items/materia/compb_spellwoventhreads.dbr": 1,
+          "records/items/materia/compa_vengefulwraith.dbr": 2,
+          "records/items/materia/compa_imbuedsilver.dbr": 1
+        },
+        "crafted_batches": {
+          "records/items/materia/compa_vengefulwraith.dbr": 2
+        },
+        "augment_purchases": {
+          "records/items/enchants/a114a_enchant.dbr": 3,
+          "records/items/enchants/c08a_enchant.dbr": 4,
+          "records/items/enchants/c07a_enchant.dbr": 1,
+          "records/items/enchants/a101a_enchant.dbr": 2
+        },
+        "craft_iron_base": 3000.0,
+        "augment_iron_base": 27500,
+        "remaining_iron_base": 2326792.0
+      }
+    }
+  },
+  "baseline": {
+    "physique": 683,
+    "cunning": 330,
+    "spirit": 770,
+    "health": 9509,
+    "energy": 3151,
+    "energy_reserved": 668,
+    "OA": 2123,
+    "DA": 1793,
+    "armor": 1213,
+    "armor_slots": {
+      "Head": 1198,
+      "Shoulders": 675,
+      "Chest": 1460,
+      "Arms": 1093,
+      "Legs": 1412,
+      "Feet": 1159
+    },
+    "armor_absorption": 70.0,
+    "damage_absorption_percent": 0,
+    "resistances": [
+      {
+        "name": "Fire",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "difficulty_adjusted_before_cap": 77.0,
+        "difficulty_penalty": -50.0,
+        "before_difficulty_penalty": 127.0
+      },
+      {
+        "name": "Cold",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "difficulty_adjusted_before_cap": 77.0,
+        "difficulty_penalty": -50.0,
+        "before_difficulty_penalty": 127.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "difficulty_adjusted_before_cap": 77.0,
+        "difficulty_penalty": -50.0,
+        "before_difficulty_penalty": 127.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 33.0,
+        "cap": 80.0,
+        "shown": 33,
+        "overcap": -47.0,
+        "difficulty_adjusted_before_cap": 33.0,
+        "difficulty_penalty": -50.0,
+        "before_difficulty_penalty": 83.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 104.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 24.0,
+        "difficulty_adjusted_before_cap": 104.0,
+        "difficulty_penalty": -50.0,
+        "before_difficulty_penalty": 154.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 51.0,
+        "cap": 80.0,
+        "shown": 51,
+        "overcap": -29.0,
+        "difficulty_adjusted_before_cap": 51.0,
+        "difficulty_penalty": -25.0,
+        "before_difficulty_penalty": 76.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 49.0,
+        "cap": 80.0,
+        "shown": 49,
+        "overcap": -31.0,
+        "difficulty_adjusted_before_cap": 49.0,
+        "difficulty_penalty": -25.0,
+        "before_difficulty_penalty": 74.0
+      },
+      {
+        "name": "Aether",
+        "raw": 136.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 56.0,
+        "difficulty_adjusted_before_cap": 136.0,
+        "difficulty_penalty": -25.0,
+        "before_difficulty_penalty": 161.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 31.0,
+        "cap": 80.0,
+        "shown": 31,
+        "overcap": -49.0,
+        "difficulty_adjusted_before_cap": 31.0,
+        "difficulty_penalty": -25.0,
+        "before_difficulty_penalty": 56.0
+      },
+      {
+        "name": "Physical",
+        "raw": 5.0,
+        "cap": 80.0,
+        "shown": 5,
+        "overcap": -75.0,
+        "difficulty_adjusted_before_cap": 5.0,
+        "difficulty_penalty": 0.0,
+        "before_difficulty_penalty": 5.0
+      }
+    ],
+    "cooldown_reduction": 18.0,
+    "lightning_modifier": 1615.942093023256,
+    "lightning_gear_skill_modifier": 1257.5700000000002,
+    "effective_skills": {
+      "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+      "records/skills/playerclass05/sphereofprotection1.dbr": 14,
+      "records/skills/playerclass05/passive01.dbr": 14,
+      "records/skills/playerclass05/arcaneshield.dbr": 3,
+      "records/skills/playerclass05/elementalinfusion1.dbr": 3,
+      "records/skills/playerclass05/elementalinfusion2.dbr": 5,
+      "records/skills/playerclass05/elementalinfusion3.dbr": 12,
+      "records/skills/playerclass05/arcanemissile.dbr": 3,
+      "records/skills/playerclass05/arcanemissile2.dbr": 3,
+      "records/skills/playerclass05/arcanemissile3.dbr": 3,
+      "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+      "records/skills/playerclass06/natureblessing1.dbr": 11,
+      "records/skills/playerclass06/naturesblessing2.dbr": 12,
+      "records/skills/playerclass06/naturesblessing3.dbr": 12,
+      "records/skills/playerclass06/stormcaller1.dbr": 13,
+      "records/skills/playerclass06/totem1.dbr": 2,
+      "records/skills/playerclass06/squall1.dbr": 5,
+      "records/skills/playerclass06/squall2.dbr": 15,
+      "records/skills/playerclass06/squall3.dbr": 13,
+      "records/skills/playerclass06/stormtotem01.dbr": 21
+    },
+    "invested_skills": {
+      "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+      "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+      "records/skills/playerclass05/passive01.dbr": 12,
+      "records/skills/playerclass05/arcaneshield.dbr": 1,
+      "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+      "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+      "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+      "records/skills/playerclass05/arcanemissile.dbr": 1,
+      "records/skills/playerclass05/arcanemissile2.dbr": 1,
+      "records/skills/playerclass05/arcanemissile3.dbr": 1,
+      "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+      "records/skills/playerclass06/natureblessing1.dbr": 10,
+      "records/skills/playerclass06/naturesblessing2.dbr": 9,
+      "records/skills/playerclass06/naturesblessing3.dbr": 9,
+      "records/skills/playerclass06/stormcaller1.dbr": 7,
+      "records/skills/playerclass06/totem1.dbr": 1,
+      "records/skills/playerclass06/squall1.dbr": 4,
+      "records/skills/playerclass06/squall2.dbr": 12,
+      "records/skills/playerclass06/squall3.dbr": 12,
+      "records/skills/playerclass06/stormtotem01.dbr": 16
+    },
+    "totem_count": 4.0,
+    "totems_per_cast": 2.0,
+    "totem_cooldown": 3.6900000000000004,
+    "totem_duration": 14.0,
+    "raging_tempest_RR": 33.0,
+    "widow_RR": 31.0,
+    "ultos_relative_RR": 13.0,
+    "energy_regen_flat": 16.4,
+    "energy_regen_percent": 115.0,
+    "stats": {
+      "characterOffensiveAbility": 525.0,
+      "characterDefensiveAbility": 446.0,
+      "offensiveLightningModifier": 1349.0,
+      "offensiveAetherModifier": 279.0,
+      "defensivePierce": 154.0,
+      "defensiveLife": 74.0,
+      "defensiveProtection": 4498.0,
+      "characterManaRegen": 16.4,
+      "offensiveColdModifier": 789.0,
+      "retaliationSlowAttackSpeedDurationMin": 5.0,
+      "conversionPercentage": 24.269531667232513,
+      "characterStrengthModifier": 3.0,
+      "retaliationSlowAttackSpeedMin": 28.0,
+      "retaliationSlowAttackSpeedChance": 18.0,
+      "defensiveAether": 161.0,
+      "defensiveFreeze": 21.0,
+      "offensiveLifeModifier": 176.0,
+      "defensiveTrap": 29.0,
+      "characterIntelligence": 421.0,
+      "offensiveChaosModifier": 73.0,
+      "offensiveSlowLightningModifier": 1002.0,
+      "offensiveSlowPoisonModifier": 40.0,
+      "defensiveBleeding": 76.0,
+      "characterLifeModifier": 58.0,
+      "offensiveElementalModifier": 181.0,
+      "offensiveSlowFireModifier": 381.0,
+      "offensiveSlowColdModifier": 772.0,
+      "defensiveElementalResistance": 127.0,
+      "offensiveSlowBleedingModifier": 39.0,
+      "defensivePoison": 83.0,
+      "defensiveStun": 83.0,
+      "characterLife": 2823.0,
+      "characterLifeRegen": 206.0,
+      "characterLifeRegenModifier": 145.0,
+      "offensiveLightningMin": 11.0,
+      "offensiveLightningMax": 42.0,
+      "offensivePierceModifier": 45.0,
+      "offensiveSlowLifeModifier": 46.0,
+      "offensiveFireModifier": 262.0,
+      "defensivePhysical": 5.0,
+      "defensiveChaos": 56.0,
+      "characterOffensiveAbilityModifier": 26.0,
+      "characterIncreasedExperience": 5.0,
+      "characterRunSpeedModifier": 6.0,
+      "offensiveGlobalChance": 125.0,
+      "offensiveFireGlobal": 1.0,
+      "offensiveSlowLightningModifierChance": 25.0,
+      "offensiveColdModifierChance": 25.0,
+      "offensiveSlowColdModifierChance": 25.0,
+      "offensiveLightningGlobal": 1.0,
+      "offensiveSlowLightningGlobal": 2.0,
+      "offensiveSlowFireModifierChance": 25.0,
+      "offensiveSlowFireGlobal": 2.0,
+      "characterTotalSpeedModifier": 11.0,
+      "offensiveSlowColdGlobal": 2.0,
+      "skillManaCostReduction": 10.0,
+      "offensiveColdGlobal": 1.0,
+      "offensiveFireModifierChance": 25.0,
+      "offensiveLightningModifierChance": 58.0,
+      "characterIntelligenceModifier": 34.0,
+      "offensiveBaseLightningMin": 46.0,
+      "offensiveBaseLightningMax": 70.0,
+      "characterBaseAttackSpeed": -0.02,
+      "characterSpellCastSpeedModifier": 25.0,
+      "characterManaRegenModifier": 115.0,
+      "skillCooldownReduction": 18.0,
+      "characterDexterity": 240.0,
+      "characterMana": 1200.0,
+      "skillMaxLevel": 248.0,
+      "characterStrength": 310.0,
+      "skillUltimateLevel": 194.0,
+      "skillTier": 36.0,
+      "skillWeaponTintBlue": 1.0,
+      "offensiveSlowManaLeachDurationMin": 1.0,
+      "skillTargetRadius": 24.0,
+      "skillWeaponTintRed": 0.4,
+      "characterManaLimitReserve": 668.0,
+      "offensiveSlowManaLeachMin": 14.0,
+      "offensiveElementalMin": 10.0,
+      "skillWeaponTintGreen": 0.7,
+      "offensiveSlowLightningChance": 33.0,
+      "offensiveSlowFireXOR": 1.0,
+      "offensiveSlowColdDurationMin": 3.0,
+      "offensiveSlowFireMin": 22.0,
+      "offensiveSlowColdXOR": 1.0,
+      "offensiveSlowLightningMax": 106.0,
+      "offensiveSlowLightningDurationMin": 6.0,
+      "offensiveSlowFireMax": 36.0,
+      "offensiveSlowColdChance": 34.0,
+      "offensiveSlowFireDurationMin": 3.0,
+      "offensiveSlowFireChance": 33.0,
+      "offensiveSlowColdMin": 29.0,
+      "offensiveSlowLightningMin": 41.0,
+      "offensiveSlowLightningXOR": 1.0,
+      "offensiveSlowFireDurationModifier": 75.0,
+      "offensiveCritDamageModifier": 67.0,
+      "offensiveSlowLightningDurationModifier": 75.0,
+      "offensiveSlowColdDurationModifier": 75.0,
+      "offensivePhysicalMin": 36.0,
+      "offensivePhysicalMax": 47.0,
+      "defensiveBleedingDuration": 27.0,
+      "defensivePoisonDuration": 27.0,
+      "offensiveLifeLeechMin": 5.0,
+      "characterShieldStrengthReqReduction": 10.0,
+      "defensiveProtectionModifier": 8.0,
+      "characterManaModifier": 9.0,
+      "characterHealIncreasePercent": 26.0,
+      "offensiveTotalDamageModifier": 15.0,
+      "defensivePercentReflectionResistance": 25.0
+    },
+    "bonuses": {
+      "all": 0.0,
+      "skill": {
+        "records/skills/playerclass05/mindovermatter1.dbr": 3.0,
+        "records/skills/playerclass06/stormcaller1.dbr": 5.0,
+        "records/skills/playerclass08/illomen1.dbr": 2.0,
+        "records/skills/playerclass02/grenado1.dbr": 2.0,
+        "records/skills/playerclass10/wpattack01.dbr": 2.0,
+        "records/skills/playerclass06/naturesblessing2.dbr": 2.0,
+        "records/skills/playerclass06/naturesblessing3.dbr": 2.0,
+        "records/skills/playerclass06/summon_manticore1.dbr": 2.0,
+        "records/skills/playerclass10/amatokpact1.dbr": 2.0,
+        "records/skills/playerclass08/lifetap1.dbr": 2.0,
+        "records/skills/playerclass06/stormtotem01.dbr": 4.0,
+        "records/skills/playerclass02/mortartrap1.dbr": 2.0,
+        "records/skills/playerclass07/auracensure1.dbr": 2.0,
+        "records/skills/playerclass10/passive02.dbr": 2.0,
+        "records/skills/playerclass06/savagestrike1.dbr": 2.0,
+        "records/skills/playerclass05/elementalinfusion2.dbr": 2.0,
+        "records/skills/playerclass05/razorwind2.dbr": 1.0,
+        "records/skills/playerclass05/chillingsurge2.dbr": 1.0,
+        "records/skills/playerclass02/stunjacks1.dbr": 2.0,
+        "records/skills/playerclass06/squall2.dbr": 2.0
+      },
+      "mastery": {
+        "records/skills/playerclass05/_classtraining_class05.dbr": 2.0,
+        "records/skills/playerclass06/_classtraining_class06.dbr": 1.0
+      }
+    },
+    "energy_regen_lower_bound": 37.41,
+    "offense_model": {
+      "abilities": {
+        "records/skills/playerclass06/stormtotem01.dbr": {
+          "name": "Storm Totem",
+          "rank": 21,
+          "scaling": "player",
+          "population": {
+            "maximum": 4.0,
+            "sustainable": 4.0,
+            "practical": 3.769375,
+            "lifetime": 14.0,
+            "deployment_interval": 3.6900000000000004,
+            "setup_seconds": 3.6900000000000004
+          },
+          "cooldown": 3.6900000000000004,
+          "strength": 48072.7158604595,
+          "channels": {
+            "Lightning": 33164.415889702934,
+            "SlowLightning": 14908.299970756565
+          },
+          "parts": [
+            {
+              "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+              "rank": 21,
+              "base_payload": {
+                "Lightning": 273.0,
+                "SlowLightning": 145.0
+              },
+              "converted_payload": {
+                "Lightning": 273.0,
+                "SlowLightning": 145.0
+              },
+              "instances": 3.769375,
+              "frequency": 1,
+              "debuff_aura": false,
+              "strength": 48072.7158604595
+            }
+          ],
+          "limitations": [
+            "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+            "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+          ]
+        },
+        "records/skills/playerclass06/squall1.dbr": {
+          "name": "Wind Devil",
+          "rank": 5,
+          "scaling": "player",
+          "population": {
+            "maximum": 3.0,
+            "sustainable": 3.0,
+            "practical": 3.0,
+            "lifetime": "permanent",
+            "deployment_interval": 16.400000000000002,
+            "setup_seconds": 0.0
+          },
+          "cooldown": 16.400000000000002,
+          "strength": 30108.094962699863,
+          "channels": {
+            "Lightning": 7889.541651211624,
+            "Physical": 115.09220125487703,
+            "SlowLightning": 16829.683109830108,
+            "Cold": 5273.778000403255
+          },
+          "parts": [
+            {
+              "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+              "rank": 5,
+              "base_payload": {
+                "Physical": 42.0,
+                "SlowLightning": 77.0
+              },
+              "converted_payload": {
+                "Lightning": 6.3,
+                "Physical": 35.7,
+                "SlowLightning": 77.0,
+                "Cold": 242.0
+              },
+              "instances": 1,
+              "frequency": 1,
+              "debuff_aura": true,
+              "strength": 7692.210685998064
+            },
+            {
+              "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+              "rank": 13,
+              "base_payload": {
+                "Lightning": 159.0,
+                "SlowLightning": 180.0
+              },
+              "converted_payload": {
+                "Lightning": 159.0,
+                "SlowLightning": 180.0
+              },
+              "instances": 3.0,
+              "frequency": 0.5,
+              "debuff_aura": false,
+              "strength": 22415.8842767018
+            }
+          ],
+          "limitations": [
+            "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+            "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+            "Identical debuff aura does not stack across instances.",
+            "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+          ]
+        }
+      },
+      "resistance_reduction": {
+        "Physical": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Pierce": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Fire": {
+          "additive": 33.0,
+          "flat": 7.0,
+          "relative": 13.0
+        },
+        "Cold": {
+          "additive": 33.0,
+          "flat": 7.0,
+          "relative": 13.0
+        },
+        "Lightning": {
+          "additive": 64.0,
+          "flat": 7.0,
+          "relative": 13.0
+        },
+        "Poison": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Life": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Aether": {
+          "additive": 33.0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Chaos": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        },
+        "Bleeding": {
+          "additive": 0,
+          "flat": 7.0,
+          "relative": 0
+        }
+      },
+      "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+      "policy": {
+        "deployment_window_seconds": 8,
+        "player_action_seconds": 1,
+        "weights": {
+          "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+          "records/skills/playerclass06/squall1.dbr": 0.2
+        }
+      },
+      "limitations": [
+        "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+        "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+        "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+      ]
+    },
+    "offense_index": 100.0,
+    "defense_index": 100.0
+  },
+  "search_log": [
+    {
+      "mode": "minimal",
+      "round": 1,
+      "evaluations": 7585,
+      "feasible": 16
+    },
+    {
+      "mode": "minimal",
+      "round": 2,
+      "evaluations": 10442,
+      "feasible": 31
+    },
+    {
+      "mode": "balanced",
+      "round": 1,
+      "evaluations": 12973,
+      "feasible": 47
+    },
+    {
+      "mode": "balanced",
+      "round": 2,
+      "evaluations": 13937,
+      "feasible": 47
+    },
+    {
+      "mode": "offense",
+      "round": 1,
+      "evaluations": 16745,
+      "feasible": 63
+    },
+    {
+      "mode": "offense",
+      "round": 2,
+      "evaluations": 19545,
+      "feasible": 64
+    }
+  ],
+  "seconds": 137.08,
+  "evaluations": 19545,
+  "feasible_candidates": 64,
+  "skills_fixed": {
+    "records/skills/playerclass05/_classtraining_class05.dbr": 25,
+    "records/skills/playerclass05/sphereofprotection1.dbr": 12,
+    "records/skills/playerclass05/passive01.dbr": 12,
+    "records/skills/playerclass05/arcaneshield.dbr": 1,
+    "records/skills/playerclass05/elementalinfusion1.dbr": 1,
+    "records/skills/playerclass05/elementalinfusion2.dbr": 1,
+    "records/skills/playerclass05/elementalinfusion3.dbr": 10,
+    "records/skills/playerclass05/arcanemissile.dbr": 1,
+    "records/skills/playerclass05/arcanemissile2.dbr": 1,
+    "records/skills/playerclass05/arcanemissile3.dbr": 1,
+    "records/skills/playerclass06/_classtraining_class06.dbr": 50,
+    "records/skills/playerclass06/natureblessing1.dbr": 10,
+    "records/skills/playerclass06/naturesblessing2.dbr": 9,
+    "records/skills/playerclass06/naturesblessing3.dbr": 9,
+    "records/skills/playerclass06/stormcaller1.dbr": 7,
+    "records/skills/playerclass06/totem1.dbr": 1,
+    "records/skills/playerclass06/squall1.dbr": 4,
+    "records/skills/playerclass06/squall2.dbr": 12,
+    "records/skills/playerclass06/squall3.dbr": 12,
+    "records/skills/playerclass06/stormtotem01.dbr": 16
+  },
+  "devotions_fixed": {
+    "records/skills/devotion/tier1_03a.dbr": 1,
+    "records/skills/devotion/tier1_03b.dbr": 1,
+    "records/skills/devotion/tier1_03c.dbr": 1,
+    "records/skills/devotion/tier1_03d.dbr": 1,
+    "records/skills/devotion/tier1_15a.dbr": 1,
+    "records/skills/devotion/tier1_15b.dbr": 1,
+    "records/skills/devotion/tier1_15c.dbr": 1,
+    "records/skills/devotion/tier1_15d.dbr": 1,
+    "records/skills/devotion/tier1_25a.dbr": 1,
+    "records/skills/devotion/tier1_25b.dbr": 1,
+    "records/skills/devotion/tier1_25c.dbr": 1,
+    "records/skills/devotion/tier1_25d.dbr": 1,
+    "records/skills/devotion/tier1_29a.dbr": 1,
+    "records/skills/devotion/tier1_29b.dbr": 1,
+    "records/skills/devotion/tier1_29c.dbr": 1,
+    "records/skills/devotion/tier1_29d.dbr": 1,
+    "records/skills/devotion/tier1_30a.dbr": 1,
+    "records/skills/devotion/tier1_30b.dbr": 1,
+    "records/skills/devotion/tier1_30c.dbr": 1,
+    "records/skills/devotion/tier1_30d.dbr": 1,
+    "records/skills/devotion/tier2_09a.dbr": 1,
+    "records/skills/devotion/tier2_09b.dbr": 1,
+    "records/skills/devotion/tier2_09c.dbr": 1,
+    "records/skills/devotion/tier2_09d.dbr": 1,
+    "records/skills/devotion/tier2_09e.dbr": 1,
+    "records/skills/devotion/tier2_09f_skill.dbr": 14,
+    "records/skills/devotion/tier2_28a.dbr": 1,
+    "records/skills/devotion/tier2_28b.dbr": 1,
+    "records/skills/devotion/tier2_28c.dbr": 1,
+    "records/skills/devotion/tier2_28d.dbr": 1,
+    "records/skills/devotion/tier2_28f_skill.dbr": 14,
+    "records/skills/devotion/tier1_25e_skill.dbr": 15,
+    "records/skills/devotion/tier1_29e_skill.dbr": 17,
+    "records/skills/devotion/tier1_36a.dbr": 1,
+    "records/skills/devotion/tier1_36b.dbr": 1,
+    "records/skills/devotion/tier1_36c.dbr": 1,
+    "records/skills/devotion/tier1_38a.dbr": 1,
+    "records/skills/devotion/tier1_38b.dbr": 1,
+    "records/skills/devotion/tier1_38c.dbr": 1,
+    "records/skills/devotion/tier3_14a.dbr": 1,
+    "records/skills/devotion/tier3_14b.dbr": 1,
+    "records/skills/devotion/tier3_14c.dbr": 1,
+    "records/skills/devotion/tier3_14d.dbr": 1,
+    "records/skills/devotion/tier3_14e.dbr": 1,
+    "records/skills/devotion/tier3_14f_skill.dbr": 3,
+    "records/skills/devotion/tier1_46a.dbr": 1,
+    "records/skills/devotion/tier1_46b.dbr": 1,
+    "records/skills/devotion/tier1_46c.dbr": 1,
+    "records/skills/devotion/tier1_46d.dbr": 1
+  },
+  "bindings_fixed": {
+    "records/skills/playerclass05/sphereofprotection1.dbr": "records/skills/devotion/tier2_28f_skill.dbr",
+    "records/skills/playerclass05/arcanemissile.dbr": "records/skills/devotion/tier2_09f_skill.dbr",
+    "records/skills/playerclass06/natureblessing1.dbr": "records/skills/devotion/tier1_29e_skill.dbr",
+    "records/skills/playerclass06/stormcaller1.dbr": "records/skills/devotion/tier1_25e_skill.dbr",
+    "records/skills/playerclass06/stormtotem01.dbr": "records/skills/devotion/tier3_14f_skill.dbr"
+  },
+  "scope": "Finite joint bundle beam search; no global optimum claim",
+  "cost_units": "Preference utility, not iron; actual base iron in resources",
+  "defensive_floors": {
+    "DA": 1900,
+    "health": 9500,
+    "armor_absorption": 84,
+    "standard_resistances": "all capped",
+    "offense_index": 95
+  },
+  "input_hash": "92d8af1110d16751650ebd5845e46d426b1d29e1a050886373b6375fd02732d9",
+  "validation": [
+    {
+      "stat": "physique",
+      "exported": 683,
+      "calculated": 683,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "cunning",
+      "exported": 330,
+      "calculated": 330,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "spirit",
+      "exported": 770,
+      "calculated": 770,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "health",
+      "exported": 9509,
+      "calculated": 9509,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "energy",
+      "exported": 3151,
+      "calculated": 3151,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "OA",
+      "exported": 2123,
+      "calculated": 2123,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "DA",
+      "exported": 1793,
+      "calculated": 1793,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor",
+      "exported": 1213,
+      "calculated": 1213,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Head",
+      "exported": 1198,
+      "calculated": 1198,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Shoulders",
+      "exported": 675,
+      "calculated": 675,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Chest",
+      "exported": 1460,
+      "calculated": 1460,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Arms",
+      "exported": 1093,
+      "calculated": 1093,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Legs",
+      "exported": 1412,
+      "calculated": 1412,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Feet",
+      "exported": 1159,
+      "calculated": 1159,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Fire resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Fire before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Cold resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Cold before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Lightning resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Lightning before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Poison & Acid resistance shown",
+      "exported": 33,
+      "calculated": 33,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Poison & Acid before cap",
+      "exported": 33,
+      "calculated": 33.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Pierce resistance shown",
+      "exported": 80,
+      "calculated": 80,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Pierce before cap",
+      "exported": 104,
+      "calculated": 104.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Bleeding resistance shown",
+      "exported": 51,
+      "calculated": 51,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Bleeding before cap",
+      "exported": 51,
+      "calculated": 51.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Vitality resistance shown",
+      "exported": 49,
+      "calculated": 49,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Vitality before cap",
+      "exported": 49,
+      "calculated": 49.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Aether resistance shown",
+      "exported": 80,
+      "calculated": 80,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Aether before cap",
+      "exported": 136,
+      "calculated": 136.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Chaos resistance shown",
+      "exported": 31,
+      "calculated": 31,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Chaos before cap",
+      "exported": 31,
+      "calculated": 31.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Physical resistance shown",
+      "exported": 5,
+      "calculated": 5,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Physical before cap",
+      "exported": 5,
+      "calculated": 5.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor_absorption",
+      "exported": null,
+      "calculated": 70.0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "lightning_modifier",
+      "exported": null,
+      "calculated": 1615.942093023256,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "cooldown_reduction",
+      "exported": null,
+      "calculated": 18.0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "offense_proxy",
+      "exported": null,
+      "calculated": 0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    }
+  ]
+}

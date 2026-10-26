@@ -1,0 +1,1 @@
+PASS: 34 baseline numeric checks; all three selected candidates legal; fixed skills/devotions/bindings/gear/weapons; four attribute points unspent; Elite/Ultimate separation; resource/faction/equip checks; preserved v1.2 source and Mal archives.

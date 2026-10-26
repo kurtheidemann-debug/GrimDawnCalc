@@ -1,0 +1,11 @@
+{
+  "name": "Beeztrap",
+  "archetype": "Dual-wield Cadence",
+  "materiality": 0.03,
+  "difficulty": 1,
+  "reference_level": 74,
+  "revision": 1,
+  "skills_locked": true,
+  "shared_snapshot": "per-profile",
+  "accepted_exceptions": []
+}

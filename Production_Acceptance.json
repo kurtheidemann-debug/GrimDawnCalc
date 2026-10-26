@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "Mal": {
+    "seconds": 21.534460078000848,
+    "feasible": 141,
+    "evaluations": 2375,
+    "offense_index": 109.98467097603924,
+    "defense_index": 105.7953189457149,
+    "uncapped_chaos": 95.0
+  },
+  "Beeztrap": {
+    "seconds": 54.363340499001424,
+    "feasible": 280,
+    "scenario_count": 32,
+    "timed_out": true,
+    "blockers": [
+      "DoT, crit, RR or conditional/proc mechanics changed outside the direct-offense envelope"
+    ]
+  },
+  "profile_isolation_passed": true,
+  "routine_regression_skip_passed": true,
+  "full_refresh": {
+    "passed": true,
+    "fresh_decoder_export": true,
+    "accepted_chaos_only": true,
+    "seconds": 49.24877439299962,
+    "uncapped_chaos": 95.0
+  },
+  "regression_tests": 58,
+  "explicit_progression": "Imported when supplied; never inferred or optimized"
+}

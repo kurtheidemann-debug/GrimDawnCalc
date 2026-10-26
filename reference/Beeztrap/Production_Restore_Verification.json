@@ -1,0 +1,7 @@
+{
+  "checkpoint_zip": "truncated; restored existing extracted checkpoint without regenerating any database",
+  "complete_zip_entries_crc_checked": 73,
+  "original_v12_files_hash_checked": 53,
+  "policy_patch": "CRC verified and extracted",
+  "scorer": "matched exact completed Task2C ZIP entry"
+}

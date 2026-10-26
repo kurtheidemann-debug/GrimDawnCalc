@@ -1,0 +1,86 @@
+PASS: Mal recommended loadout, attachments, attributes and all selected scores identical.
+PASS: All 393 original physical items reclassified exactly once.
+PASS: Every existing item comparison score preserved.
+PASS: Scion rejected on net loss and known 5-to-4 totem breakpoint, despite +4 CDR; eligibility blockers separate.
+PASS: Both superior future-level items remain retained with unchanged full valuations.
+PASS: Genuinely incomplete valuation remains Uncertain — Value.
+PASS: Competitive alternatives remain with explicit comparable scores, benefits and losses: Aetherfire Exalted Ring of Readiness
+PASS: Beeztrap disposition regression leaves recommendation and all comparison scores unchanged.
+PASS: Beeztrap has supported comparisons exercising the same decision policy.
+PASS: Beeztrap inferior-item decisions use its existing 3% comparison envelope, not Mal’s 5%.
+PASS: Preserved GrimDawn_Optimizer.py
+PASS: Preserved LICENSE.txt
+PASS: Preserved Mal_Practical_Audit_v1_2.md
+PASS: Preserved PRODUCTION_v1_3.md
+PASS: Preserved Preservation_Audit.json
+PASS: Preserved Preservation_v1_3.json
+PASS: Preserved Production_Acceptance.json
+PASS: Preserved README.md
+PASS: Preserved Software_Validation.json
+PASS: Preserved Test_Results.txt
+PASS: Preserved Validation_v1_3.txt
+PASS: Preserved Verification.json
+PASS: Preserved audit_v11.py
+PASS: Preserved baseline-sources.json
+PASS: Preserved baseline.json
+PASS: Preserved beeztrap_equipment.py
+PASS: Preserved beeztrap_materiality.py
+PASS: Preserved beeztrap_production.py
+PASS: Preserved cadence_inputs.py
+PASS: Preserved cadence_scenarios.py
+PASS: Preserved catalog.json
+PASS: Preserved database.json.gz
+PASS: Preserved extract_data.clj
+PASS: Preserved gd-edit-standalone.jar
+PASS: Preserved guide-variants.json
+PASS: Preserved guide70.json
+PASS: Preserved guide83.json
+PASS: Preserved item_identity.py
+PASS: Preserved localization.json
+PASS: Preserved mal.json
+PASS: Preserved materials.json
+PASS: Preserved offense_profile.json
+PASS: Preserved penalties.json
+PASS: Preserved practical_optimizer.py
+PASS: Preserved production_data.py
+PASS: Preserved production_report.py
+PASS: Preserved production_search.py
+PASS: Preserved quick_gear.py
+PASS: Preserved reagents.py
+PASS: Preserved recipes.json
+PASS: Preserved refresh_data.py
+PASS: Preserved relative_offense.py
+PASS: Preserved review.py
+PASS: Preserved save_bridge.clj
+PASS: Preserved settings.json
+PASS: Preserved test_audit.py
+PASS: Preserved test_optimizer.py
+PASS: Preserved test_practical.py
+PASS: Preserved validate.py
+PASS: Preserved item_valuation.py
+PASS: Preserved Focused_Test_Results_v1_3_3.txt
+PASS: Preserved Focused_Test_Results_v1_3_4.txt
+PASS: All character profiles including stash/progression snapshots remain byte-identical.
+
+Before / after:
+Keep — Upgrade: 0 -> 1
+Keep — Future Upgrade: 2 -> 3
+Keep — Alternative: 317 -> 127
+Sell/Dismantle: 15 -> 90
+Uncertain — Value: 59 -> 172
+
+Examples moved from Keep — Alternative to Sell/Dismantle:
+
+Mythical Scion of Noxious Wounds
+Balanced 3.9971 vs 4.2452; offense 65.33 vs 100.00; defense 99.53 vs 100.00. Net tradeoff is worse and outside existing 5% offense/defense, health, DA and absorption / 10% armor comparison envelope; isolated benefits do not compensate. Benefits: cooldown reduction +4. Costs: OA -57, health -105. Skill breakpoint: Storm Totem maximum instances 5 → 4. Eligibility did not determine value.
+
+Aggressive Blaze Herald of the Arcane Blaze
+Balanced 4.0093 vs 4.2452; offense 66.95 vs 100.00; defense 99.53 vs 100.00. Net tradeoff is worse and outside existing 5% offense/defense, health, DA and absorption / 10% armor comparison envelope; isolated benefits do not compensate. Benefits: OA +16. Costs: health -105. Skill breakpoint: Storm Totem maximum instances 5 → 4. Eligibility did not determine value.
+
+Aggressive Ritual Scepter of Torrents
+Balanced 4.1010 vs 4.2452; offense 75.80 vs 100.00; defense 99.53 vs 100.00. Net tradeoff is worse and outside existing 5% offense/defense, health, DA and absorption / 10% armor comparison envelope; isolated benefits do not compensate. Benefits: OA +16, relevant lightning/elemental support. Costs: health -105. Skill breakpoint: Storm Totem maximum instances 5 → 4. Eligibility did not determine value.
+
+Badge of the Crimson Company
+Balanced 3.1212 vs 4.2452; offense 94.32 vs 100.00; defense 99.77 vs 100.00. Net tradeoff is worse and outside existing 5% offense/defense, health, DA and absorption / 10% armor comparison envelope; isolated benefits do not compensate. Benefits: health +75. Costs: OA -121, DA -29. Eligibility did not determine value.
+
+Remaining uncertainty is explicit: conditional skills/procs outside the existing fixed-ability score, actual owned set dependencies, or missing/unsupported valuations. No new model was built.

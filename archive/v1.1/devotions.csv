@@ -1,0 +1,44 @@
+build,constellation,stars,count,total
+A Balanced,Crossroads,1,1,1
+A Balanced,Tortoise,"1,2,3,4,5",5,5
+A Balanced,Crossroads,1,1,1
+A Balanced,Scholar's Light,"1,2,3",3,3
+A Balanced,Widow,"1,2,3,4,5,6",6,6
+A Balanced,Lotus,"1,2,3,4",4,4
+A Balanced,Crossroads,1,1,1
+A Balanced,Panther,"1,2,3,4",4,4
+A Balanced,Jackal,"1,2,3",3,3
+A Balanced,"Ultos, Shepherd of Storms","1,2,4,5,6",5,6
+A Balanced,Sailor's Guide,"1,2,3,4",4,4
+A Balanced,Eel,"1,2,3",3,3
+A Balanced,Behemoth,"1,2,3,4,5,6",6,6
+A Balanced,"Korvaak, the Eldritch Sun","1,2,3,4,5",5,6
+B Offense,Kraken,"1,4",2,5
+B Offense,Crossroads,1,1,1
+B Offense,Ghoul,"1,2,3,4,5",5,5
+B Offense,Crossroads,1,1,1
+B Offense,Tortoise,"1,2,3,4,5",5,5
+B Offense,Crossroads,1,1,1
+B Offense,Scholar's Light,"1,2,3",3,3
+B Offense,Widow,"1,2,3,4,5,6",6,6
+B Offense,Lotus,"1,2,3,4",4,4
+B Offense,Crossroads,1,1,1
+B Offense,Raven,"1,2,3,4",4,4
+B Offense,Panther,"1,2,3,4",4,4
+B Offense,Jackal,"1,2,3",3,3
+B Offense,"Ultos, Shepherd of Storms","1,2,3,4,5,6",6,6
+B Offense,Behemoth,"1,2,3,4,6",5,6
+C Defense,Crossroads,1,1,1
+C Defense,Tortoise,"1,2,3,4,5",5,5
+C Defense,Crossroads,1,1,1
+C Defense,Scholar's Light,"1,2,3",3,3
+C Defense,Widow,"1,2,3,4,5,6",6,6
+C Defense,Lotus,"1,2,3,4",4,4
+C Defense,Crossroads,1,1,1
+C Defense,Panther,"1,2,3,4",4,4
+C Defense,Jackal,"1,2,3",3,3
+C Defense,"Ultos, Shepherd of Storms","1,2,4,5,6",5,6
+C Defense,Sailor's Guide,"1,2,3,4",4,4
+C Defense,Eel,"1,2,3",3,3
+C Defense,Behemoth,"1,2,3,4,5,6",6,6
+C Defense,"Korvaak, the Eldritch Sun","1,2,3,4,5",5,6

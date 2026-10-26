@@ -1,0 +1,58 @@
+test_conversion_once_and_additive_damage_bonus (test_audit.AuditTests.test_conversion_once_and_additive_damage_bonus) ... ok
+test_deployables_bounded_by_lifetime_and_cooldown (test_audit.AuditTests.test_deployables_bounded_by_lifetime_and_cooldown) ... ok
+test_difficulty_penalties_are_totals_not_cumulative (test_audit.AuditTests.test_difficulty_penalties_are_totals_not_cumulative) ... ok
+test_direct_damage_and_pet_domains_using_data_records (test_audit.AuditTests.test_direct_damage_and_pet_domains_using_data_records) ... ok
+test_excess_poison_has_zero_incremental_value (test_audit.AuditTests.test_excess_poison_has_zero_incremental_value) ... ok
+test_mal_pet_aura_and_autonomous_speed_not_multiplied (test_audit.AuditTests.test_mal_pet_aura_and_autonomous_speed_not_multiplied) ... ok
+test_permanent_and_temporary_summons_differ (test_audit.AuditTests.test_permanent_and_temporary_summons_differ) ... ok
+test_rr_source_dedup_and_nonstacking_categories (test_audit.AuditTests.test_rr_source_dedup_and_nonstacking_categories) ... ok
+test_cheap_and_neutral_requirements (test_beeztrap_materiality.BeeztrapMaterialityTests.test_cheap_and_neutral_requirements) ... ok
+test_real_sabre_reclassified_without_changing_indices (test_beeztrap_materiality.BeeztrapMaterialityTests.test_real_sabre_reclassified_without_changing_indices) ... ok
+test_three_percent_strict_and_blockers_preserved (test_beeztrap_materiality.BeeztrapMaterialityTests.test_three_percent_strict_and_blockers_preserved) ... ok
+test_selected_complete_loadout_legal_stock_and_defenses (test_beeztrap_production.ProductionIntegrationTests.test_selected_complete_loadout_legal_stock_and_defenses) ... ok
+test_standalone_comparison_and_ultimate_projection (test_beeztrap_production.ProductionIntegrationTests.test_standalone_comparison_and_ultimate_projection) ... ok
+test_intrinsic_damage_not_lost_or_counted_twice (test_cadence_inputs.CadenceInputTests.test_intrinsic_damage_not_lost_or_counted_twice) ... ok
+test_ranker_fails_closed_and_relative_kernel_is_monotone (test_cadence_inputs.CadenceInputTests.test_ranker_fails_closed_and_relative_kernel_is_monotone) ... ok
+test_real_saved_ranks_and_linked_momentum (test_cadence_inputs.CadenceInputTests.test_real_saved_ranks_and_linked_momentum) ... ok
+test_saved_build_and_bindings_are_unchanged (test_cadence_inputs.CadenceInputTests.test_saved_build_and_bindings_are_unchanged) ... ok
+test_seeded_weapon_damage_overrides_base (test_cadence_inputs.CadenceInputTests.test_seeded_weapon_damage_overrides_base) ... ok
+test_targeted_item_modifiers_are_retained (test_cadence_inputs.CadenceInputTests.test_targeted_item_modifiers_are_retained) ... ok
+test_all_scenarios_and_strict_materiality (test_cadence_scenarios.CadenceScenarioTests.test_all_scenarios_and_strict_materiality) ... ok
+test_fixed_build_baseline_and_targeted_modifiers (test_cadence_scenarios.CadenceScenarioTests.test_fixed_build_baseline_and_targeted_modifiers) ... ok
+test_global_conversion_precedes_hand_specific_piercing (test_cadence_scenarios.CadenceScenarioTests.test_global_conversion_precedes_hand_specific_piercing) ... ok
+test_momentum_active_in_totals_is_removed_before_scenarios (test_cadence_scenarios.CadenceScenarioTests.test_momentum_active_in_totals_is_removed_before_scenarios) ... ok
+test_real_local_flat_is_not_copied_between_hands (test_cadence_scenarios.CadenceScenarioTests.test_real_local_flat_is_not_copied_between_hands) ... ok
+test_speed_global_modifier_and_saturation (test_cadence_scenarios.CadenceScenarioTests.test_speed_global_modifier_and_saturation) ... ok
+test_swapping_has_symmetric_and_main_weighted_scenarios (test_cadence_scenarios.CadenceScenarioTests.test_swapping_has_symmetric_and_main_weighted_scenarios) ... ok
+test_unmodeled_delta_blocks_robust_claim (test_cadence_scenarios.CadenceScenarioTests.test_unmodeled_delta_blocks_robust_claim) ... ok
+test_chance_augment_counted_once_per_weapon (test_cadence_validation.CadenceValidationTests.test_chance_augment_counted_once_per_weapon) ... ok
+test_momentum_uptime_is_weighted_whole_branch (test_cadence_validation.CadenceValidationTests.test_momentum_uptime_is_weighted_whole_branch) ... ok
+test_real_available_better_sabre_has_expected_global_speed_delta (test_cadence_validation.CadenceValidationTests.test_real_available_better_sabre_has_expected_global_speed_delta) ... ok
+test_replaced_attachment_leaves_no_saved_record (test_cadence_validation.CadenceValidationTests.test_replaced_attachment_leaves_no_saved_record) ... ok
+test_actual_reputation_controls_armor_augments (test_optimizer.ModelTests.test_actual_reputation_controls_armor_augments) ... ok
+test_baseline_reproduces_all_exported_values (test_optimizer.ModelTests.test_baseline_reproduces_all_exported_values) ... ok
+test_duplicate_physical_ring_is_illegal (test_optimizer.ModelTests.test_duplicate_physical_ring_is_illegal) ... ok
+test_guide_55_points_rejected_for_mal (test_optimizer.ModelTests.test_guide_55_points_rejected_for_mal) ... /workspace/scratch/b06f8620d339/beeztrap-production/Optimizer/test_optimizer.py:24: ResourceWarning: unclosed file <_io.TextIOWrapper name='/workspace/scratch/b06f8620d339/beeztrap-production/Optimizer/guide70.json' mode='r' encoding='UTF-8'>
+  g=json.load(open(self.e.d/'guide70.json'))['data'];d={s['name']:1 for s in g['skills'] if '/devotion/' in s['name'] and s['level']}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_point_budget_is_enforced (test_optimizer.ModelTests.test_point_budget_is_enforced) ... ok
+test_relic_cannot_take_component (test_optimizer.ModelTests.test_relic_cannot_take_component) ... ok
+test_skill_hard_cap (test_optimizer.ModelTests.test_skill_hard_cap) ... ok
+test_actual_attachment_cost_breaks_immaterial_tie (test_practical.PracticalTests.test_actual_attachment_cost_breaks_immaterial_tie) ... ok
+test_attributes_preserved_when_not_required (test_practical.PracticalTests.test_attributes_preserved_when_not_required) ... ok
+test_cheap_configuration_wins_inside_materiality_band (test_practical.PracticalTests.test_cheap_configuration_wins_inside_materiality_band) ... ok
+test_components_have_opportunity_cost_even_when_owned (test_practical.PracticalTests.test_components_have_opportunity_cost_even_when_owned) ... ok
+test_delivered_results_invariants (test_practical.PracticalTests.test_delivered_results_invariants) ... ok
+test_material_offense_does_not_get_cost_override (test_practical.PracticalTests.test_material_offense_does_not_get_cost_override) ... ok
+test_no_encounter_outputs (test_practical.PracticalTests.test_no_encounter_outputs) ... ok
+test_saved_skills_and_devotions_cannot_change (test_practical.PracticalTests.test_saved_skills_and_devotions_cannot_change) ... ok
+test_search_preserves_save_build_and_input (test_practical.PracticalTests.test_search_preserves_save_build_and_input) ... {'mode': 'minimal', 'round': 1, 'evaluations': 9, 'feasible': 0}
+{'mode': 'balanced', 'round': 1, 'evaluations': 9, 'feasible': 0}
+{'mode': 'offense', 'round': 1, 'evaluations': 9, 'feasible': 0}
+ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 25.261s
+
+OK
