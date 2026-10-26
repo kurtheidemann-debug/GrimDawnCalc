@@ -21,3 +21,10 @@ def fingerprint(item):
     saved=item.get('save',{})
     stable={k:saved.get(k) for k in ('basename','prefix-name','suffix-name','seed','modifier-name','ascended-name','transmute-name')}
     return hashlib.sha256(json.dumps(stable,sort_keys=True).encode()).hexdigest()[:12]
+
+
+def transferable(item, target):
+    """Retain target/shared ownership; donor bases must not carry binding flags."""
+    if item.get('owner') in [target, 'Shared Stash']:return True
+    base=(item.get('records') or [{}])[0] or {}
+    return not (base.get('soulbound') or base.get('untradeable'))

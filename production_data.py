@@ -191,7 +191,7 @@ def read_materials(path):
     return result
 
 
-def stage_profile(name,character,raw_stash,mode,save_root,work):
+def stage_profile(name,character,raw_stash,mode,save_root,work,characters=None):
     source=ROOT/'profiles'/name;d=pathlib.Path(work)/'profiles'/name;shutil.copytree(source,d,ignore=shutil.ignore_patterns(*STATIC))
     config=json.loads((source/'profile.json').read_text());previous=json.loads((source/'catalog.json').read_text());notices=[]
     m=copy.deepcopy(character)
@@ -209,6 +209,21 @@ def stage_profile(name,character,raw_stash,mode,save_root,work):
     raw=list(scan_items(m,name))
     if mode=='full' and raw_stash is not None:raw+=list(scan_items(raw_stash,'Shared Stash'))
     else:raw+=[{'owner':x['owner'],'location':x['location'],'save':x['save']} for x in previous if x['owner']=='Shared Stash']
+    # Keep target/shared order stable so adding donors cannot renumber old instances.
+    if character.get('use-alt-weaponset'):
+        for item in raw:
+            if item['owner']==name and item['location'].startswith('/weapon-sets/'):
+                parts=item['location'].split('/');parts[2]=str(1-int(parts[2]))
+                item['source_location']='/'.join(parts)
+    donor_count=0
+    for owner,donor in sorted((characters or {}).items()):
+        if owner==name:continue
+        for item in scan_items(donor,owner):
+            if not item['location'].startswith(('/equipment/','/weapon-sets/','/inventory-sacks/','/stashes/')):continue
+            kind=database().get(item['save']['basename'],{}).get('Class','')
+            if kind.startswith(('Armor','Weapon')) or kind=='ItemArtifact':
+                raw.append(item);donor_count+=1
+    notices.append(f'Cross-character pool: {donor_count} equipment instances imported from uploaded donor characters; transfer, level and full-loadout legality checks still apply.')
     catalog,new_count=resolve_items(raw,previous,pathlib.Path(work)/'bridge')
     for x in catalog:
         if x['owner']==name and (x['location'].startswith('/equipment/') or x['location'].startswith('/weapon-sets/0/')) and not x['resolved']:

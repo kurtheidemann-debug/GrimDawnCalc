@@ -37,8 +37,7 @@ are disclosed. Quest-based purchase/service eligibility remains Stage 4 work.
 Quick still reuses the profile's shared-stash, recipe and crafting-resource
 snapshots. Full refreshes the supplied shared stash, recipes and resources. Missing
 optional account files retain their prior snapshot with an explicit notice; this
-account refresh behavior is unchanged in Stage 2. Cross-character inventory
-pooling remains Stage 3 work. Unknown characters do not receive an invented
+account refresh behavior is unchanged in Stage 2. Cross-character equipment pooling is enabled in both modes (Stage 5). Unknown characters do not receive an invented
 scoring policy. Static databases and persistent build policy are reused.
 
 Saved difficulty alone controls resistance penalties and the calculation target:
@@ -152,3 +151,35 @@ metrics, legality, utility and selected equipment matched exactly.
 
 The bundled original README, legacy modules/tests/results and licenses remain
 available. Use this document and `review.py` for the v1.3 production workflow.
+
+## Stage 5: uploaded cross-character equipment
+
+Both Quick and Full import equipment from every uploaded character's bags,
+personal stash, equipped slots and weapon sets into the selected character's
+existing pool. Target and shared items retain their order/IDs; donor instances
+are appended in character-name order. Donor consumables/material stacks are not
+pooled; this stage expands equipment availability only. Quick retains its existing
+cached shared-stash/resource behavior; Full refreshes uploaded shared storage.
+No donor profile or source save is changed. Characters absent from a new upload
+are not silently reintroduced from old donor snapshots.
+
+Donor bases with `soulbound` or `untradeable` metadata are rejected in candidate
+admission and final legality. Existing target/shared ownership exceptions remain.
+Level, attribute, equipment type, resources, faction augment eligibility, defenses
+and fixed Beeztrap weapons retain the existing checks. Attached augments on donor
+gear do not grant the target the donor's faction purchase eligibility.
+
+Reports show character, bag/stash tab or occupied equipped slot, and the exact
+zero-based decoder path/item index. Weapon sets identify set and hand. JSON
+`equipment_sources` records selected instance IDs, original owner/location and
+complete saved identity/attachment/position data. Active alternate target weapon
+normalization retains its original source path. Duplicate physical copies keep
+separate occurrence IDs even when their rolled identity matches.
+
+Focused fixtures expose three extra donor equipment instances (bag/stash/worn),
+each selectable by the unchanged production beam. A one-candidate extension
+increased fixture evaluations 71→102 and feasible states 1→2; no coverage was
+pruned. This is workload evidence, not a Save 10 runtime estimate. 28 focused
+tests cover import/routing in both modes, provenance, distinct IDs, binding/level/
+attribute gates, no-donor equivalence, Stage 2/3 safeguards, unchanged search and
+Stage 4 scorer, and suspended disposition. No complete Full Review was run.

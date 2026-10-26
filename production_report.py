@@ -20,16 +20,23 @@ def attachment_names(e,before,after):
 
 def item_source(e,item):
     """Report only ownership/location evidence present in this catalog snapshot."""
-    owner=item.get('owner');location=item.get('location') or ''
+    owner=item.get('owner');location=item.get('source_location',item.get('location')) or ''
+    parts=location.strip('/').split('/')
+    detail=''
     if owner=='Shared Stash' and location.startswith('/stash/'):
-        return 'Shared stash (cached snapshot)'
-    if location.startswith(('/equipment/','/weapon-sets/')) and owner:
-        return 'Currently equipped on '+str(owner)+(' (alternate weapon set)' if location.startswith('/weapon-sets/1/') else '')
-    if owner==e.character_name and location.startswith('/inventory-sacks/'):
-        return 'Character personal inventory ('+e.character_name+')'
-    if owner==e.character_name and location.startswith('/stashes/'):
-        return 'Character personal stash ('+e.character_name+')'
-    return 'Unknown — availability unverified; locate before equipping'
+        detail='Shared stash → Tab '+str(int(parts[1])+1)
+    elif location.startswith('/equipment/') and owner:
+        index=int(parts[1]);detail=f'{owner} → Equipped → '+(SLOTS[index] if index<len(SLOTS) else str(index))
+    elif location.startswith('/weapon-sets/') and owner:
+        detail=f'{owner} → Equipped weapon set {int(parts[1])+1} → '+('Main hand' if parts[-1]=='0' else 'Offhand')
+    elif location.startswith('/inventory-sacks/') and owner:
+        detail=f'{owner} → Inventory bag {int(parts[1])+1}'
+    elif location.startswith('/stashes/') and owner:
+        detail=f'{owner} → Personal stash tab {int(parts[1])+1}'
+    if detail:
+        return detail+' → '+location
+    return 'Unknown — availability unverified; locate before equipping ('+str(owner)+' '+location+')'
+
 
 def slot_actions(e,state):
     rows=[]
@@ -62,6 +69,10 @@ def action_checklist(e,state):
                 native=row['item']['save'].get(sourcekey) or '';target=state[field][i] or ''
                 action=attachment_action(native,target)
                 before,after=attachment_names(e,native,target)
+            borrowed=row['item'].get('owner') not in [e.character_name,'Shared Stash']
+            if borrowed and label=='augment' and after!='None' and action=='Keep':
+                lines+=['- Acquire/reapply augment under '+e.character_name+' eligibility: **'+after+'** (source character’s purchase access is not inherited).']
+                continue
             if action=='Keep':
                 lines+=['- Keep '+('replacement item’s ' if row['equipment']=='Replace' else 'existing ')+label+': **'+after+'**.']
             elif action=='Replace':lines+=['- Replace '+label+': **'+before+'** → **'+after+'**.']
