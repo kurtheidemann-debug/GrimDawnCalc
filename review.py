@@ -67,7 +67,7 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
         names=[selected] if mode=='quick' or character else [n for n in candidates if (ROOT/'profiles'/n/'profile.json').exists()]
         updates=[];all_results={}
         for name in names:
-            staged,config,notices,new_count=stage_profile(name,candidates[name],decoded.get('stash'),mode,work/'save',work)
+            staged,config,notices,new_count=stage_profile(name,candidates[name],decoded.get('stash'),mode,work/'save',work,candidates)
             if len(candidates)>1 and character is None and mode=='quick':notices.append('Multiple characters uploaded; selected persistent default '+name+'. Use --character to select another profile.')
             e=(MalEngine if name=='Mal' else CadenceEngine)(staged)
             exception,validation=verify_baseline(e,mode,config,candidates[name],work)
@@ -80,6 +80,9 @@ def perform(source,mode='quick',character=None,out=None,seconds=60,width=5,commi
             result=bounded_search(e,deadline,width=width,rounds=1 if mode=='quick' else 3,full=mode=='full')
             winner=result.get('selected');state=winner['state'] if winner else None
             result.update(version='1.3.4',character=name,level=e.mal['character-level'],mode=mode,baseline=baseline,baseline_state=e.current,accepted_exception=exception,baseline_validation=validation,materiality_percent=config['materiality']*100,notices=notices,new_item_rolls=new_count,inventory_disposition='suspended',elapsed_seconds=time.monotonic()-start,profile_revision=config['revision'])
+            result['equipment_sources']=[{'id':item['id'],'owner':item['owner'],
+                'location':item.get('source_location',item['location']),'save':item['save']}
+                for item in e.cat if winner and item['id'] in winner['state']['gear']]
             if winner:
                 # Report independent fixed state and source fingerprints, no save writes.
                 assert all(winner['state'][k]==e.current[k] for k in ['skills','devotions','bindings'])

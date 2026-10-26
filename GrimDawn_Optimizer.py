@@ -5,6 +5,7 @@ Numerical results reproduce the supplied gd-edit baseline, not an independently
 instrumented game engine. Offensive outputs are defined encounter proxies, not DPS.
 """
 import argparse,collections,copy,gzip,hashlib,json,math,pathlib,random,re,struct,time
+from item_identity import transferable
 ROOT=pathlib.Path(__file__).resolve().parent
 def read(p):
  p=pathlib.Path(p)
@@ -380,7 +381,7 @@ class Engine:
   for i,ident in enumerate(st['gear']):
    x=self.items[ident];base=x['records'][0]
    if max((r or {}).get('levelRequirement',0) for r in x['records'][:4])>self.mal['character-level']:errors.append('Level '+ident)
-   if x['owner'] not in [self.character_name,'Shared Stash'] and (base.get('soulbound') or base.get('untradeable') and base.get('Class')=='QuestItem'):errors.append('Bound base '+ident)
+   if not transferable(x,self.character_name):errors.append('Bound base '+ident)
    for typ in ['comp','aug']:
     if not self.compatible(st[typ][i],i,ident):errors.append(typ+' slot '+SLOTS[i])
    req=x.get('requirements') or {}
@@ -407,7 +408,7 @@ class Engine:
    if cl.startswith('WeaponMelee_') and not cl.endswith('2h'):i=12
    if i is None:continue
    if max((z or {}).get('levelRequirement',0) for z in x['records'][:4])>self.mal['character-level']:continue
-   if r.get('soulbound') and x['owner'] not in [self.character_name,'Shared Stash']:continue
+   if not transferable(x,self.character_name):continue
    # Soulbound attachments on borrowed items must be removed, so only the
    # unbound item is brought into the attachment search.
    options[i].append(x['id'])
