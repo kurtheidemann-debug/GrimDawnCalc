@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "configuration": "minimal",
+      "legal_errors": [],
+      "offensive_guard_gaps": [],
+      "all_Elite_caps": true,
+      "saved_build_unchanged": true,
+      "four_attribute_points_unspent": true
+    },
+    {
+      "configuration": "balanced",
+      "legal_errors": [],
+      "offensive_guard_gaps": [],
+      "all_Elite_caps": true,
+      "saved_build_unchanged": true,
+      "four_attribute_points_unspent": true
+    },
+    {
+      "configuration": "offense",
+      "legal_errors": [],
+      "offensive_guard_gaps": [],
+      "all_Elite_caps": true,
+      "saved_build_unchanged": true,
+      "four_attribute_points_unspent": true
+    }
+  ],
+  "baseline_numeric_comparisons": 34,
+  "baseline_mismatches": [],
+  "supply_quantities_verified": true
+}

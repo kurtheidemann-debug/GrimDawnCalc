@@ -1,0 +1,31 @@
+build,name,raw,cap,shown,overcap
+A Balanced,Fire,125.0,80.0,80,45.0
+A Balanced,Cold,97.0,80.0,80,17.0
+A Balanced,Lightning,101.0,80.0,80,21.0
+A Balanced,Poison & Acid,106.0,80.0,80,26.0
+A Balanced,Pierce,106.0,80.0,80,26.0
+A Balanced,Bleeding,98.0,80.0,80,18.0
+A Balanced,Vitality,95.0,80.0,80,15.0
+A Balanced,Aether,82.0,80.0,80,2.0
+A Balanced,Chaos,80.0,80.0,80,0.0
+A Balanced,Physical,9.0,80.0,9,-71.0
+B Offense,Fire,113.0,80.0,80,33.0
+B Offense,Cold,107.0,80.0,80,27.0
+B Offense,Lightning,109.0,80.0,80,29.0
+B Offense,Poison & Acid,97.0,80.0,80,17.0
+B Offense,Pierce,104.0,80.0,80,24.0
+B Offense,Bleeding,96.0,80.0,80,16.0
+B Offense,Vitality,101.0,80.0,80,21.0
+B Offense,Aether,110.0,80.0,80,30.0
+B Offense,Chaos,80.0,80.0,80,0.0
+B Offense,Physical,5.0,80.0,5,-75.0
+C Defense,Fire,135.0,80.0,80,55.0
+C Defense,Cold,95.0,80.0,80,15.0
+C Defense,Lightning,99.0,80.0,80,19.0
+C Defense,Poison & Acid,93.0,80.0,80,13.0
+C Defense,Pierce,95.0,80.0,80,15.0
+C Defense,Bleeding,83.0,80.0,80,3.0
+C Defense,Vitality,99.0,80.0,80,19.0
+C Defense,Aether,99.0,80.0,80,19.0
+C Defense,Chaos,90.0,80.0,80,10.0
+C Defense,Physical,9.0,80.0,9,-71.0

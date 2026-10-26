@@ -1,0 +1,15 @@
+{'slot': 'Head', 'evaluations': 8, 'feasible': 4}
+{'slot': 'Amulet', 'evaluations': 28, 'feasible': 4}
+{'slot': 'Chest', 'evaluations': 48, 'feasible': 4}
+{'slot': 'Legs', 'evaluations': 68, 'feasible': 4}
+{'slot': 'Feet', 'evaluations': 80, 'feasible': 4}
+{'slot': 'Hands', 'evaluations': 92, 'feasible': 4}
+{'slot': 'Ring1', 'evaluations': 112, 'feasible': 4}
+{'slot': 'Ring2', 'evaluations': 132, 'feasible': 4}
+{'slot': 'Belt', 'evaluations': 144, 'feasible': 4}
+{'slot': 'Shoulders', 'evaluations': 156, 'feasible': 4}
+{'slot': 'Medal', 'evaluations': 172, 'feasible': 4}
+{'slot': 'Relic', 'evaluations': 176, 'feasible': 4}
+{'slot': 'Weapon', 'evaluations': 192, 'feasible': 4}
+{'slot': 'Offhand', 'evaluations': 208, 'feasible': 4}
+Validated production result: /workspace/scratch/b06f8620d339/beeztrap-production/Optimizer/production-results/Beeztrap_Balanced.json

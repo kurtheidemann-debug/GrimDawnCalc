@@ -1,0 +1,59 @@
+{
+  "inputs": [
+    "Mal_Quick_Gear_Tool_FIXED.zip",
+    "GrimDawn_Practical_Optimizer_v1_2_VERIFIED.zip",
+    "GrimDawn_Beeztrap_Production.zip"
+  ],
+  "preserved_modules": {
+    "GrimDawn_Optimizer.py": {
+      "sha256": "692f921a4fb393744f0a2fb41bf2fe2a9eecbafa7f0acad251a8c97151196e7e",
+      "unchanged_from_fixed_tool": true,
+      "database_matches_verified_v1_2": null
+    },
+    "practical_optimizer.py": {
+      "sha256": "e7e6883398cc3ecb75a30c8eb502ea7da8d2312ef769e8976812c0eee0c03531",
+      "unchanged_from_fixed_tool": true,
+      "database_matches_verified_v1_2": null
+    },
+    "relative_offense.py": {
+      "sha256": "e705782451c4f660de63d0a4718ba3851028eb54387bd1f59e6744438da88b83",
+      "unchanged_from_fixed_tool": true,
+      "database_matches_verified_v1_2": null
+    },
+    "database.json.gz": {
+      "sha256": "8c699db4100c9b1b9cf584529b2712abadf03403de94e0764fece8b8c0239773",
+      "unchanged_from_fixed_tool": true,
+      "database_matches_verified_v1_2": true
+    },
+    "cadence_inputs.py": {
+      "sha256": "9335aa0b197c7aff2e07893d4adb0267cd18f5d1fe078b24ad6ef5f9945ebd94",
+      "unchanged_from_beeztrap_production": true
+    },
+    "cadence_scenarios.py": {
+      "sha256": "dae376763ccbf4e0f34831338ba3fe044de2040fd899a5ba01fcebbb1cf8e51f",
+      "unchanged_from_beeztrap_production": true
+    },
+    "beeztrap_materiality.py": {
+      "sha256": "d876d80843f1cf8183e337f63cdaff67bec6466f4da7c905aa0d6cd53430bb65",
+      "unchanged_from_beeztrap_production": true
+    },
+    "beeztrap_equipment.py": {
+      "sha256": "9c04bddb9b0744bb65245e851bab25eeab049f8d1364280da5f99f4cbe0ebe9f",
+      "unchanged_from_beeztrap_production": true
+    },
+    "beeztrap_production.py": {
+      "sha256": "db843fc8055366cf08e5009ad011853963b9f9cc9b281964ec6c36b739998bc6",
+      "unchanged_from_beeztrap_production": true
+    }
+  },
+  "new_workflow": [
+    "review.py",
+    "production_data.py",
+    "production_search.py",
+    "production_report.py",
+    "save_bridge.clj",
+    "validate.py"
+  ],
+  "display_fix": "item_identity.py joins base and affixes exactly once",
+  "scope": "No game mechanics, scoring coefficients, scenario definitions or static database rebuilt"
+}

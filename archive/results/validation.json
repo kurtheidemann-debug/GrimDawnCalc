@@ -1,0 +1,268 @@
+[
+  {
+    "stat": "physique",
+    "exported": 683,
+    "calculated": 683,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "cunning",
+    "exported": 330,
+    "calculated": 330,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "spirit",
+    "exported": 770,
+    "calculated": 770,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "health",
+    "exported": 9509,
+    "calculated": 9509,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "energy",
+    "exported": 3151,
+    "calculated": 3151,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "OA",
+    "exported": 2123,
+    "calculated": 2123,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "DA",
+    "exported": 1793,
+    "calculated": 1793,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor",
+    "exported": 1213,
+    "calculated": 1213,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Head",
+    "exported": 1198,
+    "calculated": 1198,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Shoulders",
+    "exported": 675,
+    "calculated": 675,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Chest",
+    "exported": 1460,
+    "calculated": 1460,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Arms",
+    "exported": 1093,
+    "calculated": 1093,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Legs",
+    "exported": 1412,
+    "calculated": 1412,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor Feet",
+    "exported": 1159,
+    "calculated": 1159,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Fire resistance shown",
+    "exported": 77,
+    "calculated": 77,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Fire before cap",
+    "exported": 77,
+    "calculated": 77.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Cold resistance shown",
+    "exported": 77,
+    "calculated": 77,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Cold before cap",
+    "exported": 77,
+    "calculated": 77.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Lightning resistance shown",
+    "exported": 77,
+    "calculated": 77,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Lightning before cap",
+    "exported": 77,
+    "calculated": 77.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Poison & Acid resistance shown",
+    "exported": 33,
+    "calculated": 33,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Poison & Acid before cap",
+    "exported": 33,
+    "calculated": 33.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Pierce resistance shown",
+    "exported": 80,
+    "calculated": 80,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Pierce before cap",
+    "exported": 104,
+    "calculated": 104.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Bleeding resistance shown",
+    "exported": 51,
+    "calculated": 51,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Bleeding before cap",
+    "exported": 51,
+    "calculated": 51.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Vitality resistance shown",
+    "exported": 49,
+    "calculated": 49,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Vitality before cap",
+    "exported": 49,
+    "calculated": 49.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Aether resistance shown",
+    "exported": 80,
+    "calculated": 80,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Aether before cap",
+    "exported": 136,
+    "calculated": 136.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Chaos resistance shown",
+    "exported": 31,
+    "calculated": 31,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Chaos before cap",
+    "exported": 31,
+    "calculated": 31.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Physical resistance shown",
+    "exported": 5,
+    "calculated": 5,
+    "difference": 0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "Physical before cap",
+    "exported": 5,
+    "calculated": 5.0,
+    "difference": 0.0,
+    "status": "Reproduced export"
+  },
+  {
+    "stat": "armor_absorption",
+    "exported": null,
+    "calculated": 70.0,
+    "difference": null,
+    "status": "Not in export; no independent validation"
+  },
+  {
+    "stat": "lightning_modifier",
+    "exported": null,
+    "calculated": 1615.942093023256,
+    "difference": null,
+    "status": "Not in export; no independent validation"
+  },
+  {
+    "stat": "cooldown_reduction",
+    "exported": null,
+    "calculated": 18.0,
+    "difference": null,
+    "status": "Not in export; no independent validation"
+  },
+  {
+    "stat": "offense_proxy",
+    "exported": null,
+    "calculated": 19681.076664692642,
+    "difference": null,
+    "status": "Not in export; no independent validation"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "Mal",
+  "archetype": "Lightning Druid",
+  "materiality": 0.05,
+  "difficulty": 2,
+  "reference_level": 82,
+  "revision": 5,
+  "skills_locked": true,
+  "shared_snapshot": "per-profile",
+  "accepted_exceptions": [
+    {
+      "key": "mal-chaos-78-known",
+      "character": "Mal",
+      "level": 78,
+      "uncapped": 105,
+      "optimizer_shown": 80,
+      "decoder_shown": 86,
+      "decoder_cap": 86,
+      "scope": "original imported baseline only",
+      "baseline_character_sha256": "8248b3bdd0b035b526fede5680024957359cdf024246089e328633596ce2a650",
+      "character_digest": "4a447d995277e44b569e839da1b0a6ac45d07874c5b67902591c59c4fdcb36e5"
+    }
+  ]
+}

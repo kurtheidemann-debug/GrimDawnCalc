@@ -1,0 +1,1035 @@
+{
+  "stats": {
+    "physique": 899,
+    "cunning": 801,
+    "spirit": 361,
+    "health": 10242,
+    "energy": 2222,
+    "energy_reserved": 435,
+    "OA": 2175,
+    "DA": 1852,
+    "armor": 1453,
+    "armor_slots": {
+      "Head": 1526,
+      "Shoulders": 1191,
+      "Chest": 1376,
+      "Arms": 1643,
+      "Legs": 1642,
+      "Feet": 1355
+    },
+    "armor_absorption": 90.3,
+    "damage_absorption_percent": 0,
+    "resistances": [
+      {
+        "name": "Fire",
+        "raw": 72.0,
+        "cap": 80.0,
+        "shown": 72,
+        "overcap": -8.0
+      },
+      {
+        "name": "Cold",
+        "raw": 92.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 12.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 72.0,
+        "cap": 80.0,
+        "shown": 72,
+        "overcap": -8.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 90.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 10.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 157.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 77.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 89.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 9.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 65.0,
+        "cap": 80.0,
+        "shown": 65,
+        "overcap": -15.0
+      },
+      {
+        "name": "Aether",
+        "raw": 88.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 8.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 89.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 9.0
+      },
+      {
+        "name": "Physical",
+        "raw": 3.0,
+        "cap": 80.0,
+        "shown": 3,
+        "overcap": -77.0
+      }
+    ],
+    "cooldown_reduction": 0,
+    "lightning_modifier": 795.9999914834666,
+    "lightning_gear_skill_modifier": 628.0,
+    "effective_skills": {
+      "records/skills/playerclass01/_classtraining_class01.dbr": 50,
+      "records/skills/playerclass01/cadence1.dbr": 16,
+      "records/skills/playerclass01/cadence2.dbr": 2,
+      "records/skills/playerclass01/cadence3.dbr": 13,
+      "records/skills/playerclass01/passive1.dbr": 2,
+      "records/skills/playerclass01/passive3.dbr": 2,
+      "records/skills/playerclass01/passive4.dbr": 2,
+      "records/skills/playerclass01/blitz1.dbr": 2,
+      "records/skills/playerclass01/stanceoffensive.dbr": 15,
+      "records/skills/playerclass01/fieldcommand1.dbr": 7,
+      "records/skills/playerclass01/weaponpool1.dbr": 4,
+      "records/skills/playerclass01/warcry1.dbr": 2,
+      "records/skills/playerclass01/fightingspirit1.dbr": 2,
+      "records/skills/playerclass04/_classtraining_class04.dbr": 50,
+      "records/skills/playerclass04/shadowstrike.dbr": 5,
+      "records/skills/playerclass04/shadowstrike_mod2.dbr": 3,
+      "records/skills/playerclass04/bladebarrier1.dbr": 1,
+      "records/skills/playerclass04/passive1.dbr": 2,
+      "records/skills/playerclass04/passive2.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant1.dbr": 5,
+      "records/skills/playerclass04/nightbladeenchant1b.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant2.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant3.dbr": 2,
+      "records/skills/playerclass04/wpattack0.dbr": 16,
+      "records/skills/playerclass04/wpattack1.dbr": 1,
+      "records/skills/playerclass04/wpattack2.dbr": 5,
+      "records/skills/playerclass04/wpattack3.dbr": 3,
+      "records/skills/playerclass04/wpattack5.dbr": 4,
+      "records/skills/playerclass04/ringofsteel.dbr": 1,
+      "records/skills/playerclass04/ringofsteel_mod1.dbr": 1,
+      "records/skills/playerclass04/veilofshadows1.dbr": 2,
+      "records/skills/playerclass04/veilofshadows2.dbr": 2
+    },
+    "invested_skills": {
+      "records/skills/playerclass01/_classtraining_class01.dbr": 50,
+      "records/skills/playerclass01/cadence1.dbr": 15,
+      "records/skills/playerclass01/cadence2.dbr": 1,
+      "records/skills/playerclass01/cadence3.dbr": 12,
+      "records/skills/playerclass01/passive1.dbr": 1,
+      "records/skills/playerclass01/passive3.dbr": 1,
+      "records/skills/playerclass01/passive4.dbr": 1,
+      "records/skills/playerclass01/blitz1.dbr": 1,
+      "records/skills/playerclass01/stanceoffensive.dbr": 12,
+      "records/skills/playerclass01/fieldcommand1.dbr": 4,
+      "records/skills/playerclass01/weaponpool1.dbr": 1,
+      "records/skills/playerclass01/warcry1.dbr": 1,
+      "records/skills/playerclass01/fightingspirit1.dbr": 1,
+      "records/skills/playerclass04/_classtraining_class04.dbr": 50,
+      "records/skills/playerclass04/shadowstrike.dbr": 3,
+      "records/skills/playerclass04/shadowstrike_mod2.dbr": 3,
+      "records/skills/playerclass04/bladebarrier1.dbr": 1,
+      "records/skills/playerclass04/passive1.dbr": 2,
+      "records/skills/playerclass04/passive2.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant1.dbr": 2,
+      "records/skills/playerclass04/nightbladeenchant1b.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant2.dbr": 1,
+      "records/skills/playerclass04/nightbladeenchant3.dbr": 2,
+      "records/skills/playerclass04/wpattack0.dbr": 16,
+      "records/skills/playerclass04/wpattack1.dbr": 1,
+      "records/skills/playerclass04/wpattack2.dbr": 1,
+      "records/skills/playerclass04/wpattack3.dbr": 1,
+      "records/skills/playerclass04/wpattack5.dbr": 4,
+      "records/skills/playerclass04/ringofsteel.dbr": 1,
+      "records/skills/playerclass04/ringofsteel_mod1.dbr": 1,
+      "records/skills/playerclass04/veilofshadows1.dbr": 2,
+      "records/skills/playerclass04/veilofshadows2.dbr": 2
+    },
+    "totem_count": 3,
+    "totems_per_cast": 1,
+    "totem_cooldown": 4.5,
+    "totem_duration": 14.0,
+    "steady_totems": 3,
+    "ramp_totems_6sec": 1.25,
+    "storm_packet": 1028.1599902272778,
+    "maelstrom_packet": 0,
+    "offense_proxy": 550.5976020786387,
+    "offense_low": 205.63199804545553,
+    "offense_high": 1028.1599902272778,
+    "defense_proxy": 35896.347644950234,
+    "raging_tempest_RR": 0,
+    "widow_RR": 0,
+    "ultos_relative_RR": 0,
+    "energy_regen_flat": 2.0,
+    "energy_regen_percent": 0,
+    "stats": {
+      "characterLife": 4804.0,
+      "characterDefensiveAbility": 397.0,
+      "offensivePhysicalModifier": 586.0,
+      "offensivePierceModifier": 1419.0,
+      "offensiveSlowPhysicalModifier": 453.0,
+      "defensiveAether": 88.0,
+      "defensiveChaos": 89.0,
+      "defensiveProtection": 4352.0,
+      "defensiveElementalResistance": 97.0,
+      "defensivePoison": 115.0,
+      "characterDexterity": 516.0,
+      "characterAttackSpeedModifier": 60.0,
+      "offensiveSlowBleedingMin": 47.0,
+      "offensiveSlowBleedingMax": 5.0,
+      "offensiveSlowBleedingModifier": 506.0,
+      "offensiveSlowBleedingDurationMin": 12.0,
+      "characterOffensiveAbility": 430.0,
+      "characterIntelligence": 230.0,
+      "characterGlobalReqReduction": 11.0,
+      "offensiveElementalModifier": 183.0,
+      "characterSpellCastSpeedModifier": 14.0,
+      "defensivePierce": 182.0,
+      "defensiveBleeding": 89.0,
+      "characterDodgePercent": 16.0,
+      "offensiveColdModifier": 197.0,
+      "offensiveSlowColdModifier": 212.0,
+      "offensiveSlowPoisonModifier": 86.0,
+      "defensiveAbsorptionModifier": 29.0,
+      "defensiveBonusProtection": 59.0,
+      "characterRunSpeedModifier": 35.0,
+      "retaliationPoisonMin": 245.0,
+      "retaliationPoisonMax": 245.0,
+      "offensivePoisonModifier": 65.0,
+      "characterLifeRegen": 18.0,
+      "defensiveTotalSpeedResistance": 64.0,
+      "offensivePhysicalMin": 69.0,
+      "offensivePhysicalMax": 89.0,
+      "defensiveTrap": 50.0,
+      "offensiveLifeLeechMin": 5.0,
+      "defensiveLife": 65.0,
+      "offensiveFireMin": 10.0,
+      "offensiveFireMax": 16.0,
+      "defensiveProtectionModifier": 47.0,
+      "defensivePetrify": 27.0,
+      "conversionPercentage": 53.64380240440369,
+      "defensiveCold": 20.0,
+      "characterLifeModifier": 22.0,
+      "offensiveLifeModifier": 54.0,
+      "offensiveSlowLifeModifier": 54.0,
+      "defensiveStun": 56.0,
+      "offensiveTotalDamageModifier": 445.0,
+      "offensivePhysicalChance": 10.0,
+      "offensivePierceRatioMin": 200.0,
+      "offensiveChaosMax": 20.0,
+      "offensivePierceMax": 41.0,
+      "characterBaseAttackSpeed": 0.0,
+      "offensiveChaosMin": 8.0,
+      "offensivePierceMin": 170.0,
+      "offensiveCritDamageModifier": 19.0,
+      "offensiveTotalDamageModifierChance": 20.0,
+      "skillMaxLevel": 248.0,
+      "characterManaLimitReserve": 435.0,
+      "characterMana": 1350.0,
+      "characterStrength": 495.0,
+      "characterStrengthModifier": 3.0,
+      "skillUltimateLevel": 190.0,
+      "skillTier": 43.0,
+      "offensiveSlowPhysicalDurationMin": 10.0,
+      "offensiveSlowPhysicalMin": 45.0,
+      "defensiveFreeze": 38.0,
+      "offensiveSlowPhysicalMax": 48.0,
+      "characterOffensiveAbilityModifier": 19.0,
+      "skillTargetRadius": 12.0,
+      "characterEnergyAbsorptionPercent": 10.0,
+      "offensiveSlowLifeDurationModifier": 10.0,
+      "characterDexterityModifier": 8.0,
+      "offensiveSlowBleedingDurationModifier": 10.0,
+      "offensiveSlowColdDurationMin": 2.0,
+      "offensiveColdMin": 15.0,
+      "offensiveSlowColdMin": 13.0,
+      "characterDeflectProjectile": 4.0,
+      "characterManaRegen": 2.0,
+      "characterIntelligenceModifier": 5.0,
+      "characterWeaponIntelligenceReqReduction": 10.0,
+      "defensivePhysical": 3.0,
+      "characterJewelryIntelligenceReqReduction": 10.0,
+      "characterConstitutionModifier": 15.0,
+      "offensiveSlowFireModifier": 100.0,
+      "offensiveSlowLightningModifier": 100.0,
+      "offensiveElementalMin": 15.0,
+      "defensiveDisruption": 30.0
+    },
+    "bonuses": {
+      "all": 0.0,
+      "skill": {
+        "records/skills/playerclass02/canisterbomb2.dbr": 2.0,
+        "records/skills/playerclass04/summon_bladespirit.dbr": 2.0,
+        "records/skills/playerclass09/viremight3.dbr": 2.0,
+        "records/skills/playerclass06/weaponpool01.dbr": 2.0,
+        "records/skills/playerclass10/werewolf2.dbr": 2.0,
+        "records/skills/playerclass04/shadowstrike.dbr": 2.0,
+        "records/skills/playerclass03/bloodofdreeg1.dbr": 2.0,
+        "records/skills/playerclass04/shadowstrike_mod1.dbr": 2.0,
+        "records/skills/playerclass04/wpattack4.dbr": 5.0,
+        "records/skills/playerclass09/righteousfervor3.dbr": 2.0,
+        "records/skills/playerclass01/stanceoffensive.dbr": 2.0,
+        "records/skills/playerclass01/bladearc1.dbr": 2.0,
+        "records/skills/playerclass03/bloodofdreeg2.dbr": 2.0,
+        "records/skills/playerclass01/passiveshield.dbr": 2.0,
+        "records/skills/playerclass09/passive01.dbr": 2.0,
+        "records/skills/playerclass07/concussiverune1.dbr": 3.0,
+        "records/skills/playerclass09/aegis1.dbr": 3.0,
+        "records/skills/playerclass07/arcaneseal1.dbr": 2.0,
+        "records/skills/playerclass05/arcaneshield.dbr": 2.0,
+        "records/skills/playerclass01/fieldcommand1.dbr": 2.0,
+        "records/skills/playerclass08/illomen1.dbr": 3.0,
+        "records/skills/playerclass04/nightbladeenchant1.dbr": 3.0,
+        "records/skills/playerclass04/wpattack2.dbr": 4.0,
+        "records/skills/playerclass04/wpattack3.dbr": 2.0,
+        "records/skills/playerclass01/weaponpool1.dbr": 2.0,
+        "records/skills/playerclass10/wpattack01.dbr": 2.0
+      },
+      "mastery": {
+        "records/skills/playerclass01/_classtraining_class01.dbr": 1.0
+      }
+    },
+    "mirror_cooldown": 0,
+    "mirror_duration": 0,
+    "energy_regen_lower_bound": 3.0,
+    "totem_wind_energy_upkeep_estimate": 9.642857142857142,
+    "energy_margin_lower_bound": -6.642857142857142
+  },
+  "offense_framework": {
+    "abilities": {
+      "records/skills/playerclass01/blitz1.dbr": {
+        "name": "Blitz",
+        "rank": 2,
+        "scaling": "player",
+        "population": {
+          "maximum": 1,
+          "sustainable": 1,
+          "practical": 1,
+          "lifetime": null,
+          "deployment_interval": 3.5,
+          "setup_seconds": 0
+        },
+        "cooldown": 3.5,
+        "strength": 499.762992074539,
+        "channels": {
+          "Chaos": 39.66254145971761,
+          "Physical": 460.1004506148214
+        },
+        "parts": [
+          {
+            "record": "records/skills/playerclass01/blitz1.dbr",
+            "rank": 2,
+            "base_payload": {
+              "Physical": 115.0
+            },
+            "converted_payload": {
+              "Chaos": 17.25,
+              "Physical": 97.75
+            },
+            "instances": 1,
+            "frequency": 0.2857142857142857,
+            "debuff_aura": false,
+            "strength": 499.762992074539
+          }
+        ],
+        "limitations": [
+          "Action animation unavailable: normalized base action of 1 second."
+        ]
+      },
+      "records/skills/playerclass01/warcry1.dbr": {
+        "name": "War Cry",
+        "rank": 2,
+        "scaling": "player",
+        "population": {
+          "maximum": 1,
+          "sustainable": 1,
+          "practical": 1,
+          "lifetime": null,
+          "deployment_interval": 7.5,
+          "setup_seconds": 0
+        },
+        "cooldown": 7.5,
+        "strength": 0,
+        "channels": {},
+        "parts": [],
+        "limitations": []
+      },
+      "records/skills/playerclass04/shadowstrike.dbr": {
+        "name": "Shadow Strike",
+        "rank": 5,
+        "scaling": "player",
+        "population": {
+          "maximum": 1,
+          "sustainable": 1,
+          "practical": 1,
+          "lifetime": null,
+          "deployment_interval": 3.5,
+          "setup_seconds": 0
+        },
+        "cooldown": 3.5,
+        "strength": 1834.2866094111625,
+        "channels": {
+          "Pierce": 1242.1102647599998,
+          "Cold": 592.1763446511627
+        },
+        "parts": [
+          {
+            "record": "records/skills/playerclass04/shadowstrike.dbr",
+            "rank": 5,
+            "base_payload": {
+              "Pierce": 168.0,
+              "Cold": 168.0
+            },
+            "converted_payload": {
+              "Pierce": 168.0,
+              "Cold": 168.0
+            },
+            "instances": 1,
+            "frequency": 0.2857142857142857,
+            "debuff_aura": false,
+            "strength": 1834.2866094111625
+          }
+        ],
+        "limitations": [
+          "Action animation unavailable: normalized base action of 1 second."
+        ]
+      },
+      "records/skills/playerclass04/ringofsteel.dbr": {
+        "name": "Ring of Steel",
+        "rank": 1,
+        "scaling": "player",
+        "population": {
+          "maximum": 1,
+          "sustainable": 1,
+          "practical": 1,
+          "lifetime": null,
+          "deployment_interval": 3.0,
+          "setup_seconds": 0
+        },
+        "cooldown": 3.0,
+        "strength": 1171.50131655975,
+        "channels": {
+          "Pierce": 948.834230025,
+          "SlowBleeding": 222.66708653474998
+        },
+        "parts": [
+          {
+            "record": "records/skills/playerclass04/ringofsteel.dbr",
+            "rank": 1,
+            "base_payload": {
+              "Pierce": 100.0
+            },
+            "converted_payload": {
+              "Pierce": 110.00000000000001,
+              "SlowBleeding": 39.0
+            },
+            "instances": 1,
+            "frequency": 0.3333333333333333,
+            "debuff_aura": false,
+            "strength": 1171.50131655975
+          }
+        ],
+        "limitations": [
+          "Action animation unavailable: normalized base action of 1 second."
+        ]
+      }
+    },
+    "resistance_reduction": {
+      "Physical": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Pierce": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Fire": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Cold": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Lightning": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Poison": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Life": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Aether": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Chaos": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      },
+      "Bleeding": {
+        "additive": 0,
+        "flat": 0,
+        "relative": 0
+      }
+    },
+    "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+    "policy": {
+      "deployment_window_seconds": 8,
+      "player_action_seconds": 1,
+      "weights": "automatic baseline strength contributions"
+    },
+    "limitations": [
+      "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+      "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+      "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+    ]
+  },
+  "factions": [
+    {
+      "index": 0,
+      "key": "",
+      "name": "Player",
+      "reputation": 24000.0,
+      "rank": "Honored"
+    },
+    {
+      "index": 1,
+      "key": "Survivors",
+      "name": "Devil's Crossing",
+      "reputation": 14454.879,
+      "rank": "Honored"
+    },
+    {
+      "index": 2,
+      "key": "",
+      "name": "Aetherials",
+      "reputation": -12181.49,
+      "rank": "Hostile"
+    },
+    {
+      "index": 3,
+      "key": "",
+      "name": "Chthonians",
+      "reputation": -9531.074,
+      "rank": "Hostile"
+    },
+    {
+      "index": 4,
+      "key": "",
+      "name": "Cronley's Gang",
+      "reputation": -2173.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 5,
+      "key": "",
+      "name": "Beasts",
+      "reputation": -17169.482,
+      "rank": "Hostile"
+    },
+    {
+      "index": 6,
+      "key": "User0",
+      "name": "Rovers",
+      "reputation": 10201.957,
+      "rank": "Honored"
+    },
+    {
+      "index": 7,
+      "key": "User1",
+      "name": "Neutral",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 8,
+      "key": "User2",
+      "name": "Homestead",
+      "reputation": 25000.0,
+      "rank": "Revered"
+    },
+    {
+      "index": 9,
+      "key": "User3",
+      "name": "Free Men of Corrigan Mine",
+      "reputation": -1000.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 10,
+      "key": "User4",
+      "name": "The Outcast",
+      "reputation": 5956.5,
+      "rank": "Respected"
+    },
+    {
+      "index": 11,
+      "key": "User5",
+      "name": "Order of Death's Vigil",
+      "reputation": -2276.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 12,
+      "key": "User6",
+      "name": "Arkovian Undead",
+      "reputation": -4934.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 13,
+      "key": "User7",
+      "name": "The Black Legion",
+      "reputation": 25000.0,
+      "rank": "Revered"
+    },
+    {
+      "index": 14,
+      "key": "User8",
+      "name": "Kymon's Chosen",
+      "reputation": 7581.0,
+      "rank": "Respected"
+    },
+    {
+      "index": 15,
+      "key": "User9",
+      "name": "Coven of Ugdenbog",
+      "reputation": 25000.0,
+      "rank": "Revered"
+    },
+    {
+      "index": 16,
+      "key": "User10",
+      "name": "Barrowholm",
+      "reputation": 9535.5,
+      "rank": "Respected"
+    },
+    {
+      "index": 17,
+      "key": "User11",
+      "name": "Malmouth Resistance",
+      "reputation": 10775.764,
+      "rank": "Honored"
+    },
+    {
+      "index": 18,
+      "key": "User12",
+      "name": "Aetherial Vanguard",
+      "reputation": -7271.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 19,
+      "key": "User13",
+      "name": "Cult of Bysmiel",
+      "reputation": 8589.0,
+      "rank": "Respected"
+    },
+    {
+      "index": 20,
+      "key": "User14",
+      "name": "Cult of Dreeg",
+      "reputation": 5730.0,
+      "rank": "Respected"
+    },
+    {
+      "index": 21,
+      "key": "User15",
+      "name": "Cult of Solael",
+      "reputation": 5730.0,
+      "rank": "Respected"
+    },
+    {
+      "index": 22,
+      "key": "User16",
+      "name": "Eldritch Horrors",
+      "reputation": -3931.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 23,
+      "key": "User17",
+      "name": "Kurn",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 24,
+      "key": "User18",
+      "name": "Bloodbound",
+      "reputation": -1.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 25,
+      "key": "User19",
+      "name": "Traps",
+      "reputation": -1.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 26,
+      "key": "User20",
+      "name": "The Dread",
+      "reputation": -1.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 27,
+      "key": "User21",
+      "name": "Noktukari",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 28,
+      "key": "User22",
+      "name": "Asterkarn Dead",
+      "reputation": -1.0,
+      "rank": "Hostile"
+    },
+    {
+      "index": 29,
+      "key": "User23",
+      "name": "User23",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 30,
+      "key": "User24",
+      "name": "User24",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 31,
+      "key": "User25",
+      "name": "User25",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 32,
+      "key": "User26",
+      "name": "User26",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 33,
+      "key": "User27",
+      "name": "User27",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 34,
+      "key": "User28",
+      "name": "User28",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 35,
+      "key": "User29",
+      "name": "User29",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 36,
+      "key": "User30",
+      "name": "User30",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 37,
+      "key": "User31",
+      "name": "User31",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 38,
+      "key": "User32",
+      "name": "User32",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 39,
+      "key": "User33",
+      "name": "User33",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 40,
+      "key": "User34",
+      "name": "User34",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 41,
+      "key": "User35",
+      "name": "User35",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 42,
+      "key": "User36",
+      "name": "User36",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 43,
+      "key": "User37",
+      "name": "User37",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 44,
+      "key": "User38",
+      "name": "User38",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 45,
+      "key": "User39",
+      "name": "User39",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    },
+    {
+      "index": 46,
+      "key": "User40",
+      "name": "User40",
+      "reputation": 0.0,
+      "rank": "Tolerated"
+    }
+  ],
+  "saved_hotbars": [
+    {
+      "unk-a": 47,
+      "unk-b": 0,
+      "slots": [
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass01/blitz1.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass04/nightbladeenchant1.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass01/warcry1.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass04/ringofsteel.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass04/bladebarrier1.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/itemskillsgdx2/runes/disengage_00_basic.dbr",
+          "is-item-skill": true,
+          "item-name": "records/items/enchants/runes/b206_rune.dbr",
+          "item-equip-location": 14
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass01/cadence1.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/default/defaultweaponattack.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/playerclass04/shadowstrike.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": 2
+        },
+        {
+          "type": 3
+        },
+        {
+          "type": 0,
+          "skill-name": "records/skills/default/defaultweaponattack.dbr",
+          "is-item-skill": false,
+          "item-name": "",
+          "item-equip-location": 0
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        },
+        {
+          "type": -1
+        }
+      ]
+    }
+  ]
+}

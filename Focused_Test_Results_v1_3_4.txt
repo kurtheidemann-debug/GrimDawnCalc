@@ -1,0 +1,13 @@
+PASS: Mythical Scion of Noxious Wounds: Keep — Alternative for actual +4 cooldown reduction, not eligibility uncertainty; balanced 3.9971 vs 4.2452, offense 65.33 vs 100, defense 99.53 vs 100. Blockers separate.
+PASS: Reliable inferior value remains Sell/Dismantle despite attribute/component/order blockers: Vilescorn Greaves
+PASS: Incomplete scores retain Uncertain — Value; competitive cooldown alternatives remain protected.
+PASS: Superior future equipment retained with full score, excluded at 82, admitted at 83; retention does not require a materiality gate.
+PASS: Every personal inventory item and all owned-equipment valuation entries receive one disposition; duplicate ring contexts counted once.
+PASS: Mal Save 3 recommendation and scores unchanged by disposition; Beeztrap recommendations/profile and all scoring/search/progression/database code byte-identical.
+
+Disposition counts (all owned equipment plus personal inventory, each physical item once):
+Keep — Alternative: 317
+Keep — Future Upgrade: 2
+Sell/Dismantle: 15
+Uncertain — Value: 59
+Total: 393

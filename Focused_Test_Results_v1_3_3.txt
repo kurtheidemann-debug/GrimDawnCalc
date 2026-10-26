@@ -1,0 +1,5 @@
+Real item: Voidmancer's Cord required 84 score 4.581250776415457 vs 3.585170185988092 current pool False result Keep — No demonstrated upgrade
+Controlled upgrade: required level 82; score 3.894005066786917 vs 3.585170185988092 classification Keep — Future Upgrade
+PASS: superior future score preserved; excluded at 81; admitted at 82; incomplete comparison Uncertain; current progression/state unchanged.
+PASS: normal level-81 Quick Review completed (506 feasible candidates, 27.26 seconds); every recommended item is level-eligible. Future scores rendered with full names, locations, required levels and comparisons. Existing runtime integrity passed.
+PASS: all production ZIP members passed CRC checks; scoring/search/database/progression/stash/profile files unchanged against v1.3.2.

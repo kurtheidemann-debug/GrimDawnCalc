@@ -1,0 +1,61 @@
+build,skill,record,baseline_invested,invested,effective,delta_invested,softcap,hardcap
+A Balanced,Arcanist,records/skills/playerclass05/_classtraining_class05.dbr,25,25,25,0,50,
+A Balanced,Maiven's Sphere of Protection,records/skills/playerclass05/sphereofprotection1.dbr,12,12,13,0,12,22
+A Balanced,Inner Focus,records/skills/playerclass05/passive01.dbr,12,10,11,-2,12,22
+A Balanced,Mirror of Ereoctes,records/skills/playerclass05/arcaneshield.dbr,1,1,2,0,12,22
+A Balanced,Iskandra's Elemental Exchange,records/skills/playerclass05/elementalinfusion1.dbr,1,1,4,0,,
+A Balanced,Overload,records/skills/playerclass05/elementalinfusion2.dbr,1,1,4,0,12,22
+A Balanced,Elemental Balance,records/skills/playerclass05/elementalinfusion3.dbr,10,1,2,-9,12,22
+A Balanced,Panetti's Replicating Missile,records/skills/playerclass05/arcanemissile.dbr,1,1,2,0,16,26
+A Balanced,Distortion,records/skills/playerclass05/arcanemissile2.dbr,1,0,0,-1,12,22
+A Balanced,Supercharged,records/skills/playerclass05/arcanemissile3.dbr,1,0,0,-1,12,22
+A Balanced,Shaman,records/skills/playerclass06/_classtraining_class06.dbr,50,50,50,0,50,
+A Balanced,Mogdrogen's Pact,records/skills/playerclass06/natureblessing1.dbr,10,19,22,9,,
+A Balanced,Heart of the Wild,records/skills/playerclass06/naturesblessing2.dbr,9,8,11,-1,10,20
+A Balanced,Oak Skin,records/skills/playerclass06/naturesblessing3.dbr,9,10,17,1,10,20
+A Balanced,Stormcaller's Pact,records/skills/playerclass06/stormcaller1.dbr,7,1,7,-6,12,22
+A Balanced,Wendigo Totem,records/skills/playerclass06/totem1.dbr,1,1,2,0,12,22
+A Balanced,Wind Devil,records/skills/playerclass06/squall1.dbr,4,1,2,-3,16,26
+A Balanced,Raging Tempest,records/skills/playerclass06/squall2.dbr,12,19,22,7,,
+A Balanced,Maelstrom,records/skills/playerclass06/squall3.dbr,12,21,22,9,,
+A Balanced,Storm Totem,records/skills/playerclass06/stormtotem01.dbr,16,16,21,0,16,26
+B Offense,Arcanist,records/skills/playerclass05/_classtraining_class05.dbr,25,25,25,0,50,
+B Offense,Maiven's Sphere of Protection,records/skills/playerclass05/sphereofprotection1.dbr,12,1,2,-11,12,22
+B Offense,Inner Focus,records/skills/playerclass05/passive01.dbr,12,11,12,-1,12,22
+B Offense,Mirror of Ereoctes,records/skills/playerclass05/arcaneshield.dbr,1,1,2,0,12,22
+B Offense,Iskandra's Elemental Exchange,records/skills/playerclass05/elementalinfusion1.dbr,1,21,22,20,,
+B Offense,Overload,records/skills/playerclass05/elementalinfusion2.dbr,1,8,11,7,12,22
+B Offense,Elemental Balance,records/skills/playerclass05/elementalinfusion3.dbr,10,1,2,-9,12,22
+B Offense,Panetti's Replicating Missile,records/skills/playerclass05/arcanemissile.dbr,1,1,2,0,16,26
+B Offense,Distortion,records/skills/playerclass05/arcanemissile2.dbr,1,0,0,-1,12,22
+B Offense,Supercharged,records/skills/playerclass05/arcanemissile3.dbr,1,0,0,-1,12,22
+B Offense,Shaman,records/skills/playerclass06/_classtraining_class06.dbr,50,50,50,0,50,
+B Offense,Mogdrogen's Pact,records/skills/playerclass06/natureblessing1.dbr,10,1,4,-9,,
+B Offense,Heart of the Wild,records/skills/playerclass06/naturesblessing2.dbr,9,1,2,-8,10,20
+B Offense,Oak Skin,records/skills/playerclass06/naturesblessing3.dbr,9,7,10,-2,10,20
+B Offense,Stormcaller's Pact,records/skills/playerclass06/stormcaller1.dbr,7,12,18,5,12,22
+B Offense,Wendigo Totem,records/skills/playerclass06/totem1.dbr,1,1,2,0,12,22
+B Offense,Wind Devil,records/skills/playerclass06/squall1.dbr,4,1,2,-3,16,26
+B Offense,Raging Tempest,records/skills/playerclass06/squall2.dbr,12,19,22,7,,
+B Offense,Maelstrom,records/skills/playerclass06/squall3.dbr,12,21,22,9,,
+B Offense,Storm Totem,records/skills/playerclass06/stormtotem01.dbr,16,16,23,0,16,26
+C Defense,Arcanist,records/skills/playerclass05/_classtraining_class05.dbr,25,25,25,0,50,
+C Defense,Maiven's Sphere of Protection,records/skills/playerclass05/sphereofprotection1.dbr,12,12,13,0,12,22
+C Defense,Inner Focus,records/skills/playerclass05/passive01.dbr,12,11,12,-1,12,22
+C Defense,Mirror of Ereoctes,records/skills/playerclass05/arcaneshield.dbr,1,11,12,10,12,22
+C Defense,Iskandra's Elemental Exchange,records/skills/playerclass05/elementalinfusion1.dbr,1,1,2,0,,
+C Defense,Overload,records/skills/playerclass05/elementalinfusion2.dbr,1,1,2,0,12,22
+C Defense,Elemental Balance,records/skills/playerclass05/elementalinfusion3.dbr,10,1,2,-9,12,22
+C Defense,Panetti's Replicating Missile,records/skills/playerclass05/arcanemissile.dbr,1,1,2,0,16,26
+C Defense,Distortion,records/skills/playerclass05/arcanemissile2.dbr,1,0,0,-1,12,22
+C Defense,Supercharged,records/skills/playerclass05/arcanemissile3.dbr,1,0,0,-1,12,22
+C Defense,Shaman,records/skills/playerclass06/_classtraining_class06.dbr,50,50,50,0,50,
+C Defense,Mogdrogen's Pact,records/skills/playerclass06/natureblessing1.dbr,10,18,22,8,,
+C Defense,Heart of the Wild,records/skills/playerclass06/naturesblessing2.dbr,9,10,12,1,10,20
+C Defense,Oak Skin,records/skills/playerclass06/naturesblessing3.dbr,9,10,18,1,10,20
+C Defense,Stormcaller's Pact,records/skills/playerclass06/stormcaller1.dbr,7,1,6,-6,12,22
+C Defense,Wendigo Totem,records/skills/playerclass06/totem1.dbr,1,1,1,0,12,22
+C Defense,Wind Devil,records/skills/playerclass06/squall1.dbr,4,1,1,-3,16,26
+C Defense,Raging Tempest,records/skills/playerclass06/squall2.dbr,12,12,14,0,,
+C Defense,Maelstrom,records/skills/playerclass06/squall3.dbr,12,16,16,4,,
+C Defense,Storm Totem,records/skills/playerclass06/stormtotem01.dbr,16,16,20,0,16,26

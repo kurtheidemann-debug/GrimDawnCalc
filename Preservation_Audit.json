@@ -1,0 +1,81 @@
+{
+  "compared_to": "Practical Optimizer v1.1",
+  "unchanged_files": {
+    "database.json.gz": {
+      "unchanged": true,
+      "sha256": "8c699db4100c9b1b9cf584529b2712abadf03403de94e0764fece8b8c0239773"
+    },
+    "catalog.json": {
+      "unchanged": true,
+      "sha256": "a7523836023dba74ada91f3901d70b534ad24c768fbb43d5bd4839a0944f235e"
+    },
+    "mal.json": {
+      "unchanged": true,
+      "sha256": "8a3f531b44ba183535f391f9b13d55094820e75afecbf7e3d0cff767a2cc8b42"
+    },
+    "baseline.json": {
+      "unchanged": true,
+      "sha256": "ae51fd48e0835eeea4c916478c09ec60aa05336b701dfced70623c1adde3b2eb"
+    },
+    "baseline-sources.json": {
+      "unchanged": true,
+      "sha256": "1e6ac38d013c6be10fb784366684ac8cc065b69ee76d7a55c546bd8215700b7f"
+    },
+    "localization.json": {
+      "unchanged": true,
+      "sha256": "c7ec3d17ea79d816e03d50b1cefae862a00e96c9ba1530fc73f0f7976cd9b608"
+    },
+    "penalties.json": {
+      "unchanged": true,
+      "sha256": "1cb2b79a89e4f649e3181e9d553f5480150f778745a44f7cbe4245e9fdc2eedf"
+    },
+    "materials.json": {
+      "unchanged": true,
+      "sha256": "2ed8079931820f195874b1862646944002db6ca72f2d5fdef30b7af0aefb5598"
+    },
+    "recipes.json": {
+      "unchanged": true,
+      "sha256": "fbd22095c143d34aae8231ee61c49807d8a8a8bf0edbbc23463db58859342213"
+    },
+    "gd-edit-standalone.jar": {
+      "unchanged": true,
+      "sha256": "7103341f5c6cf6ff2a0f8955cb8ff3d9bc5a2bb3926b6c7f6c0aff46d02c9f45"
+    },
+    "reagents.py": {
+      "unchanged": true,
+      "sha256": "b0ef932f74364e4202858df7a656eb893b1fd2dbd825260f38fec3cd51436b87"
+    },
+    "test_optimizer.py": {
+      "unchanged": true,
+      "sha256": "9047cac5d43a27fd27f0251b9c9b4c2ec7059325616857166c704130675e20f4"
+    },
+    "test_practical.py": {
+      "unchanged": true,
+      "sha256": "80f32e0eaa75ebe4acd186f246548035926a6f4f28665d3287780b8a7f9f53e1"
+    }
+  },
+  "intentional_source_changes": {
+    "GrimDawn_Optimizer.py": "Current-owner selection uses imported character name; stat math unchanged.",
+    "practical_optimizer.py": "Generic offense adapter, penalty-table guard, unambiguous resistance labels. Search/cost/materiality logic retained.",
+    "relative_offense.py": "New generic data-driven scoring module.",
+    "refresh_data.py": "Optional character selector and matching profile copy; underlying decoder unchanged.",
+    "extract_data.clj": "Optional character selector only; default Mal and parsing/stat extraction unchanged."
+  },
+  "v11_results_archived_byte_identical": true,
+  "unchanged_function_AST": {
+    "Engine.calculate": true,
+    "Engine.validate": true,
+    "Engine.item_parts": true,
+    "Engine.effective": true,
+    "Engine.compatible": true,
+    "Engine.devotion_valid": true,
+    "Engine.equip_order_possible": true,
+    "PracticalEngine.component_cost": true,
+    "PracticalEngine.deficits": true,
+    "PracticalEngine.score": true,
+    "PracticalEngine.feasible": true,
+    "PracticalEngine.prefer": true,
+    "PracticalEngine.repair_attributes": true,
+    "PracticalEngine.search_practical": true
+  }
+}

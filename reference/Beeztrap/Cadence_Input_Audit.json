@@ -1,0 +1,521 @@
+{
+  "schema": 1,
+  "status": "INPUT_ADAPTER_READY_CYCLE_NOT_VERIFIED",
+  "offense_rankable": false,
+  "character": "Beeztrap",
+  "primary_attack": "records/skills/playerclass01/cadence1.dbr",
+  "configuration_hash": "67d466b5abaaa97a354bbbe9b246ea1e8a17a19d2a51c309a10144168bb2383f",
+  "weapons": [
+    {
+      "slot": 12,
+      "id": "GD0321",
+      "name": "Void-Touched Dermapteran Slicer of Alacrity",
+      "owner": "Beeztrap",
+      "location": "/weapon-sets/0/items/0",
+      "record": "records/items/gearweapons/swords1h/b012c_sword.dbr",
+      "class": "WeaponMelee_Sword",
+      "intrinsic_physical_range": {
+        "offensivePhysicalMin": 48.0,
+        "offensivePhysicalMax": 74.0
+      },
+      "intrinsic_physical_mean": 61.0,
+      "damage_provenance": {
+        "offensivePhysicalMin": "database base",
+        "offensivePhysicalMax": "database base"
+      },
+      "rolled_item_fields": {
+        "offensivePierceRatioMin": 100.0,
+        "characterAttackSpeedModifier": 18.0,
+        "offensiveChaosMax": 20.0,
+        "conversionPercentage": 13.587144613265991,
+        "characterLife": 351.0,
+        "offensivePierceMax": 13.0,
+        "characterBaseAttackSpeed": 0.01,
+        "offensiveChaosMin": 8.0,
+        "offensivePierceModifier": 52.0,
+        "offensivePierceMin": 13.0
+      },
+      "armor_piercing_percent": 100.0,
+      "conversions": [
+        {
+          "source": "Physical",
+          "destination": "Chaos",
+          "percent": 13.587144613265991,
+          "provenance": "seeded roll",
+          "scope": "UNVERIFIED: local versus global"
+        }
+      ],
+      "component": "records/items/materia/compa_viciousspikes.dbr",
+      "augment": "records/items/enchants/b05a_enchant.dbr",
+      "speed_tag": "Speed:  Very Fast",
+      "base_speed_adjustment": 0.01
+    },
+    {
+      "slot": 13,
+      "id": "GD0322",
+      "name": "Empowered Duelist's Sabre",
+      "owner": "Beeztrap",
+      "location": "/weapon-sets/0/items/1",
+      "record": "records/items/gearweapons/swords1h/c024_sword.dbr",
+      "class": "WeaponMelee_Sword",
+      "intrinsic_physical_range": {
+        "offensivePhysicalMin": 70.0,
+        "offensivePhysicalMax": 76.0
+      },
+      "intrinsic_physical_mean": 73.0,
+      "damage_provenance": {
+        "offensivePhysicalMin": "database base",
+        "offensivePhysicalMax": "database base"
+      },
+      "rolled_item_fields": {
+        "characterLife": 189.0,
+        "characterAttackSpeedModifier": 13.0,
+        "offensivePierceMin": 9.0,
+        "offensivePierceMax": 18.0,
+        "offensivePierceModifier": 54.0,
+        "offensivePierceRatioMin": 100.0,
+        "characterBaseAttackSpeed": -0.01
+      },
+      "armor_piercing_percent": 100.0,
+      "conversions": [],
+      "component": "records/items/materia/compa_viciousspikes.dbr",
+      "augment": "records/items/enchants/b05a_enchant.dbr",
+      "speed_tag": "Speed:  Very Fast",
+      "base_speed_adjustment": -0.01
+    }
+  ],
+  "skills": {
+    "records/skills/playerclass01/cadence1.dbr": {
+      "name": "Cadence",
+      "invested_rank": 15,
+      "effective_rank": 16,
+      "class": "Skill_WeaponPool_ChargedFinale",
+      "fields": {
+        "skillChargeTimeRanged": 0.25,
+        "offensivePhysicalMin": 197.0,
+        "weaponDamagePct": 430.0,
+        "skillProjectileNumber": 1.0,
+        "cameraShakeDurationSecs": 0.1,
+        "skillChargeLevel": 2.0,
+        "ragDollAmplification": 1.0,
+        "skillUltimateLevel": 26.0,
+        "skillMaxLevel": 16.0,
+        "cameraShakeAmplitude": 0.15,
+        "skillManaCost": 4.0,
+        "skillChargeTime": 0.35,
+        "skillTargetNumber": 1.0,
+        "skillTier": 1.0,
+        "skillChargeDuration": 8.0
+      },
+      "native_payload": {
+        "Physical": 197.0
+      },
+      "item_modifiers": []
+    },
+    "records/skills/playerclass01/cadence2.dbr": {
+      "name": "Fighting Form",
+      "invested_rank": 1,
+      "effective_rank": 2,
+      "class": "Skill_Modifier",
+      "fields": {
+        "offensiveSlowBleedingDurationMin": 2.0,
+        "skillUltimateLevel": 22.0,
+        "skillTargetAngle": 120.0,
+        "projectilePiercing": 40.0,
+        "skillMaxLevel": 12.0,
+        "offensiveSlowBleedingMin": 42.0,
+        "skillManaCost": 1.0,
+        "offensivePierceModifier": 23.0,
+        "offensivePhysicalModifier": 23.0,
+        "skillTargetNumber": 2.0,
+        "skillTier": 4.0
+      },
+      "native_payload": {
+        "SlowBleeding": 42.0
+      },
+      "item_modifiers": []
+    },
+    "records/skills/playerclass01/cadence3.dbr": {
+      "name": "Deadly Momentum",
+      "invested_rank": 12,
+      "effective_rank": 13,
+      "class": "SkillSecondary_BuffSelfDuration",
+      "fields": {},
+      "native_payload": {},
+      "item_modifiers": [],
+      "linked_buff": {
+        "record": "records/skills/playerclass01/cadence3_buff.dbr",
+        "fields": {
+          "offensivePhysicalMin": 126.0,
+          "skillActiveDuration": 5.0,
+          "offensiveTotalDamageModifier": 108.0,
+          "offensivePhysicalMax": 167.0,
+          "offensiveSlowPhysicalDurationMin": 2.0,
+          "skillUltimateLevel": 22.0,
+          "offensiveSlowPhysicalMin": 60.0,
+          "skillMaxLevel": 12.0,
+          "skillTier": 8.0
+        },
+        "native_payload": {
+          "Physical": 146.5,
+          "SlowPhysical": 60.0
+        }
+      }
+    },
+    "records/skills/playerclass01/weaponpool1.dbr": {
+      "name": "Markovian's Advantage",
+      "invested_rank": 1,
+      "effective_rank": 4,
+      "class": "Skill_WPAttack_BasicAttack",
+      "fields": {
+        "offensivePhysicalMin": 43.0,
+        "weaponDamagePct": 160.0,
+        "skillProjectileNumber": 1.0,
+        "cameraShakeDurationSecs": 0.1,
+        "skillChanceWeight": 20.0,
+        "ragDollAmplification": 1.2,
+        "skillUltimateLevel": 22.0,
+        "offensiveSlowDefensiveAbilityMin": 80.0,
+        "offensiveSlowDefensiveAbilityDurationMin": 5.0,
+        "skillMaxLevel": 12.0,
+        "cameraShakeAmplitude": 0.25,
+        "skillTargetNumber": 1.0,
+        "skillTier": 1.0
+      },
+      "native_payload": {
+        "Physical": 43.0
+      },
+      "item_modifiers": []
+    },
+    "records/skills/playerclass04/wpattack1.dbr": {
+      "name": "Belgothian's Shears",
+      "invested_rank": 1,
+      "effective_rank": 1,
+      "class": "Skill_WPAttack_BasicAttack",
+      "fields": {
+        "offensivePhysicalMin": 14.0,
+        "weaponDamagePct": 125.0,
+        "offensivePhysicalMax": 19.0,
+        "skillChanceWeight": 12.0,
+        "dualWieldOnly": 1.0,
+        "ragDollAmplification": 1.0,
+        "skillUltimateLevel": 18.0,
+        "skillTargetAngle": 180.0,
+        "skillMaxLevel": 8.0,
+        "offensiveStunMin": 0.7,
+        "cameraShakeAmplitude": 0.12,
+        "offensivePierceMin": 10.0,
+        "skillTargetNumber": 3.0,
+        "skillTier": 2.0
+      },
+      "native_payload": {
+        "Physical": 16.5,
+        "Pierce": 10.0
+      },
+      "item_modifiers": []
+    },
+    "records/skills/playerclass04/wpattack2.dbr": {
+      "name": "Amarasta's Quick Cut",
+      "invested_rank": 1,
+      "effective_rank": 5,
+      "class": "Skill_WPAttack_BasicAttack",
+      "fields": {
+        "weaponDamagePct": 98.0,
+        "skillChanceWeight": 20.0,
+        "dualWieldOnly": 1.0,
+        "skillUltimateLevel": 18.0,
+        "offensiveCritDamageModifier": 23.0,
+        "skillMaxLevel": 8.0,
+        "cameraShakeAmplitude": 0.12,
+        "offensivePierceMin": 47.0,
+        "skillTargetNumber": 1.0,
+        "skillTier": 4.0
+      },
+      "native_payload": {
+        "Pierce": 47.0
+      },
+      "item_modifiers": [
+        {
+          "item_id": "GD0321",
+          "slot": 12,
+          "modifier_record": "records/skills/itemskillsgdx1/skillmodifiers/monsterinfrequents/sword1h_b012_amarastaquickcut.dbr",
+          "fields": {
+            "skillMaxLevel": 1.0,
+            "weaponDamagePct": 24.0
+          }
+        }
+      ]
+    },
+    "records/skills/playerclass04/wpattack3.dbr": {
+      "name": "Whirling Death",
+      "invested_rank": 1,
+      "effective_rank": 3,
+      "class": "Skill_WPAttack_BasicAttack",
+      "fields": {
+        "weaponDamagePct": 121.0,
+        "offensiveSlowBleedingDurationMin": 3.0,
+        "skillChanceWeight": 17.0,
+        "dualWieldOnly": 1.0,
+        "skillUltimateLevel": 18.0,
+        "skillTargetAngle": 360.0,
+        "skillMaxLevel": 8.0,
+        "cameraShakeAmplitude": 0.12,
+        "offensiveSlowBleedingMin": 49.0,
+        "offensivePierceMin": 45.0,
+        "skillTargetNumber": 8.0,
+        "skillTier": 6.0
+      },
+      "native_payload": {
+        "Pierce": 45.0,
+        "SlowBleeding": 49.0
+      },
+      "item_modifiers": [
+        {
+          "item_id": "GD0321",
+          "slot": 12,
+          "modifier_record": "records/skills/itemskillsgdx1/skillmodifiers/monsterinfrequents/sword1h_b012_whirlingdeath.dbr",
+          "fields": {
+            "offensiveLifeLeechMin": 6.0,
+            "offensivePierceMin": 80.0,
+            "skillMaxLevel": 1.0
+          }
+        }
+      ]
+    },
+    "records/skills/playerclass04/wpattack5.dbr": {
+      "name": "Execution",
+      "invested_rank": 4,
+      "effective_rank": 4,
+      "class": "Skill_WPAttack_BasicAttack",
+      "fields": {
+        "weaponDamagePct": 245.0,
+        "offensivePercentCurrentLifeMin": 15.0,
+        "skillChanceWeight": 19.0,
+        "dualWieldOnly": 1.0,
+        "skillUltimateLevel": 18.0,
+        "offensiveColdMin": 78.0,
+        "skillMaxLevel": 8.0,
+        "cameraShakeAmplitude": 0.12,
+        "skillTargetNumber": 1.0,
+        "skillTier": 9.0
+      },
+      "native_payload": {
+        "Cold": 78.0
+      },
+      "item_modifiers": []
+    }
+  },
+  "raw_wps_weight_sum": 88.0,
+  "stats": {
+    "OA": 2175,
+    "DA": 1852,
+    "health": 10242,
+    "armor": 1453,
+    "armor_absorption": 90.3,
+    "cunning": 801,
+    "spirit": 361
+  },
+  "recognized_global_fields": {
+    "characterLife": 4804.0,
+    "characterDefensiveAbility": 397.0,
+    "offensivePhysicalModifier": 586.0,
+    "offensivePierceModifier": 1419.0,
+    "offensiveSlowPhysicalModifier": 453.0,
+    "defensiveAether": 88.0,
+    "defensiveChaos": 89.0,
+    "defensiveProtection": 4352.0,
+    "defensiveElementalResistance": 97.0,
+    "defensivePoison": 115.0,
+    "characterDexterity": 516.0,
+    "characterAttackSpeedModifier": 60.0,
+    "offensiveSlowBleedingMin": 47.0,
+    "offensiveSlowBleedingMax": 5.0,
+    "offensiveSlowBleedingModifier": 506.0,
+    "offensiveSlowBleedingDurationMin": 12.0,
+    "characterOffensiveAbility": 430.0,
+    "characterIntelligence": 230.0,
+    "characterGlobalReqReduction": 11.0,
+    "offensiveElementalModifier": 183.0,
+    "characterSpellCastSpeedModifier": 14.0,
+    "defensivePierce": 182.0,
+    "defensiveBleeding": 89.0,
+    "characterDodgePercent": 16.0,
+    "offensiveColdModifier": 197.0,
+    "offensiveSlowColdModifier": 212.0,
+    "offensiveSlowPoisonModifier": 86.0,
+    "defensiveAbsorptionModifier": 29.0,
+    "defensiveBonusProtection": 59.0,
+    "characterRunSpeedModifier": 35.0,
+    "retaliationPoisonMin": 245.0,
+    "retaliationPoisonMax": 245.0,
+    "offensivePoisonModifier": 65.0,
+    "characterLifeRegen": 18.0,
+    "defensiveTotalSpeedResistance": 64.0,
+    "offensivePhysicalMin": 69.0,
+    "offensivePhysicalMax": 89.0,
+    "defensiveTrap": 50.0,
+    "offensiveLifeLeechMin": 5.0,
+    "defensiveLife": 65.0,
+    "offensiveFireMin": 10.0,
+    "offensiveFireMax": 16.0,
+    "defensiveProtectionModifier": 47.0,
+    "defensivePetrify": 27.0,
+    "conversionPercentage": 53.64380240440369,
+    "defensiveCold": 20.0,
+    "characterLifeModifier": 22.0,
+    "offensiveLifeModifier": 54.0,
+    "offensiveSlowLifeModifier": 54.0,
+    "defensiveStun": 56.0,
+    "offensiveTotalDamageModifier": 445.0,
+    "offensivePhysicalChance": 10.0,
+    "offensivePierceRatioMin": 200.0,
+    "offensiveChaosMax": 20.0,
+    "offensivePierceMax": 41.0,
+    "characterBaseAttackSpeed": 0.0,
+    "offensiveChaosMin": 8.0,
+    "offensivePierceMin": 170.0,
+    "offensiveCritDamageModifier": 19.0,
+    "offensiveTotalDamageModifierChance": 20.0,
+    "skillMaxLevel": 248.0,
+    "characterManaLimitReserve": 435.0,
+    "characterMana": 1350.0,
+    "characterStrength": 495.0,
+    "characterStrengthModifier": 3.0,
+    "skillUltimateLevel": 190.0,
+    "skillTier": 43.0,
+    "offensiveSlowPhysicalDurationMin": 10.0,
+    "offensiveSlowPhysicalMin": 45.0,
+    "defensiveFreeze": 38.0,
+    "offensiveSlowPhysicalMax": 48.0,
+    "characterOffensiveAbilityModifier": 19.0,
+    "skillTargetRadius": 12.0,
+    "characterEnergyAbsorptionPercent": 10.0,
+    "offensiveSlowLifeDurationModifier": 10.0,
+    "characterDexterityModifier": 8.0,
+    "offensiveSlowBleedingDurationModifier": 10.0,
+    "offensiveSlowColdDurationMin": 2.0,
+    "offensiveColdMin": 15.0,
+    "offensiveSlowColdMin": 13.0,
+    "characterDeflectProjectile": 4.0,
+    "characterManaRegen": 2.0,
+    "characterIntelligenceModifier": 5.0,
+    "characterWeaponIntelligenceReqReduction": 10.0,
+    "defensivePhysical": 3.0,
+    "characterJewelryIntelligenceReqReduction": 10.0,
+    "characterConstitutionModifier": 15.0,
+    "offensiveSlowFireModifier": 100.0,
+    "offensiveSlowLightningModifier": 100.0,
+    "offensiveElementalMin": 15.0,
+    "defensiveDisruption": 30.0
+  },
+  "resistances": [
+    {
+      "name": "Fire",
+      "raw": 72.0,
+      "cap": 80.0,
+      "shown": 72,
+      "overcap": -8.0,
+      "difficulty_adjusted_before_cap": 72.0,
+      "difficulty_penalty": -25.0,
+      "before_difficulty_penalty": 97.0
+    },
+    {
+      "name": "Cold",
+      "raw": 92.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 12.0,
+      "difficulty_adjusted_before_cap": 92.0,
+      "difficulty_penalty": -25.0,
+      "before_difficulty_penalty": 117.0
+    },
+    {
+      "name": "Lightning",
+      "raw": 72.0,
+      "cap": 80.0,
+      "shown": 72,
+      "overcap": -8.0,
+      "difficulty_adjusted_before_cap": 72.0,
+      "difficulty_penalty": -25.0,
+      "before_difficulty_penalty": 97.0
+    },
+    {
+      "name": "Poison & Acid",
+      "raw": 90.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 10.0,
+      "difficulty_adjusted_before_cap": 90.0,
+      "difficulty_penalty": -25.0,
+      "before_difficulty_penalty": 115.0
+    },
+    {
+      "name": "Pierce",
+      "raw": 157.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 77.0,
+      "difficulty_adjusted_before_cap": 157.0,
+      "difficulty_penalty": -25.0,
+      "before_difficulty_penalty": 182.0
+    },
+    {
+      "name": "Bleeding",
+      "raw": 89.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 9.0,
+      "difficulty_adjusted_before_cap": 89.0,
+      "difficulty_penalty": 0.0,
+      "before_difficulty_penalty": 89.0
+    },
+    {
+      "name": "Vitality",
+      "raw": 65.0,
+      "cap": 80.0,
+      "shown": 65,
+      "overcap": -15.0,
+      "difficulty_adjusted_before_cap": 65.0,
+      "difficulty_penalty": 0.0,
+      "before_difficulty_penalty": 65.0
+    },
+    {
+      "name": "Aether",
+      "raw": 88.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 8.0,
+      "difficulty_adjusted_before_cap": 88.0,
+      "difficulty_penalty": 0.0,
+      "before_difficulty_penalty": 88.0
+    },
+    {
+      "name": "Chaos",
+      "raw": 89.0,
+      "cap": 80.0,
+      "shown": 80,
+      "overcap": 9.0,
+      "difficulty_adjusted_before_cap": 89.0,
+      "difficulty_penalty": 0.0,
+      "before_difficulty_penalty": 89.0
+    },
+    {
+      "name": "Physical",
+      "raw": 3.0,
+      "cap": 80.0,
+      "shown": 3,
+      "overcap": -77.0,
+      "difficulty_adjusted_before_cap": 3.0,
+      "difficulty_penalty": 0.0,
+      "before_difficulty_penalty": 3.0
+    }
+  ],
+  "unresolved": [
+    "Melee dual-wield hand selection and charge carryover; no fixed every-third-attack assumption.",
+    "WPS hand counts, animation rates and interaction with the discharge; weights are not full-cycle shares.",
+    "Weapon-local versus shared flat damage, conversion and attack speed; do not sum both hands as global bonuses.",
+    "Deadly Momentum duration is known; uptime and inclusion in existing global totals must be reconciled.",
+    "Armor-piercing/conversion ordering and applicability to skill-native flat damage.",
+    "DoT refresh, OA/crit and conditional devotion uptime remain outside certified scoring."
+  ]
+}

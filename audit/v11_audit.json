@@ -1,0 +1,1934 @@
+{
+  "saved_difficulty": 2,
+  "difficulty_masked": 2,
+  "database_record": "records/game/balancingadjustment_mp+difficulty_players01.dbr",
+  "database_penalty_arrays": {
+    "defensivePierce": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -50.0,
+      -50.0,
+      -50.0,
+      -50.0
+    ],
+    "defensiveChaos": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0
+    ],
+    "Class": "AttributePak",
+    "defensiveCold": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -50.0,
+      -50.0,
+      -50.0,
+      -50.0
+    ],
+    "characterBaseAttackSpeedTag": "CharacterAttackSpeedAverage",
+    "defensiveBleeding": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0
+    ],
+    "templateName": "database/templates/attributepak.tpl",
+    "defensiveFire": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -50.0,
+      -50.0,
+      -50.0,
+      -50.0
+    ],
+    "defensiveLife": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0
+    ],
+    "recordname": "records/game/balancingadjustment_mp+difficulty_players01.dbr",
+    "defensiveAether": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0
+    ],
+    "defensiveLightning": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -50.0,
+      -50.0,
+      -50.0,
+      -50.0
+    ],
+    "defensiveSlowLifeLeach": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0
+    ],
+    "defensivePoison": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -25.0,
+      -50.0,
+      -50.0,
+      -50.0,
+      -50.0
+    ]
+  },
+  "extracted_penalties_match": true,
+  "baseline_validation": [
+    {
+      "stat": "physique",
+      "exported": 683,
+      "calculated": 683,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "cunning",
+      "exported": 330,
+      "calculated": 330,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "spirit",
+      "exported": 770,
+      "calculated": 770,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "health",
+      "exported": 9509,
+      "calculated": 9509,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "energy",
+      "exported": 3151,
+      "calculated": 3151,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "OA",
+      "exported": 2123,
+      "calculated": 2123,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "DA",
+      "exported": 1793,
+      "calculated": 1793,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor",
+      "exported": 1213,
+      "calculated": 1213,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Head",
+      "exported": 1198,
+      "calculated": 1198,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Shoulders",
+      "exported": 675,
+      "calculated": 675,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Chest",
+      "exported": 1460,
+      "calculated": 1460,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Arms",
+      "exported": 1093,
+      "calculated": 1093,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Legs",
+      "exported": 1412,
+      "calculated": 1412,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor Feet",
+      "exported": 1159,
+      "calculated": 1159,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Fire resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Fire before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Cold resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Cold before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Lightning resistance shown",
+      "exported": 77,
+      "calculated": 77,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Lightning before cap",
+      "exported": 77,
+      "calculated": 77.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Poison & Acid resistance shown",
+      "exported": 33,
+      "calculated": 33,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Poison & Acid before cap",
+      "exported": 33,
+      "calculated": 33.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Pierce resistance shown",
+      "exported": 80,
+      "calculated": 80,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Pierce before cap",
+      "exported": 104,
+      "calculated": 104.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Bleeding resistance shown",
+      "exported": 51,
+      "calculated": 51,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Bleeding before cap",
+      "exported": 51,
+      "calculated": 51.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Vitality resistance shown",
+      "exported": 49,
+      "calculated": 49,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Vitality before cap",
+      "exported": 49,
+      "calculated": 49.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Aether resistance shown",
+      "exported": 80,
+      "calculated": 80,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Aether before cap",
+      "exported": 136,
+      "calculated": 136.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Chaos resistance shown",
+      "exported": 31,
+      "calculated": 31,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Chaos before cap",
+      "exported": 31,
+      "calculated": 31.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Physical resistance shown",
+      "exported": 5,
+      "calculated": 5,
+      "difference": 0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "Physical before cap",
+      "exported": 5,
+      "calculated": 5.0,
+      "difference": 0.0,
+      "status": "Reproduced export"
+    },
+    {
+      "stat": "armor_absorption",
+      "exported": null,
+      "calculated": 70.0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "lightning_modifier",
+      "exported": null,
+      "calculated": 1615.942093023256,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "cooldown_reduction",
+      "exported": null,
+      "calculated": 18.0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    },
+    {
+      "stat": "offense_proxy",
+      "exported": null,
+      "calculated": 0,
+      "difference": null,
+      "status": "Not in export; no independent validation"
+    }
+  ],
+  "old_factors": {
+    "current": {
+      "v11_index": 100.0,
+      "totem_rank": 21,
+      "totem_invested": 16,
+      "totem_bonus": 5,
+      "totem_maximum": 4.0,
+      "per_cast": 2.0,
+      "cooldown": 3.6900000000000004,
+      "lightning_bonus_percent": 1615.942093023256,
+      "raging_tempest_RR": 33.0,
+      "widow_RR": 31.0,
+      "ultos_relative_RR": 13.0,
+      "factors": {
+        "native_lightning": 273.0,
+        "damage_factor": 17.15942093023256,
+        "OA_crit_rating": 1.203741,
+        "RR_utility": 1.8532,
+        "capacity_factor": 1.3333333333333333,
+        "deployment_factor": 1.3662357654442774,
+        "item_total_factor": 1.0
+      },
+      "storm_relative": 1.0,
+      "wind_relative": 1.0,
+      "weighted_index_check": 100.0
+    },
+    "minimal": {
+      "v11_index": 164.23979171267146,
+      "totem_rank": 21,
+      "totem_invested": 16,
+      "totem_bonus": 5,
+      "totem_maximum": 5.0,
+      "per_cast": 2.0,
+      "cooldown": 2.34,
+      "lightning_bonus_percent": 1967.9409393168605,
+      "raging_tempest_RR": 33.0,
+      "widow_RR": 31.0,
+      "ultos_relative_RR": 13.0,
+      "factors": {
+        "native_lightning": 273.0,
+        "damage_factor": 20.679409393168605,
+        "OA_crit_rating": 1.192793,
+        "RR_utility": 1.8532,
+        "capacity_factor": 1.6666666666666667,
+        "deployment_factor": 1.602357170693938,
+        "item_total_factor": 1.0
+      },
+      "storm_relative": 1.7506979491929975,
+      "wind_relative": 1.209197788861582,
+      "weighted_index_check": 164.23979171267146
+    },
+    "balanced": {
+      "v11_index": 164.38177505057345,
+      "totem_rank": 21,
+      "totem_invested": 16,
+      "totem_bonus": 5,
+      "totem_maximum": 5.0,
+      "per_cast": 2.0,
+      "cooldown": 2.34,
+      "lightning_bonus_percent": 1938.9409393168605,
+      "raging_tempest_RR": 33.0,
+      "widow_RR": 31.0,
+      "ultos_relative_RR": 13.0,
+      "factors": {
+        "native_lightning": 273.0,
+        "damage_factor": 20.389409393168606,
+        "OA_crit_rating": 1.210804,
+        "RR_utility": 1.8532,
+        "capacity_factor": 1.6666666666666667,
+        "deployment_factor": 1.602357170693938,
+        "item_total_factor": 1.0
+      },
+      "storm_relative": 1.75221140665597,
+      "wind_relative": 1.2102431259047917,
+      "weighted_index_check": 164.38177505057345
+    },
+    "offense": {
+      "v11_index": 216.2487631290365,
+      "totem_rank": 23,
+      "totem_invested": 16,
+      "totem_bonus": 7,
+      "totem_maximum": 5.0,
+      "per_cast": 2.0,
+      "cooldown": 2.34,
+      "lightning_bonus_percent": 2019.3700147619916,
+      "raging_tempest_RR": 33.0,
+      "widow_RR": 31.0,
+      "ultos_relative_RR": 13.0,
+      "factors": {
+        "native_lightning": 298.0,
+        "damage_factor": 21.193700147619914,
+        "OA_crit_rating": 1.4213999999999998,
+        "RR_utility": 1.8532,
+        "capacity_factor": 1.6666666666666667,
+        "deployment_factor": 1.602357170693938,
+        "item_total_factor": 1.0
+      },
+      "storm_relative": 2.3339133267815377,
+      "wind_relative": 1.4767848493256732,
+      "weighted_index_check": 216.2487631290365
+    }
+  },
+  "v11_resistances": {
+    "current": [
+      {
+        "name": "Fire",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "before_difficulty": 127.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Cold",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "before_difficulty": 127.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 77.0,
+        "cap": 80.0,
+        "shown": 77,
+        "overcap": -3.0,
+        "before_difficulty": 127.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 33.0,
+        "cap": 80.0,
+        "shown": 33,
+        "overcap": -47.0,
+        "before_difficulty": 83.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 104.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 24.0,
+        "before_difficulty": 154.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 51.0,
+        "cap": 80.0,
+        "shown": 51,
+        "overcap": -29.0,
+        "before_difficulty": 76.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 49.0,
+        "cap": 80.0,
+        "shown": 49,
+        "overcap": -31.0,
+        "before_difficulty": 74.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Aether",
+        "raw": 136.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 56.0,
+        "before_difficulty": 161.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 31.0,
+        "cap": 80.0,
+        "shown": 31,
+        "overcap": -49.0,
+        "before_difficulty": 56.0,
+        "penalty": -25.0
+      }
+    ],
+    "minimal": [
+      {
+        "name": "Fire",
+        "raw": 126.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 46.0,
+        "before_difficulty": 176.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Cold",
+        "raw": 102.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 22.0,
+        "before_difficulty": 152.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 114.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 34.0,
+        "before_difficulty": 164.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 169.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 89.0,
+        "before_difficulty": 219.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 103.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 23.0,
+        "before_difficulty": 153.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 106.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 26.0,
+        "before_difficulty": 131.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 88.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 8.0,
+        "before_difficulty": 113.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Aether",
+        "raw": 81.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 1.0,
+        "before_difficulty": 106.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 82.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 2.0,
+        "before_difficulty": 107.0,
+        "penalty": -25.0
+      }
+    ],
+    "balanced": [
+      {
+        "name": "Fire",
+        "raw": 120.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 40.0,
+        "before_difficulty": 170.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Cold",
+        "raw": 84.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 4.0,
+        "before_difficulty": 134.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 108.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 28.0,
+        "before_difficulty": 158.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 123.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 43.0,
+        "before_difficulty": 173.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 103.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 23.0,
+        "before_difficulty": 153.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 103.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 23.0,
+        "before_difficulty": 128.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 85.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 5.0,
+        "before_difficulty": 110.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Aether",
+        "raw": 81.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 1.0,
+        "before_difficulty": 106.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 82.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 2.0,
+        "before_difficulty": 107.0,
+        "penalty": -25.0
+      }
+    ],
+    "offense": [
+      {
+        "name": "Fire",
+        "raw": 107.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 27.0,
+        "before_difficulty": 157.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Cold",
+        "raw": 125.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 45.0,
+        "before_difficulty": 175.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Lightning",
+        "raw": 95.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 15.0,
+        "before_difficulty": 145.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Poison & Acid",
+        "raw": 125.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 45.0,
+        "before_difficulty": 175.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Pierce",
+        "raw": 104.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 24.0,
+        "before_difficulty": 154.0,
+        "penalty": -50.0
+      },
+      {
+        "name": "Bleeding",
+        "raw": 109.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 29.0,
+        "before_difficulty": 134.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Vitality",
+        "raw": 83.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 3.0,
+        "before_difficulty": 108.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Aether",
+        "raw": 98.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 18.0,
+        "before_difficulty": 123.0,
+        "penalty": -25.0
+      },
+      {
+        "name": "Chaos",
+        "raw": 125.0,
+        "cap": 80.0,
+        "shown": 80,
+        "overcap": 45.0,
+        "before_difficulty": 150.0,
+        "penalty": -25.0
+      }
+    ]
+  },
+  "poison_ablation": {
+    "current": {
+      "useful_overcap_before": 0.2222222222222222,
+      "useful_overcap_with_poison_excess_removed": 0.2222222222222222,
+      "score_gain_from_poison_above_cap_plus_20": 0.0
+    },
+    "minimal": {
+      "useful_overcap_before": 0.7277777777777777,
+      "useful_overcap_with_poison_excess_removed": 0.7277777777777777,
+      "score_gain_from_poison_above_cap_plus_20": 0.0
+    },
+    "balanced": {
+      "useful_overcap_before": 0.6222222222222222,
+      "useful_overcap_with_poison_excess_removed": 0.6222222222222222,
+      "score_gain_from_poison_above_cap_plus_20": 0.0
+    },
+    "offense": {
+      "useful_overcap_before": 0.8666666666666667,
+      "useful_overcap_with_poison_excess_removed": 0.8666666666666667,
+      "score_gain_from_poison_above_cap_plus_20": 0.0
+    }
+  },
+  "poison_item_sources": {
+    "current": [
+      {
+        "slot": 0,
+        "id": "GD0117",
+        "name": "Magestorm Ascended Diadem of Attack",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 1,
+        "id": "GD0118",
+        "name": "Rimefrost Gaze of Ungoliax of Protection",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 2,
+        "id": "GD0119",
+        "name": "Maniacal Assault Hauberk of Thunder",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 3,
+        "id": "GD0120",
+        "name": "Vigorous Exalted Leggings of Arcane Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 4,
+        "id": "GD0121",
+        "name": "Impervious Exalted Sabatons of Eternal Blood",
+        "poison_from_item_attachments": 47.0
+      },
+      {
+        "slot": 5,
+        "id": "GD0122",
+        "name": "Touch of the Everliving Grove",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 6,
+        "id": "GD0123",
+        "name": "Glyph of Kelphat'Zoth",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 7,
+        "id": "GD0124",
+        "name": "Thunderstruck Obsidian Band of Landslides",
+        "poison_from_item_attachments": 18.0
+      },
+      {
+        "slot": 8,
+        "id": "GD0125",
+        "name": "Solar Girdle of Tormented Souls",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 9,
+        "id": "GD0126",
+        "name": "Chosen Mantle",
+        "poison_from_item_attachments": 18.0
+      },
+      {
+        "slot": 10,
+        "id": "GD0127",
+        "name": "Druid's Crest of Readiness",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 11,
+        "id": "GD0128",
+        "name": "Iskandra's Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 12,
+        "id": "GD0207",
+        "name": "Mystic Ugdenbog Stormstrife of Celerity",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 13,
+        "id": "GD0208",
+        "name": "Thunderstruck Exalted Effigy of Frostbite",
+        "poison_from_item_attachments": 0
+      }
+    ],
+    "minimal": [
+      {
+        "slot": 0,
+        "id": "GD0117",
+        "name": "Magestorm Ascended Diadem of Attack",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 1,
+        "id": "GD0171",
+        "name": "Interrogator's Sylvarria's Root of Mending",
+        "poison_from_item_attachments": 28.0
+      },
+      {
+        "slot": 2,
+        "id": "GD0669",
+        "name": "Empowered Wildcaller's Skins",
+        "poison_from_item_attachments": 31.0
+      },
+      {
+        "slot": 3,
+        "id": "GD0070",
+        "name": "Empowered Swampdweller's Legguards",
+        "poison_from_item_attachments": 73.0
+      },
+      {
+        "slot": 4,
+        "id": "GD0121",
+        "name": "Impervious Exalted Sabatons of Eternal Blood",
+        "poison_from_item_attachments": 47.0
+      },
+      {
+        "slot": 5,
+        "id": "GD0122",
+        "name": "Touch of the Everliving Grove",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 6,
+        "id": "GD0123",
+        "name": "Glyph of Kelphat'Zoth",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 7,
+        "id": "GD0163",
+        "name": "Stalwart Imperial Signet of Arcane Balance",
+        "poison_from_item_attachments": 15.0
+      },
+      {
+        "slot": 8,
+        "id": "GD0125",
+        "name": "Solar Girdle of Tormented Souls",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 9,
+        "id": "GD0486",
+        "name": "Dawnguard Epaulets",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 10,
+        "id": "GD0127",
+        "name": "Druid's Crest of Readiness",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 11,
+        "id": "GD0128",
+        "name": "Iskandra's Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 12,
+        "id": "GD0207",
+        "name": "Mystic Ugdenbog Stormstrife of Celerity",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 13,
+        "id": "GD0153",
+        "name": "Thunderstruck Groble Sky Effigy of Thunder",
+        "poison_from_item_attachments": 25.0
+      }
+    ],
+    "balanced": [
+      {
+        "slot": 0,
+        "id": "GD0117",
+        "name": "Magestorm Ascended Diadem of Attack",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 1,
+        "id": "GD0171",
+        "name": "Interrogator's Sylvarria's Root of Mending",
+        "poison_from_item_attachments": 28.0
+      },
+      {
+        "slot": 2,
+        "id": "GD0553",
+        "name": "Empowered Chestguard of Perdition",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 3,
+        "id": "GD0070",
+        "name": "Empowered Swampdweller's Legguards",
+        "poison_from_item_attachments": 73.0
+      },
+      {
+        "slot": 4,
+        "id": "GD0121",
+        "name": "Impervious Exalted Sabatons of Eternal Blood",
+        "poison_from_item_attachments": 47.0
+      },
+      {
+        "slot": 5,
+        "id": "GD0122",
+        "name": "Touch of the Everliving Grove",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 6,
+        "id": "GD0123",
+        "name": "Glyph of Kelphat'Zoth",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 7,
+        "id": "GD0163",
+        "name": "Stalwart Imperial Signet of Arcane Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 8,
+        "id": "GD0125",
+        "name": "Solar Girdle of Tormented Souls",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 9,
+        "id": "GD0486",
+        "name": "Dawnguard Epaulets",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 10,
+        "id": "GD0127",
+        "name": "Druid's Crest of Readiness",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 11,
+        "id": "GD0128",
+        "name": "Iskandra's Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 12,
+        "id": "GD0207",
+        "name": "Mystic Ugdenbog Stormstrife of Celerity",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 13,
+        "id": "GD0153",
+        "name": "Thunderstruck Groble Sky Effigy of Thunder",
+        "poison_from_item_attachments": 25.0
+      }
+    ],
+    "offense": [
+      {
+        "slot": 0,
+        "id": "GD0117",
+        "name": "Magestorm Ascended Diadem of Attack",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 1,
+        "id": "GD0171",
+        "name": "Interrogator's Sylvarria's Root of Mending",
+        "poison_from_item_attachments": 28.0
+      },
+      {
+        "slot": 2,
+        "id": "GD0669",
+        "name": "Empowered Wildcaller's Skins",
+        "poison_from_item_attachments": 31.0
+      },
+      {
+        "slot": 3,
+        "id": "GD0070",
+        "name": "Empowered Swampdweller's Legguards",
+        "poison_from_item_attachments": 73.0
+      },
+      {
+        "slot": 4,
+        "id": "GD0186",
+        "name": "Magestorm Exalted Sabatons of Readiness",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 5,
+        "id": "GD0648",
+        "name": "Runic Bracers",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 6,
+        "id": "GD0163",
+        "name": "Stalwart Imperial Signet of Arcane Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 7,
+        "id": "GD0136",
+        "name": "Impervious Imperial Signet of Squalls",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 8,
+        "id": "GD0125",
+        "name": "Solar Girdle of Tormented Souls",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 9,
+        "id": "GD0126",
+        "name": "Chosen Mantle",
+        "poison_from_item_attachments": 18.0
+      },
+      {
+        "slot": 10,
+        "id": "GD0127",
+        "name": "Druid's Crest of Readiness",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 11,
+        "id": "GD0128",
+        "name": "Iskandra's Balance",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 12,
+        "id": "GD0207",
+        "name": "Mystic Ugdenbog Stormstrife of Celerity",
+        "poison_from_item_attachments": 0
+      },
+      {
+        "slot": 13,
+        "id": "GD0153",
+        "name": "Thunderstruck Groble Sky Effigy of Thunder",
+        "poison_from_item_attachments": 25.0
+      }
+    ]
+  },
+  "old_loadouts_under_revised_model": {
+    "current": {
+      "offense_index": 100.0,
+      "offense_model": {
+        "abilities": {
+          "records/skills/playerclass06/stormtotem01.dbr": {
+            "name": "Storm Totem",
+            "rank": 21,
+            "scaling": "player",
+            "population": {
+              "maximum": 4.0,
+              "sustainable": 4.0,
+              "practical": 3.769375,
+              "lifetime": 14.0,
+              "deployment_interval": 3.6900000000000004,
+              "setup_seconds": 3.6900000000000004
+            },
+            "cooldown": 3.6900000000000004,
+            "strength": 48072.7158604595,
+            "channels": {
+              "Lightning": 33164.415889702934,
+              "SlowLightning": 14908.299970756565
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                "rank": 21,
+                "base_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "converted_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "instances": 3.769375,
+                "frequency": 1,
+                "debuff_aura": false,
+                "strength": 48072.7158604595
+              }
+            ],
+            "limitations": [
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          },
+          "records/skills/playerclass06/squall1.dbr": {
+            "name": "Wind Devil",
+            "rank": 5,
+            "scaling": "player",
+            "population": {
+              "maximum": 3.0,
+              "sustainable": 3.0,
+              "practical": 3.0,
+              "lifetime": "permanent",
+              "deployment_interval": 16.400000000000002,
+              "setup_seconds": 0.0
+            },
+            "cooldown": 16.400000000000002,
+            "strength": 30108.094962699863,
+            "channels": {
+              "Lightning": 7889.541651211624,
+              "Physical": 115.09220125487703,
+              "SlowLightning": 16829.683109830108,
+              "Cold": 5273.778000403255
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                "rank": 5,
+                "base_payload": {
+                  "Physical": 42.0,
+                  "SlowLightning": 77.0
+                },
+                "converted_payload": {
+                  "Lightning": 6.3,
+                  "Physical": 35.7,
+                  "SlowLightning": 77.0,
+                  "Cold": 242.0
+                },
+                "instances": 1,
+                "frequency": 1,
+                "debuff_aura": true,
+                "strength": 7692.210685998064
+              },
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                "rank": 13,
+                "base_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "converted_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "instances": 3.0,
+                "frequency": 0.5,
+                "debuff_aura": false,
+                "strength": 22415.8842767018
+              }
+            ],
+            "limitations": [
+              "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Identical debuff aura does not stack across instances.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          }
+        },
+        "resistance_reduction": {
+          "Physical": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Pierce": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Fire": {
+            "additive": 33.0,
+            "flat": 7.0,
+            "relative": 13.0
+          },
+          "Cold": {
+            "additive": 33.0,
+            "flat": 7.0,
+            "relative": 13.0
+          },
+          "Lightning": {
+            "additive": 64.0,
+            "flat": 7.0,
+            "relative": 13.0
+          },
+          "Poison": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Life": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Aether": {
+            "additive": 33.0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Chaos": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          },
+          "Bleeding": {
+            "additive": 0,
+            "flat": 7.0,
+            "relative": 0
+          }
+        },
+        "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+        "policy": {
+          "deployment_window_seconds": 8,
+          "player_action_seconds": 1,
+          "weights": {
+            "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+            "records/skills/playerclass06/squall1.dbr": 0.2
+          }
+        },
+        "limitations": [
+          "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+          "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+          "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+        ]
+      }
+    },
+    "minimal": {
+      "offense_index": 137.40252010322666,
+      "offense_model": {
+        "abilities": {
+          "records/skills/playerclass06/stormtotem01.dbr": {
+            "name": "Storm Totem",
+            "rank": 21,
+            "scaling": "player",
+            "population": {
+              "maximum": 5.0,
+              "sustainable": 5.0,
+              "practical": 4.6709375,
+              "lifetime": 14.0,
+              "deployment_interval": 2.34,
+              "setup_seconds": 3.51
+            },
+            "cooldown": 2.34,
+            "strength": 69477.3014765261,
+            "channels": {
+              "Lightning": 49294.55463299627,
+              "SlowLightning": 20182.746843529832
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                "rank": 21,
+                "base_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "converted_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "instances": 4.6709375,
+                "frequency": 1,
+                "debuff_aura": false,
+                "strength": 69477.3014765261
+              }
+            ],
+            "limitations": [
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          },
+          "records/skills/playerclass06/squall1.dbr": {
+            "name": "Wind Devil",
+            "rank": 5,
+            "scaling": "player",
+            "population": {
+              "maximum": 3.0,
+              "sustainable": 3.0,
+              "practical": 3.0,
+              "lifetime": "permanent",
+              "deployment_interval": 15.600000000000001,
+              "setup_seconds": 0.0
+            },
+            "cooldown": 15.600000000000001,
+            "strength": 32790.98590291951,
+            "channels": {
+              "Lightning": 9463.32286589759,
+              "Physical": 128.28275622530552,
+              "SlowLightning": 18386.259204529706,
+              "Cold": 4813.1210762669025
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                "rank": 5,
+                "base_payload": {
+                  "Physical": 42.0,
+                  "SlowLightning": 77.0
+                },
+                "converted_payload": {
+                  "Lightning": 6.3,
+                  "Physical": 35.7,
+                  "SlowLightning": 77.0,
+                  "Cold": 242.0
+                },
+                "instances": 1,
+                "frequency": 1,
+                "debuff_aura": true,
+                "strength": 7479.502699385393
+              },
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                "rank": 13,
+                "base_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "converted_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "instances": 3.0,
+                "frequency": 0.5,
+                "debuff_aura": false,
+                "strength": 25311.48320353411
+              }
+            ],
+            "limitations": [
+              "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Identical debuff aura does not stack across instances.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          }
+        },
+        "resistance_reduction": {
+          "Physical": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Pierce": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Fire": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Cold": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Lightning": {
+            "additive": 64.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Poison": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Life": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Aether": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Chaos": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Bleeding": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          }
+        },
+        "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+        "policy": {
+          "deployment_window_seconds": 8,
+          "player_action_seconds": 1,
+          "weights": {
+            "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+            "records/skills/playerclass06/squall1.dbr": 0.2
+          }
+        },
+        "limitations": [
+          "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+          "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+          "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+        ]
+      }
+    },
+    "balanced": {
+      "offense_index": 138.21821504510748,
+      "offense_model": {
+        "abilities": {
+          "records/skills/playerclass06/stormtotem01.dbr": {
+            "name": "Storm Totem",
+            "rank": 21,
+            "scaling": "player",
+            "population": {
+              "maximum": 5.0,
+              "sustainable": 5.0,
+              "practical": 4.6709375,
+              "lifetime": 14.0,
+              "deployment_interval": 2.34,
+              "setup_seconds": 3.51
+            },
+            "cooldown": 2.34,
+            "strength": 69769.6959299508,
+            "channels": {
+              "Lightning": 49282.19255834039,
+              "SlowLightning": 20487.503371610408
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                "rank": 21,
+                "base_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "converted_payload": {
+                  "Lightning": 273.0,
+                  "SlowLightning": 145.0
+                },
+                "instances": 4.6709375,
+                "frequency": 1,
+                "debuff_aura": false,
+                "strength": 69769.6959299508
+              }
+            ],
+            "limitations": [
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          },
+          "records/skills/playerclass06/squall1.dbr": {
+            "name": "Wind Devil",
+            "rank": 5,
+            "scaling": "player",
+            "population": {
+              "maximum": 3.0,
+              "sustainable": 3.0,
+              "practical": 3.0,
+              "lifetime": "permanent",
+              "deployment_interval": 15.600000000000001,
+              "setup_seconds": 0.0
+            },
+            "cooldown": 15.600000000000001,
+            "strength": 33286.4266338774,
+            "channels": {
+              "Lightning": 9460.949656429895,
+              "Physical": 130.21980709865403,
+              "SlowLightning": 18663.889031777842,
+              "Cold": 5031.368138571013
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                "rank": 5,
+                "base_payload": {
+                  "Physical": 42.0,
+                  "SlowLightning": 77.0
+                },
+                "converted_payload": {
+                  "Lightning": 6.3,
+                  "Physical": 35.7,
+                  "SlowLightning": 77.0,
+                  "Cold": 242.0
+                },
+                "instances": 1,
+                "frequency": 1,
+                "debuff_aura": true,
+                "strength": 7734.2732198120775
+              },
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                "rank": 13,
+                "base_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "converted_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "instances": 3.0,
+                "frequency": 0.5,
+                "debuff_aura": false,
+                "strength": 25552.153414065324
+              }
+            ],
+            "limitations": [
+              "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Identical debuff aura does not stack across instances.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          }
+        },
+        "resistance_reduction": {
+          "Physical": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Pierce": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Fire": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Cold": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Lightning": {
+            "additive": 64.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Poison": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Life": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Aether": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Chaos": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Bleeding": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          }
+        },
+        "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+        "policy": {
+          "deployment_window_seconds": 8,
+          "player_action_seconds": 1,
+          "weights": {
+            "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+            "records/skills/playerclass06/squall1.dbr": 0.2
+          }
+        },
+        "limitations": [
+          "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+          "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+          "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+        ]
+      }
+    },
+    "offense": {
+      "offense_index": 181.07358429241293,
+      "offense_model": {
+        "abilities": {
+          "records/skills/playerclass06/stormtotem01.dbr": {
+            "name": "Storm Totem",
+            "rank": 23,
+            "scaling": "player",
+            "population": {
+              "maximum": 5.0,
+              "sustainable": 5.0,
+              "practical": 4.6709375,
+              "lifetime": 14.0,
+              "deployment_interval": 2.34,
+              "setup_seconds": 3.51
+            },
+            "cooldown": 2.34,
+            "strength": 92895.40876918893,
+            "channels": {
+              "Lightning": 65841.91344712595,
+              "SlowLightning": 27053.495322062983
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_totemstorm_chainlightning.dbr",
+                "rank": 23,
+                "base_payload": {
+                  "Lightning": 298.0,
+                  "SlowLightning": 161.0
+                },
+                "converted_payload": {
+                  "Lightning": 298.0,
+                  "SlowLightning": 161.0
+                },
+                "instances": 4.6709375,
+                "frequency": 1,
+                "debuff_aura": false,
+                "strength": 92895.40876918893
+              }
+            ],
+            "limitations": [
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          },
+          "records/skills/playerclass06/squall1.dbr": {
+            "name": "Wind Devil",
+            "rank": 5,
+            "scaling": "player",
+            "population": {
+              "maximum": 3.0,
+              "sustainable": 3.0,
+              "practical": 3.0,
+              "lifetime": "permanent",
+              "deployment_interval": 15.600000000000001,
+              "setup_seconds": 0.0
+            },
+            "cooldown": 15.600000000000001,
+            "strength": 39866.27273302615,
+            "channels": {
+              "Lightning": 11579.599443299341,
+              "Physical": 168.3205725789,
+              "SlowLightning": 22196.199309560932,
+              "Cold": 5922.153407586976
+            },
+            "parts": [
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_whirlwind_buff.dbr",
+                "rank": 5,
+                "base_payload": {
+                  "Physical": 42.0,
+                  "SlowLightning": 77.0
+                },
+                "converted_payload": {
+                  "Lightning": 6.3,
+                  "Physical": 35.7,
+                  "SlowLightning": 77.0,
+                  "Cold": 242.0
+                },
+                "instances": 1,
+                "frequency": 1,
+                "debuff_aura": true,
+                "strength": 9158.506492411168
+              },
+              {
+                "record": "records/skills/playerclass06/pets/petskill_whirlwind_stormcaller1.dbr",
+                "rank": 13,
+                "base_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "converted_payload": {
+                  "Lightning": 159.0,
+                  "SlowLightning": 180.0
+                },
+                "instances": 3.0,
+                "frequency": 0.5,
+                "debuff_aura": false,
+                "strength": 30707.76624061498
+              }
+            ],
+            "limitations": [
+              "Autonomous active-buff recast gaps unknown; fixed baseline cadence, no claimed exact uptime.",
+              "Autonomous animation cadence unknown: normalized to 1; no player attack/cast-speed multiplier.",
+              "Identical debuff aura does not stack across instances.",
+              "Relative % reduced RR reported separately; no enemy-independent damage multiplier credited."
+            ]
+          }
+        },
+        "resistance_reduction": {
+          "Physical": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Pierce": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Fire": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Cold": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Lightning": {
+            "additive": 64.0,
+            "flat": 5.0,
+            "relative": 13.0
+          },
+          "Poison": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Life": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Aether": {
+            "additive": 33.0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Chaos": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          },
+          "Bleeding": {
+            "additive": 0,
+            "flat": 5.0,
+            "relative": 0
+          }
+        },
+        "resistance_reduction_order": "different additive debuffs summed, then strongest relative reduced, then strongest flat reduced; no enemy resistance substituted",
+        "policy": {
+          "deployment_window_seconds": 8,
+          "player_action_seconds": 1,
+          "weights": {
+            "records/skills/playerclass06/stormtotem01.dbr": 0.8,
+            "records/skills/playerclass06/squall1.dbr": 0.2
+          }
+        },
+        "limitations": [
+          "RR categories preserve stacking; numeric RR value is a static additive+flat utility, not post-resistance damage.",
+          "Source lifetime limits DoT population; no extra lingering DoTs from retired summons are credited.",
+          "Pet AI, animation speed, survival, shotgun/projectile overlaps and weapon payload are not simulated."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+build,augment,quantity,faction,reputation,required,vendors,base_unit_cost,base_total
+A Balanced,Flameweave Powder,2,Homestead,25000.0,25000,"Miller, Whitfield",4000,8000
+A Balanced,Hexxer's Delight,3,Coven of Ugdenbog,23235.473,10000,"Falonestra, Lunasta",1500,4500
+A Balanced,Solarstorm Powder,2,Homestead,25000.0,25000,"Miller, Whitfield",4000,8000
+A Balanced,Stardust,2,Coven of Ugdenbog,23235.473,10000,"Falonestra, Lunasta",1500,3000
+B Offense,Solarstorm Powder,4,Homestead,25000.0,25000,"Miller, Whitfield",4000,16000
+B Offense,Hexxer's Delight,3,Coven of Ugdenbog,23235.473,10000,"Falonestra, Lunasta",1500,4500
+B Offense,Flameweave Powder,2,Homestead,25000.0,25000,"Miller, Whitfield",4000,8000
+B Offense,Stardust,1,Coven of Ugdenbog,23235.473,10000,"Falonestra, Lunasta",1500,1500
+C Defense,Flameweave Powder,3,Homestead,25000.0,25000,"Miller, Whitfield",4000,12000
+C Defense,Hexxer's Delight,3,Coven of Ugdenbog,23235.473,10000,"Falonestra, Lunasta",1500,4500
+C Defense,Solarstorm Powder,2,Homestead,25000.0,25000,"Miller, Whitfield",4000,8000
+C Defense,Troll Wart Powder,2,Rovers,10303.879,10000,"Keeper Arallo, Keeper Unkala",1000,2000
