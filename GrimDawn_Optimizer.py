@@ -31,6 +31,9 @@ def family(p,r):
   s=s.lower().split('/')[-1];s=re.sub('^skillicon_','',s);s=re.sub(r'(up|down)\.tex$|\.dbr$','',s);s=re.sub(r'\d+$','',s)
   if s:out.add(s)
  return out
+def resistance_caps(record,level=1):
+ """Maximum-resistance bonuses are additive percentage points, not multipliers."""
+ return collections.Counter({f:at(record.get(f+'MaxResist'),level)+at(record.get('defensiveAllMaxResist'),level) for f in RES})
 class Engine:
  def __init__(self,directory=ROOT):
   d=pathlib.Path(directory);self.d=d;self.db=read(d/'database.json.gz');self.cat=read(d/'catalog.json');self.mal=read(d/'mal.json');self.exported=read(d/'baseline.json');self.pen=read(d/'penalties.json');self.loc=read(d/'localization.json');self.items={x['id']:x for x in self.cat};self.recipes={}
@@ -118,23 +121,43 @@ class Engine:
     n=at(v,level)
     if n and (not positive or n>0):out[k]=n
   return out
+ def item_records(self,ident,comp,aug):
+  """Intrinsic sources plus live attachments, each once; never saved attachments."""
+  saved=self.items[ident]['save'];base=self.db.get(saved.get('basename'),{})
+  keys=['basename','prefix-name','suffix-name','modifier-name','relic-bonus','ascended-name']
+  paths=[saved.get(k) for k in keys if not (k=='modifier-name' and base.get('Class')=='ItemArtifact')]
+  records=[self.db[p] for p in paths+[comp,aug] if p and p in self.db]
+  rolled=self.items[ident].get('worn-rolled') or self.items[ident].get('rolled') or {}
+  seeded={saved.get(k) for k in ['basename','prefix-name','suffix-name','modifier-name']
+          if not (k=='modifier-name' and base.get('Class')=='ItemArtifact')}
+  # A single intrinsic mapping can use its actual seeded percentage. An
+  # aggregate roll with several mappings cannot safely be allocated to sources.
+  out=[]
+  for p in paths+[comp,aug]:
+   if not p or p not in self.db:continue
+   r=self.db[p]
+   if p in seeded:
+    for suffix in ['', '2','3','4','5','6']:
+     field='conversionPercentage'+suffix
+     if r.get('conversionInType'+suffix) and field in rolled and sum(bool(q.get('conversionInType'+suffix)) for q in records)==1:
+      r=dict(r);r[field]=rolled[field]
+   out.append(r)
+  return out
  def item_parts(self,ident,comp,aug):
   key=(ident,comp,aug)
   if key in self.cache:return self.cache[key]
-  x=self.items[ident];s=x['save'];base=self.db[s['basename']];records=[]
-  for k in ['basename','prefix-name','suffix-name','modifier-name','relic-bonus','ascended-name']:
-   if k=='modifier-name' and base.get('Class')=='ItemArtifact':continue
-   if s.get(k):records.append(self.db.get(s[k],{}))
+  x=self.items[ident];s=x['save'];base=self.db[s['basename']];records=self.item_records(ident,comp,aug)
+  # The seeded roller covers base/prefix/suffix/modifier, not ascended affixes.
   attach=[self.db.get(p,{}) for p in [comp,aug,s.get('ascended-name','')] if p]
   vals=collections.Counter(x.get('worn-rolled') or x.get('rolled') or {})
   vals.update(x.get('completion') or {})
   for r in attach:vals.update(self.numeric(r))
   # Item-granted persistent skills, once per granting item/component.
-  for r in [base]+[self.db.get(p,{}) for p in [comp,aug] if p]:
+  granted=[]
+  for r in records:
    sr=self.db.get(r.get('itemSkillName'),{})
    if sr.get('Class') in ['Skill_Passive','Skill_BuffSelfToggled','Skill_BuffAttackRadiusToggled','Skill_BuffRadiusToggled']:
-    vals.update(self.numeric(sr,r.get('itemSkillLevel',1)))
-  records+=attach[:2]
+    level=r.get('itemSkillLevel',1);vals.update(self.numeric(sr,level));granted.append((sr,level))
   bonus={'all':0,'skill':collections.Counter(),'mastery':collections.Counter()}
   for r in records:
    bonus['all']+=at(r.get('augmentAllLevel'))
@@ -148,8 +171,8 @@ class Engine:
     target=r.get('modifiedSkillName'+str(i));mr=self.db.get(r.get('modifierSkillName'+str(i)),{})
     if target:mods[target].update(self.numeric(mr))
   cap=collections.Counter()
-  for r in [base]+attach[:2]:
-   for f in RES:cap[f]+=at(r.get(f+'MaxResist'))+at(r.get('defensiveAllMaxResist'))
+  for r in records:cap.update(resistance_caps(r))
+  for r,level in granted:cap.update(resistance_caps(r,level))
   ans=(vals,bonus,mods,cap);self.cache[key]=ans;return ans
  def effective(self,p,l,b):
   if l<=0:return 0
@@ -167,7 +190,7 @@ class Engine:
    base=self.items[ident]['records'][0]
    if base.get('itemSetName'):sets[base['itemSetName']].add(self.items[ident]['save']['basename'])
   for p,bases in sets.items():
-   r=self.db.get(p,{});cnt=len(bases);t.update(self.numeric(r,cnt))
+   r=self.db.get(p,{});cnt=len(bases);t.update(self.numeric(r,cnt));caps.update(resistance_caps(r,cnt))
    bon['all']+=at(r.get('augmentAllLevel'),cnt)
    for j in range(1,6):
     if r.get('augmentSkillName'+str(j)):bon['skill'][r['augmentSkillName'+str(j)]]+=at(r.get('augmentSkillLevel'+str(j)),cnt)
@@ -178,18 +201,18 @@ class Engine:
   for p,l in st['skills'].items():
    if l<=0:continue
    r=self.db.get(p,{});cl=r.get('Class');e=eff[p]
-   if cl in ['Skill_Mastery','Skill_Passive']:t.update(self.numeric(r,l if cl=='Skill_Mastery' else e))
+   if cl in ['Skill_Mastery','Skill_Passive']:
+    t.update(self.numeric(r,l if cl=='Skill_Mastery' else e));caps.update(resistance_caps(r,l if cl=='Skill_Mastery' else e))
    if cl=='Skill_Modifier' and family(p,r)&running:t.update(self.numeric(r,e,True))
    if p in active:
     t.update(self.numeric(r,e));br=self.db.get(r.get('buffSkillName'),{})
     if 'Debuf' not in br.get('Class',''):t.update(self.numeric(br,e))
-    for rr in [r,br]:
-     for f in RES:caps[f]+=at(rr.get(f+'MaxResist'),e)+at(rr.get('defensiveAllMaxResist'),e)
+    for rr in [r,br]:caps.update(resistance_caps(rr,e))
   for p,l in st['devotions'].items():
    r=self.db.get(p,{})
    if r.get('Class')=='Skill_Passive':
     t.update(self.numeric(r,1))
-    for f in RES:caps[f]+=at(r.get(f+'MaxResist'))+at(r.get('defensiveAllMaxResist'))
+    caps.update(resistance_caps(r))
   phys=modified(self.mal['physique']+st['attributes'][0]*8+t['characterStrength'],t['characterStrengthModifier'])
   cun=modified(self.mal['cunning']+st['attributes'][1]*8+t['characterDexterity'],t['characterDexterityModifier'])
   spi=modified(self.mal['spirit']+st['attributes'][2]*8+t['characterIntelligence'],t['characterIntelligenceModifier'])
@@ -205,7 +228,7 @@ class Engine:
   armor=int(sum(slots[label]*w/100 for label,w in ARMOR.values()))
   res=[]
   for f,n in zip(RES,RN):
-   total=t[f]+(t['defensiveElementalResistance'] if f in RES[:3] else 0)+self.pen[f];cap=80+caps[f]
+   total=t[f]+(t['defensiveElementalResistance'] if f in RES[:3] else 0)+self.pen[f];cap=min(95,80+caps[f]) if f in RES[:9] else 80+caps[f]
    res.append({'name':n,'raw':total,'cap':cap,'shown':math.floor(min(cap,total)+.5),'overcap':total-cap})
   absorption=min(100,70*(1+t['defensiveAbsorptionModifier']/100))
   # Spell damage receives Spirit's magical-damage bonus. This 0.47 coefficient is

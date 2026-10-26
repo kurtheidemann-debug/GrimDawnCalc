@@ -42,7 +42,7 @@ def weapon_input(engine, state, slot):
     lo, hi = intrinsic.values()
     if lo < 0 or hi < lo:
         raise ValueError('Invalid intrinsic weapon damage range')
-    records = [r for r in item['records'] if r]
+    records = engine.item_records(item['id'], state['comp'][slot], state['aug'][slot])
     conversions = []
     for record in records:
         for suffix in ('', '2', '3', '4', '5', '6'):
@@ -76,8 +76,7 @@ def weapon_input(engine, state, slot):
 def targeted_modifiers(engine, state):
     out = {}
     for slot, ident in enumerate(state['gear']):
-        records = [r for r in engine.items[ident]['records'] if r]
-        records += [engine.db.get(state[k][slot], {}) for k in ('comp', 'aug')]
+        records = engine.item_records(ident, state['comp'][slot], state['aug'][slot])
         for record in records:
             for i in range(1, 6):
                 target = record.get('modifiedSkillName' + str(i))

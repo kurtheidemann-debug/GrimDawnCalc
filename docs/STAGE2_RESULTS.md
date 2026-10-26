@@ -1,6 +1,6 @@
 # Stage 2 — Save-state authority
 
-Status: **Complete for Stage 2 save-state authority**. This is not the complete v1.3.6 release. Stages 3–6 remain unimplemented. Mal's current save remains blocked from optimization by the independent material-calibration safeguard described below.
+Status: **Complete for Stage 2 save-state authority**. This is the historical Stage 2 record. The subsequently requested [equipment mechanics reconciliation](EQUIPMENT_MECHANICS_RECONCILIATION.md) resolves the Mal cap blocker described below; both current saves now pass strict verification. The remaining planned optimization features are not released.
 
 Starting point: Stage 1 merge `361d4ca7fed393eb0db7c412b1566163c6444683` (PR #2).
 

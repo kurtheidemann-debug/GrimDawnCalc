@@ -1,6 +1,6 @@
 # Production Roadmap
 
-Status: Stages 1 and 2 implemented. Stages 3–6 remain planned and must be separately implemented and verified. See `STAGE2_RESULTS.md` for the separate Mal mechanics blocker; this is not the complete v1.3.6 release.
+Status: Stages 1 and 2, plus the user-requested Stage 3 equipment mechanics reconciliation, are implemented. The originally planned transferable-item pool and later features remain pending. See `EQUIPMENT_MECHANICS_RECONCILIATION.md`; this is not the complete v1.3.6 release.
 
 ## Execution discipline
 
@@ -14,7 +14,11 @@ Create `ARCHITECTURE.md`, `PRODUCTION_CONTRACT.md` and this roadmap. No producti
 
 Ensure saved difficulty and selected-character current state override all historical profile snapshots. Retain persistent build-scoring policy only. Verify current level, skills, devotions, bindings, reputation and progression from current ZIP; scope independent model/calibration discrepancies rather than suppressing material defects. **Completion:** focused Beeztrap/Mal save-state tests pass.
 
-## Stage 3 — Transferable owned-item pool
+## Stage 3 — Equipment mechanics reconciliation
+
+Resolve persistent item-granted maximum-resistance bonuses and related live-source, ascended-affix and cap/stacking defects. Preserve strict verification and scoring/search policy. **Complete:** both Save 9 characters pass strict verification; focused evidence and limitations are in `EQUIPMENT_MECHANICS_RECONCILIATION.md`. No equipment search was run.
+
+## Next — Transferable owned-item pool (originally Stage 3)
 
 Collect all eligible unequipped transferable items across all characters and shared storage; retain target's equipped baseline, exclude other characters' equipped items, preserve physical-instance identities and locations. **Completion:** inventory enumeration and transfer/duplicate tests pass against `save9.zip`.
 
