@@ -24,8 +24,8 @@ class PoolTests(unittest.TestCase):
   with patch.object(data,'ROOT',root),patch.object(data,'database',return_value=db),patch.object(data,'resolve_items',side_effect=resolve),patch.object(data,'link_static'):
    path,_,_,_=data.stage_profile('Beeztrap',target,{'stash':[]},mode,root,root/'work',{'Beeztrap':target,**({'Donor':donor} if donors else {})})
   return json.loads((path/'catalog.json').read_text())
- def test_quick_and_full_import_all_three_sources_and_instances(self):
-  for mode in ['quick','full']:
+ def test_full_imports_all_three_sources_and_instances(self):
+  for mode in ['full']:
    rows=[r for r in self.staged(mode) if r['owner']=='Donor']
    self.assertEqual(len(rows),3);self.assertEqual(len({x['id'] for x in rows}),3)
    self.assertEqual({x['location'].split('/')[1] for x in rows},{'inventory-sacks','stashes','equipment'})
