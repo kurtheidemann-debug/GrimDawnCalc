@@ -10,7 +10,7 @@
   "validate.py": "82aaf05d1b560f9f5a328a54c011d7d9841c30aa75c01953641373e325c1b751",
   "localization.json": "c7ec3d17ea79d816e03d50b1cefae862a00e96c9ba1530fc73f0f7976cd9b608",
   "production_report.py": "31a68c95377fdb7e8ab5f4033550bce8523d80909688614616545d45be5f3b1f",
-  "GrimDawn_Optimizer.py": "263b7994f6a18e293c2aa971b6282c64f18c16cef73ef757a76c18433de57b9f",
+  "GrimDawn_Optimizer.py": "891e27e39ad24dd04bb42d186eef75d77ccab84cdcf67595f85974807156a4e3",
   "gd-edit-standalone.jar": "7103341f5c6cf6ff2a0f8955cb8ff3d9bc5a2bb3926b6c7f6c0aff46d02c9f45",
   "item_identity.py": "c18cee798265c7477635a46d065658310f395502cbde74977bd3802dcd9b71b6",
   "extract_data.clj": "413fb5cc3fb7f3b6fa34b0f1745f8a3f3adbfb1315c4ae20afe30b31a37ccde7",
@@ -24,10 +24,11 @@
   "production_search.py": "2a31e64acbe700ba0d60fa888c7fab245dbd580a114c5450b0e0489decde38dd",
   "beeztrap_production.py": "5b436ab2e99fbdfeb8e456abe5b158bb75ac1cc29c4a168137fc6fe0d19bdee9",
   "production_data.py": "e564150b1d27ccad1f1898e07706589be08cbdcd98144991f33b8965673b8119",
-  "practical_optimizer.py": "e7e6883398cc3ecb75a30c8eb502ea7da8d2312ef769e8976812c0eee0c03531",
+  "practical_optimizer.py": "20cd7ad1feff7b24d4565753fd148b7b6d6673232fe7d2ad273a734e7ce196ed",
   "item_valuation.py": "b74e2d42d4560acf764cb08c6f28bbca1998d505c12ac283d32a97ce10641115",
   "inventory_decisions.py": "29a7679e656413205db8bbaa9cf822515957a7c6273bd4b11f8d1bbd49caee3c",
   "test_stage2.py": "924c513a996b5c98c94e07a782045bc98423164e43f4a2d30bdd8c3b1611c14a",
   "test_equipment_mechanics.py": "d2a8a9b5017e3fc46c3e2b4310f19ef8a69d05f1236d355e14cb5a8176c61251",
-  "combat_configuration.py": "b826ea004d23df79c026585d1747dcd076bc7444c7bb3be3dadf1fa62cd0c4d6"
+  "combat_configuration.py": "b826ea004d23df79c026585d1747dcd076bc7444c7bb3be3dadf1fa62cd0c4d6",
+  "routine_crafting.py": "cb35a2e192b39e06b6974d87d3eccace1b191cd7e2bad320117f89318094ea72"
 }

@@ -312,3 +312,13 @@ Matched fixture (width 5, one round, 30-second bound): inferred sword DW admitte
 explicit DW admitted 2 swords + 1 axe + 1 mace, evaluated 8 configurations / 418
 loadouts in 19.5078 seconds. Both completed within the bound. The latter selected
 the slower axe and mace. This is source/admission coverage, not a speedup claim.
+
+## Stage 10: routine component crafting (verified subset)
+
+Both review modes load the game's `craftingDefaultRecipes` menu as well as uploaded known recipes. A completed component need not already exist: the shared planner recursively crafts it from actual finite ingredients, charges crafting iron and augment purchases, and reports ingredient consumption. Attached components remain on their physical item; salvage is not assumed. No inventory is fabricated at any level, including Tier III below or above level 100. Unknown recipes or missing special inputs still block the package.
+
+Aether Crystal is a verified ordinary ingredient despite its `QuestItem` database class; it uses the existing ordinary-material cost unit (1) instead of the special-material unit (15). All scoring, cost weights, materiality thresholds, search limits and equipment scopes remain unchanged.
+
+Limitation: the database has no reliable universal Tier I/II/III ingredient labels. This release supports verified default/known recipes with finite saved stocks, not assumed supplies for every Tier I/II material or every special blacksmith service. No broad tier classification or vendor expansion is claimed.
+
+Save11 regression: the 18% attack-speed Sabre with crafted Vicious Spikes passes resources (3 Serrated Spikes + 3 Aether Crystals + 1,500 iron). A controlled two-Sabre search with both matched packages seeded symmetrically selects it, offense 135.53, in 803 evaluations / 74.36 seconds without timeout. This is focused verification, not a Full Review or proof of unseeded global coverage. Public resource tests are in `test_stage10.py`; the actual Save11 fixture and its regression remain private.

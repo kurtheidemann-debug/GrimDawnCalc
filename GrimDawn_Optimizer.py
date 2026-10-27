@@ -42,10 +42,10 @@ class Engine:
   for b in read(d/'recipes.json'):
    r=b.get('definition') or {};p=r.get('artifactName')
    if p:self.recipes[p]=r
-  # Default recipes have no blueprint gate. They are the basic blacksmith menu.
-  for p,r in self.db.items():
-   if '/crafting/' in p and r.get('Class')=='ItemArtifactFormula' and r.get('defaultRecipe'):
-    self.recipes.setdefault(r.get('artifactName'),r)
+  # Default recipes have no blueprint gate. The game declares the basic
+  # blacksmith menu on the crafting panel, not on each recipe's flags.
+  from routine_crafting import default_recipes
+  for result,recipe in default_recipes(self.db,self.mal['character-level']):self.recipes.setdefault(result,recipe)
   self.available=collections.Counter({m['record']:m['quantity'] for m in read(d/'materials.json') if m['file']=='reagents.gst'})
   for x in self.cat:
    if x['records'][0].get('Class')=='ItemRelic':self.available[x['save']['basename']]+=x['save'].get('stack-count',1)
@@ -322,14 +322,14 @@ class Engine:
   if i==13:key='shield' if base.get('Class')=='WeaponArmor_Shield' else 'offhand'
   return bool(key and r.get(key)) and r.get('levelRequirement',0)<=self.mal['character-level']
  def resources(self,st):
-  avail=self.available.copy();iron=0;crafted=collections.Counter();need=collections.Counter();errors=[]
+  avail=self.available.copy();iron=0;crafted=collections.Counter();need=collections.Counter();consumed=collections.Counter();errors=[]
   # Reuse an attachment only when it remains on that same item. Replacements
   # destroy it; no free component salvaging is assumed.
   for i,p in enumerate(st['comp']):
    if p and p!=self.items[st['gear'][i]]['save'].get('relic-name'):need[p]+=1
   def acquire(p,q,depth=0):
    nonlocal iron
-   use=min(q,avail[p]);avail[p]-=use;q-=use
+   use=min(q,avail[p]);avail[p]-=use;q-=use;consumed[p]+=use
    if q<=0:return
    r=self.recipes.get(p)
    if not r or depth>8:errors.append(f'{self.name(p)}: short {q}');return
@@ -346,7 +346,7 @@ class Engine:
     if p not in self.augments:errors.append('Augment not purchasable: '+self.name(p))
     buys[p]+=1;augcost+=self.db[p].get('itemCost',0)
   if iron+augcost>self.mal['iron']:errors.append('Iron requirement exceeds current balance')
-  return {'errors':errors,'component_need':dict(need),'crafted_batches':dict(crafted),'augment_purchases':dict(buys),'craft_iron_base':iron,'augment_iron_base':augcost,'remaining_iron_base':self.mal['iron']-iron-augcost}
+  return {'errors':errors,'component_need':dict(need),'crafted_batches':dict(crafted),'ingredient_consumption':{p:q for p,q in consumed.items() if q},'augment_purchases':dict(buys),'craft_iron_base':iron,'augment_iron_base':augcost,'remaining_iron_base':self.mal['iron']-iron-augcost}
  def devotion_valid(self,dev):
   total=collections.Counter();selected=set(dev);partial=[]
   for c in self.const:

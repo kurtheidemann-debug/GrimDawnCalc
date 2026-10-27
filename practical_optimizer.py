@@ -3,6 +3,7 @@ import argparse,copy,hashlib,json,math,pathlib,time
 from GrimDawn_Optimizer import Engine,ROOT,STORM,WIND,MAEL,SLOTS,SPHERE,RES,at
 from relative_offense import RelativeOffense,difficulty_penalties,useful_overcap
 from item_identity import full_name,fingerprint as item_fingerprint
+from routine_crafting import ingredient_cost_units
 VERSION='practical-1.2'
 class PracticalEngine(Engine):
  def __init__(self,directory=ROOT):
@@ -48,7 +49,7 @@ class PracticalEngine(Engine):
    for k,mat in r.items():
     if k.startswith('reagent') and k.endswith('BaseName'):
      q=r.get(k[:-8]+'Quantity',1)
-     cost+=q*(self.component_cost(mat,seen) if mat in self.recipes else (1 if self.db.get(mat,{}).get('Class')=='ItemRelic' else 15))
+     cost+=q*(self.component_cost(mat,seen) if mat in self.recipes else ingredient_cost_units(self.db,mat))
    cost/=max(1,r.get('artifactCreateQuantity',1))
   self.costmemo[p]=cost;return cost
  def cost(self,s):
